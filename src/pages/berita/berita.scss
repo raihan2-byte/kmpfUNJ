@@ -1,0 +1,59 @@
+@use "../../scss/index" as *;
+
+.berita-parent {
+  margin-top: 1rem;
+  padding-top: 2rem;
+  background-color: #edceab;
+  padding-bottom: 3rem;
+
+  .text {
+    margin-left: 10vh;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .berita-child {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 33.3%);
+    text-align: center;
+    height: 70vh;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 2rem;
+
+    p {
+      margin-top: 10vh;
+      font-size: 24px;
+      color: white;
+    }
+
+    .card {
+      padding: 20px;
+      display: grid;
+      align-items: center;
+      background-size: cover;
+      background-image: url(../../components/assets/headlie1.jpg);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 50vh;
+      height: 25vh;
+
+      .card-content {
+        padding: 20px;
+      }
+
+      .card-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+        color: white;
+      }
+
+      .card-description {
+        font-size: 14px;
+        color: white;
+      }
+    }
+  }
+}

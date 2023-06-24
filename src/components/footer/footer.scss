@@ -1,0 +1,74 @@
+@use "../../scss/index" as *;
+
+.footer {
+  margin-top: 5rem;
+  padding: 2rem;
+  background-color: #eaeaea;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    .contact {
+      flex: 1;
+      display: flex;
+
+      div {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          white-space: nowrap;
+          margin-right: 50px;
+          margin-bottom: 5px;
+        }
+
+        p {
+          margin: 0 0 5px 0;
+        }
+      }
+    }
+
+    .social-media {
+      flex: 0.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        font-size: 2rem;
+        color: $blackColor;
+        margin: 0 1rem 0 1rem;
+
+        @include mobile {
+          margin: 1rem 1rem 0 1rem;
+        }
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@use "../../scss/index" as *;
+
+.navbar {
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: $whiteColor;
+
+  .logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+
+    img {
+      width: 10vh;
+    }
+
+    // &__text {
+    //   margin-left: 1rem;
+    //   color: $blackColor;
+    // }
+  }
+
+  &__wrap {
+    @include flex(center, space-between);
+    padding: 0 2rem;
+    height: 100%;
+    position: relative;
+
+    &__display {
+      @include flex(center, unset);
+      gap: 30px;
+
+      li {
+        padding: 5px 0;
+        position: relative;
+        font-weight: 500;
+        font-size: 1.3rem;
+        width: max-content;
+
+        .text {
+          color: $blackColor;
+          transition: ease-out 0.3s;
+
+          &:hover {
+            color: #c69c6d;
+          }
+        }
+      }
+
+      @include mobile {
+        position: absolute;
+        top: 0;
+        right: -230px;
+        display: block;
+        padding: 6rem 15px;
+        margin: 0;
+        width: 200px;
+        height: 100vh;
+        transition: ease-in-out 300ms;
+        background-color: $whiteColor;
+        z-index: 20;
+
+        &.isActive {
+          right: 0;
+        }
+
+        li {
+          font-size: 1.8rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .buttonDisplay {
+      display: none;
+      z-index: 21;
+    }
+
+    @include mobile {
+      .buttonDisplay {
+        display: block;
+      }
+    }
+  }
+}

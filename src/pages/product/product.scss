@@ -1,0 +1,117 @@
+@use "../../scss/index" as *;
+
+.foto-wisuda-parent {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  gap: 10px;
+  background-color: #c69c6d;
+  color: white;
+  height: 55vh;
+
+  .foto-wisuda-left {
+    // background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    margin-left: 50px;
+
+    img {
+      width: 65%;
+      height: 38vh;
+    }
+  }
+
+  .foto-wisuda-middle {
+    justify-content: center;
+    text-align: center;
+    // margin-top: 9rem;
+    position: relative;
+    margin-top: 5rem;
+
+    h3 {
+      line-height: 0.3;
+    }
+
+    .ket {
+      margin-top: 50px;
+    }
+  }
+
+  .button {
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    bottom: -40vh;
+    left: 10%;
+    // transform: translateX(-50%);
+  }
+}
+
+.jasa-foto-parent {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  gap: 10px;
+  background-color: #c69c6d;
+  color: white;
+  height: 55vh;
+  justify-content: space-evenly;
+
+  img {
+    width: 65%;
+  }
+
+  .jasa-foto-left {
+    // background-repeat: no-repeat;
+    // text-align: right;
+    // justify-content: center;
+    // margin-left: 30vh;
+    margin-left: auto;
+    position: relative;
+    top: 5rem;
+  }
+
+  .jasa-foto-middle {
+    justify-content: center;
+    text-align: center;
+    // margin-top: 9rem;
+    position: relative;
+
+    .button {
+      margin-top: 2vh;
+    }
+  }
+
+  .jasa-foto-right {
+    // text-align: left;
+    position: relative;
+    justify-content: center;
+    margin-right: auto;
+    // margin-left: 20vh;
+    top: 5rem;
+  }
+}
+
+.merch-parent {
+  padding: 20px;
+  background-color: white;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  display: flex;
+
+  .merch {
+    background-color: #c69c6d;
+    width: 100%;
+    height: 80vh;
+    max-width: 400vw;
+    border-radius: 7%;
+    position: relative;
+
+    h2 {
+      text-align: center;
+      color: white;
+      font-size: 30px;
+    }
+  }
+}

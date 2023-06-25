@@ -20,11 +20,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header__left">
-        <Swiper
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
+        <Swiper navigation={true} modules={[Pagination, Navigation]} className="mySwiper">
           <SwiperSlide>
             <img src={Headline} alt="text" className="kontoru" />
             <div className="overlay">

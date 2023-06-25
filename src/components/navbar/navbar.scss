@@ -33,11 +33,12 @@
     &__display {
       @include flex(center, unset);
       gap: 30px;
+      position: relative;
 
       li {
         padding: 5px 0;
-        position: relative;
         font-weight: 500;
+        position: relative;
         font-size: 1.3rem;
         width: max-content;
 
@@ -49,6 +50,33 @@
             color: #c69c6d;
           }
         }
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+
+        .text-content {
+          padding: 10px;
+          font-size: 16px;
+          color: #3c3c3c;
+          border: 1px solid #000000;
+          transition: 0.3s ease-in-out;
+          white-space: nowrap;
+
+          &:hover {
+            color: #c69c6d;
+          }
+        }
+      }
+
+      li:hover .dropdown-content {
+        display: flex;
+        flex-direction: column;
       }
 
       @include mobile {

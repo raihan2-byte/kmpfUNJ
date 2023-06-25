@@ -8,44 +8,44 @@ const navbarContent = [
   {
     display: "Home",
     path: "/",
+    content: [],
   },
   {
     display: "Gallery",
     path: "/",
+    content: [],
   },
   {
     display: "Product & Services",
     path: "/",
+    content: [
+      { name: "Product & Services", path: "/" },
+      { name: "Rent & Price", path: "/" },
+    ],
   },
   {
     display: "Blog",
     path: "/",
+    content: [
+      { name: "News", path: "/" },
+      { name: "Artikel KMPF", path: "/" },
+      { name: "PhotoTalk", path: "/" },
+    ],
   },
   {
     display: "About Us",
     path: "/",
+    content: [],
   },
 ];
 
 const Navbar = () => {
   const { pathname } = useLocation();
   const [addClass, setAddClass] = React.useState("");
-  const navbarRef = React.useRef(null);
   const active = navbarContent.findIndex((e) => e.path === pathname);
 
-  const onScrollHeader = () => {
-    if (
-      document.body.scrollTop > 150 ||
-      document.documentElement.scrollTop > 150
-    ) {
-      navbarRef.current.classList.add("onScroll");
-    } else {
-      navbarRef.current.classList.remove("onScroll");
-    }
-  };
-  window.addEventListener("scroll", onScrollHeader);
   return (
-    <div className="navbar" ref={navbarRef}>
+    <div className="navbar">
       <div className="navbar__wrap container">
         <div className="logo">
           <img src={Logo} alt="kamera" />
@@ -57,15 +57,18 @@ const Navbar = () => {
               <Link className="text" to={e.path}>
                 {e.display}
               </Link>
+              <div class="dropdown-content">
+                {e.content.map((e, i) => (
+                  <Link key={i} to={e.path} className="text-content">
+                    {e.name}
+                  </Link>
+                ))}
+              </div>
             </li>
           ))}
         </ul>
         <div className="buttonDisplay">
-          <Hamburger
-            onToggle={(toggled) =>
-              toggled ? setAddClass("isActive") : setAddClass("")
-            }
-          />
+          <Hamburger onToggle={(toggled) => (toggled ? setAddClass("isActive") : setAddClass(""))} />
         </div>
       </div>
     </div>

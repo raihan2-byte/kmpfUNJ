@@ -7,7 +7,7 @@ import Kelas from "./pages/kelas/kelas";
 import Product from "./pages/product/product";
 import Berita from "./pages/berita/berita";
 import Rent from "./pages/Renting/Rent";
-import UploadFoto from "../src/pages/upload-foto/uploadfoto"
+import UploadFoto from "../src/pages/upload-foto/uploadfoto";
 
 function App() {
   return (
@@ -17,13 +17,11 @@ function App() {
         <Route path="/" element={<Home />} />
       </Routes>
       <Kelas />
-      <Product/>
+      <Product />
       <Rent />
       <Berita />
-      <UploadFoto/>
+      <UploadFoto />
       <Footer />
-      
-     
     </BrowserRouter>
   );
 }

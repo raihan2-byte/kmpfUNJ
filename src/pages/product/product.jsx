@@ -2,6 +2,8 @@ import React from "react";
 import "./product.scss";
 import Button from "../../components/button/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Merch1 from "../../components/assets/whitee.png";
+import Merch2 from "../../components/assets/black.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -111,6 +113,28 @@ const product = () => {
       <div className="merch-parent">
         <div className="merch">
           <h2>Merch</h2>
+          <div className="merch-produk">
+            <div className="merch1">
+              <img src={Merch1} alt="merch" />
+              <div className="price">IDR 50.000</div>
+              <Button onClick="btn">Purchase Now</Button>
+            </div>
+            <div className="merch2">
+              <img src={Merch2} alt="merch" />
+              <div className="price">IDR 50.000</div>
+              <Button onClick="btn">Purchase Now</Button>
+            </div>
+            {/* <div className="merch2">
+              <img src={Merch2} alt="merch" />
+              <div className="price">IDR 50.000</div>
+              <Button onClick="btn">Purchase Now</Button>
+            </div>
+            <div className="merch2">
+              <img src={Merch2} alt="merch" />
+              <div className="price">IDR 50.000</div>
+              <Button onClick="btn">Purchase Now</Button>
+            </div> */}
+          </div>
         </div>
       </div>
     </>

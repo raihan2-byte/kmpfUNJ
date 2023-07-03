@@ -4,7 +4,7 @@ import "./uploadfoto.scss";
 const uploadfoto = () => {
   return (
     <div className="upload-foto-parent">
-      <h3>Hasil Karya KMPFUNJ</h3>
+      <h3 className="tulisan">Hasil Karya KMPFUNJ</h3>
       <div className="upload-foto-child">
         <div class="card">
           <div class="card-content">

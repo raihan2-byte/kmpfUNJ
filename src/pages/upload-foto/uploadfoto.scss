@@ -2,10 +2,11 @@
 
 .upload-foto-parent {
   background-color: #edceab;
+  margin-top: 7rem;
   //   justify-content: center;
   //   display: grid;
 
-  h3 {
+  .tulisan {
     padding-top: 2rem;
     margin-left: 10vh;
     color: white;
@@ -22,13 +23,13 @@
     font-size: 20px;
     padding-bottom: 2rem;
 
-    p {
-      margin-top: 10vh;
-    }
+    // p {
+    //   margin-top: 10vh;
+    // }
 
     .card {
       display: grid;
-      align-items: center;
+      place-items: center;
       background-size: cover;
       background-image: url(../../components/assets/proker-terbaru.JPG);
       border: 1px solid #ccc;
@@ -45,6 +46,7 @@
         font-size: 20px;
         margin-bottom: 8px;
         color: white;
+        text-align: center;
       }
 
       .card-description {

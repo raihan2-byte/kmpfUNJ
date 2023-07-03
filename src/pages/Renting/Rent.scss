@@ -3,6 +3,7 @@
 .rent-parent {
   // height: 80vh;
   background-color: #c69c6d;
+  margin-top: 7rem;
   padding-top: 2px;
   padding-bottom: 3rem;
 
@@ -30,6 +31,7 @@
       display: grid;
       max-width: 80%;
       grid-template-columns: repeat(4, 30%);
+      // place-items: center;
       //   h4 {
       //     font-size: 15px;
       //   }

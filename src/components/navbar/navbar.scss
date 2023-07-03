@@ -79,7 +79,7 @@
         flex-direction: column;
       }
 
-      @include mobile {
+      @include tablet {
         position: absolute;
         top: 0;
         right: -230px;
@@ -108,7 +108,7 @@
       z-index: 21;
     }
 
-    @include mobile {
+    @include tablet {
       .buttonDisplay {
         display: block;
       }

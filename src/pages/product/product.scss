@@ -1,7 +1,7 @@
 @use "../../scss/index" as *;
 
 .foto-wisuda-parent {
-  margin-top: 5rem;
+  margin-top: 6rem;
   display: grid;
   grid-template-columns: repeat(3, 33.3%);
   gap: 10px;
@@ -103,10 +103,25 @@
   .merch {
     background-color: #c69c6d;
     width: 100%;
-    height: 80vh;
     max-width: 400vw;
     border-radius: 7%;
     position: relative;
+    text-align: center;
+
+    .merch-produk {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      place-items: center;
+      padding: 20px;
+
+      img {
+        padding-top: 30px;
+        width: 40vh;
+      }
+      .price {
+        text-align: center;
+      }
+    }
 
     h2 {
       text-align: center;

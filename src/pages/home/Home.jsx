@@ -36,7 +36,7 @@ const Home = () => {
       <div className="phototalk">
         <h1>PhotoTalk</h1>
         <Swiper
-          slidesPerView={1}
+          slidesPerView={2}
           spaceBetween={10}
           pagination={{
             clickable: true,

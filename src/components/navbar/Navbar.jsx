@@ -68,11 +68,7 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="buttonDisplay">
-          <Hamburger
-            onToggle={(toggled) =>
-              toggled ? setAddClass("isActive") : setAddClass("")
-            }
-          />
+          <Hamburger onToggle={(toggled) => (toggled ? setAddClass("isActive") : setAddClass(""))} />
         </div>
       </div>
     </div>

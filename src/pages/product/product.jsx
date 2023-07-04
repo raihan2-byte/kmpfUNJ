@@ -12,10 +12,13 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 
 const product = () => {
   return (
     <>
+      <Navbar />
       <div className="foto-wisuda-parent">
         <div className="foto-wisuda-left">
           <h3>Jasa Foto Wisuda Pribadi</h3>
@@ -23,11 +26,7 @@ const product = () => {
           <div className="carousel-atas">
             <div class="card">
               <div class="card-content">
-                <Swiper
-                  navigation={true}
-                  modules={[Pagination, Navigation]}
-                  className="mySwiper"
-                >
+                <Swiper navigation={true} modules={[Pagination, Navigation]} className="mySwiper">
                   <SwiperSlide>
                     <img src="https://picsum.photos/600/400" alt="text" />
                   </SwiperSlide>
@@ -73,11 +72,7 @@ const product = () => {
         <div className="jasa-foto-middle">
           <h3>Jasa Pas foto</h3>
           <div className="carousel-jasa">
-            <Swiper
-              navigation={true}
-              modules={[Pagination, Navigation]}
-              className="mySwiper"
-            >
+            <Swiper navigation={true} modules={[Pagination, Navigation]} className="mySwiper">
               <SwiperSlide>
                 <img src="https://picsum.photos/600/400" alt="text" />
               </SwiperSlide>
@@ -137,6 +132,7 @@ const product = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

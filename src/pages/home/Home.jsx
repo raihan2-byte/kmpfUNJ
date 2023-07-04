@@ -12,10 +12,13 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper";
+import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   return (
     <>
+      <Navbar />
       <Header />
       <div className="rental-foto">
         <div className="fotografi">
@@ -90,6 +93,7 @@ const Home = () => {
           </SwiperSlide>
         </Swiper>
       </div>
+      <Footer />
     </>
   );
 };

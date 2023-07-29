@@ -6,10 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Headline from "../../components/assets/headlie1.jpg";
-import Headline1 from "../../components/assets/Headline1.jpg";
-import Headline2 from "../../components/assets/headline2.JPG";
-import Headline3 from "../../components/assets/headline3.jpg";
+import Headline from "../../components/assets/Headline1.jpg";
 
 import Proker from "../../components/assets/proker-terbaru.JPG";
 import Karya from "../../components/assets/karya-terbaru.jpg";
@@ -35,19 +32,19 @@ const Header = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Headline1} alt="text" className="kontoru" />
+            <img src={Headline} alt="text" className="kontoru" />
             <div className="overlay">
               <h2>Headline Terbaru</h2>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Headline2} alt="text" className="kontoru" />
+            <img src={Headline} alt="text" className="kontoru" />
             <div className="overlay">
               <h2>Headline Terbaru</h2>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Headline3} alt="text" className="kontoru" />
+            <img src={Headline} alt="text" className="kontoru" />
             <div className="overlay">
               <h2>Headline Terbaru</h2>
             </div>
@@ -57,11 +54,11 @@ const Header = () => {
       <div className="header__right">
         <div className="header__right__top">
           <img src={Karya} alt="text" className="img-top" />
-          <h2>Karya Terbaru</h2>
+          <h2 className="teks-right">Karya Terbaru</h2>
         </div>
         <div className="header__right__bottom">
           <img src={Proker} alt="text" className="img-bot" />
-          <h2>Proker Terbaru</h2>
+          <h2 className="teks-right">Proker Terbaru</h2>
         </div>
       </div>
     </div>

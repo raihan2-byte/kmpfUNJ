@@ -1,36 +1,36 @@
 @use "../../scss/index" as *;
 
 .foto-wisuda-parent {
-  margin-top: 6rem;
+  margin: 0.7rem;
+  margin-top: 7rem;
   display: grid;
   grid-template-columns: repeat(3, 33.3%);
-  gap: 10px;
   background-color: #c69c6d;
   color: white;
-  height: 55vh;
+  height: 50vh;
 
   .foto-wisuda-left {
-    // background-repeat: no-repeat;
+    position: relative;
+    margin: auto 0px;
+    font-size: 20px;
     text-align: center;
-    justify-content: center;
-    margin-left: 50px;
+
+    h3 {
+      margin-bottom: 10px;
+    }
 
     img {
       width: 65%;
-      height: 38vh;
+      object-fit: contain;
     }
   }
 
   .foto-wisuda-middle {
-    justify-content: center;
-    text-align: center;
-    // margin-top: 9rem;
+    width: 100%;
     position: relative;
-    margin-top: 5rem;
-
-    h3 {
-      line-height: 0.3;
-    }
+    margin: auto;
+    font-size: 15px;
+    text-align: center;
 
     .ket {
       margin-top: 50px;
@@ -38,17 +38,18 @@
   }
 
   .button {
-    justify-content: center;
-    text-align: center;
-    position: relative;
     bottom: -40vh;
     left: 10%;
-    // transform: translateX(-50%);
+
+    position: relative;
+
+    font-size: 20px;
+    text-align: center;
   }
 }
 
 .jasa-foto-parent {
-  margin-top: 2rem;
+  margin: 0.7rem;
   display: grid;
   grid-template-columns: repeat(3, 33.3%);
   gap: 10px;
@@ -62,20 +63,22 @@
   }
 
   .jasa-foto-left {
-    // background-repeat: no-repeat;
-    // text-align: right;
-    // justify-content: center;
-    // margin-left: 30vh;
-    margin-left: auto;
+    width: 100%;
     position: relative;
-    top: 5rem;
+    margin: auto;
+    font-size: 15px;
+    text-align: center;
   }
 
   .jasa-foto-middle {
-    justify-content: center;
-    text-align: center;
-    // margin-top: 9rem;
     position: relative;
+    margin: auto 0px;
+    font-size: 20px;
+    text-align: center;
+
+    h3 {
+      margin-bottom: 10px;
+    }
 
     .button {
       margin-top: 2vh;
@@ -83,18 +86,17 @@
   }
 
   .jasa-foto-right {
-    // text-align: left;
+    width: 100%;
     position: relative;
-    justify-content: center;
-    margin-right: auto;
-    // margin-left: 20vh;
-    top: 5rem;
+    margin: auto;
+    font-size: 15px;
+    text-align: center;
   }
 }
 
 .merch-parent {
-  padding: 20px;
-  background-color: white;
+  margin: 0.7rem;
+  background-color: antiquewhite;
   justify-content: center;
   position: relative;
   align-items: center;
@@ -130,3 +132,138 @@
     }
   }
 }
+
+// @media only screen and (max-width: 1110px) {
+//   .foto-wisuda-parent {
+//     margin: 0.7rem;
+//     margin-top: 7rem;
+//     display: grid;
+//     grid-template-columns: repeat(3, 33.3%);
+//     background-color: #c69c6d;
+//     color: white;
+//     height: 50vh;
+
+//     .foto-wisuda-left {
+//       position: relative;
+//       margin: auto 0px;
+//       font-size: 20px;
+//       text-align: center;
+
+//       h3 {
+//         margin-bottom: 10px;
+//       }
+
+//       img {
+//         width: 65%;
+//         object-fit: contain;
+//       }
+//     }
+
+//     .foto-wisuda-middle {
+//       width: 100%;
+//       position: relative;
+//       margin: auto;
+//       font-size: 15px;
+//       text-align: center;
+
+//       .ket {
+//         margin-top: 50px;
+//       }
+//     }
+
+//     .button {
+//       bottom: -40vh;
+//       left: 10%;
+
+//       position: relative;
+
+//       font-size: 20px;
+//       text-align: center;
+//     }
+//   }
+
+//   .jasa-foto-parent {
+//     margin: 0.7rem;
+//     display: grid;
+//     grid-template-columns: repeat(3, 33.3%);
+//     gap: 10px;
+//     background-color: #c69c6d;
+//     color: white;
+//     height: 55vh;
+//     justify-content: space-evenly;
+
+//     img {
+//       width: 65%;
+//     }
+
+//     .jasa-foto-left {
+//       width: 100%;
+//       position: relative;
+//       margin: auto;
+//       font-size: 15px;
+//       text-align: center;
+//     }
+
+//     .jasa-foto-middle {
+//       position: relative;
+//       margin: auto 0px;
+//       font-size: 20px;
+//       text-align: center;
+
+//       h3 {
+//         margin-bottom: 10px;
+//       }
+
+//       .button {
+//         margin-top: 2vh;
+//       }
+//     }
+
+//     .jasa-foto-right {
+//       width: 100%;
+//       position: relative;
+//       margin: auto;
+//       font-size: 15px;
+//       text-align: center;
+//     }
+//   }
+
+//   .merch-parent {
+//     margin: 0.7rem;
+//     background-color: antiquewhite;
+//     justify-content: center;
+//     position: relative;
+//     align-items: center;
+//     display: flex;
+
+//     .merch {
+//       background-color: #c69c6d;
+//       width: 100%;
+//       max-width: 400vw;
+//       border-radius: 7%;
+//       position: relative;
+//       text-align: center;
+
+//       .merch-produk {
+//         display: grid;
+//         grid-template-columns: repeat(2, 50%);
+//         place-items: center;
+//         padding: 20px;
+
+//         img {
+//           padding-top: 30px;
+//           width: 40vh;
+//         }
+//         .price {
+//           text-align: center;
+//         }
+//       }
+
+//       h2 {
+//         text-align: center;
+//         color: white;
+//         font-size: 30px;
+//       }
+//     }
+//   }
+// }

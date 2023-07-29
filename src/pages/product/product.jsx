@@ -14,6 +14,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
+// import Rent from "../../pages/Renting/Rent";
 
 const product = () => {
   return (
@@ -26,7 +27,11 @@ const product = () => {
           <div className="carousel-atas">
             <div class="card">
               <div class="card-content">
-                <Swiper navigation={true} modules={[Pagination, Navigation]} className="mySwiper">
+                <Swiper
+                  navigation={true}
+                  modules={[Pagination, Navigation]}
+                  className="mySwiper"
+                >
                   <SwiperSlide>
                     <img src="https://picsum.photos/600/400" alt="text" />
                   </SwiperSlide>
@@ -72,7 +77,11 @@ const product = () => {
         <div className="jasa-foto-middle">
           <h3>Jasa Pas foto</h3>
           <div className="carousel-jasa">
-            <Swiper navigation={true} modules={[Pagination, Navigation]} className="mySwiper">
+            <Swiper
+              navigation={true}
+              modules={[Pagination, Navigation]}
+              className="mySwiper"
+            >
               <SwiperSlide>
                 <img src="https://picsum.photos/600/400" alt="text" />
               </SwiperSlide>
@@ -119,19 +128,10 @@ const product = () => {
               <div className="price">IDR 50.000</div>
               <Button onClick="btn">Purchase Now</Button>
             </div>
-            {/* <div className="merch2">
-              <img src={Merch2} alt="merch" />
-              <div className="price">IDR 50.000</div>
-              <Button onClick="btn">Purchase Now</Button>
-            </div>
-            <div className="merch2">
-              <img src={Merch2} alt="merch" />
-              <div className="price">IDR 50.000</div>
-              <Button onClick="btn">Purchase Now</Button>
-            </div> */}
           </div>
         </div>
       </div>
+      {/* <Rent /> */}
       <Footer />
     </>
   );

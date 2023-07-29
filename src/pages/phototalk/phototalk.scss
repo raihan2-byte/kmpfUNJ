@@ -1,0 +1,54 @@
+.phototalk-parent {
+  margin-top: 7rem;
+  .phototalk-teks {
+    h3 {
+      text-align: center;
+      width: 50%;
+      margin: auto;
+      font-size: 40px;
+    }
+    p {
+      padding-top: 3rem;
+      text-align: justify;
+      width: 50%;
+      margin: auto;
+      font-size: 20px;
+      margin-bottom: 3rem;
+    }
+  }
+  .phototalk-konten {
+    .section {
+      .swiper-button-prev,
+      .swiper-button-next {
+        color: #ff0000; /* Ganti dengan warna yang Anda inginkan */
+      }
+
+      /* Untuk mengubah warna panah navigasi saat di hover */
+      .swiper-button-prev:hover,
+      .swiper-button-next:hover {
+        color: #00ff00; /* Ganti dengan warna yang Anda inginkan */
+      }
+      .konten {
+        width: 93%;
+        margin: auto;
+        .kontoru {
+          width: 100%;
+          border-radius: 10%;
+        }
+        .overlay {
+          position: absolute;
+          top: 4rem;
+          left: 25%;
+          width: 50%;
+          line-height: 1;
+          font-size: 3rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white; /* Atur warna teks */
+          text-align: center;
+        }
+      }
+    }
+  }
+}

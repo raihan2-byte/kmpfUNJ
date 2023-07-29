@@ -13,9 +13,14 @@
     font-size: 1.3rem;
     font-weight: 600;
     display: flex;
+    cursor: pointer;
 
     img {
-      width: 10vh;
+      width: 7vh;
+    }
+
+    p {
+      margin: auto;
     }
 
     // &__text {

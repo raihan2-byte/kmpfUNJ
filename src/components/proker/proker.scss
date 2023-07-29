@@ -1,0 +1,85 @@
+.sub-our-proker {
+  text-align: left;
+}
+.konten-our-proker {
+  overflow: hidden;
+  margin: 0;
+
+  .konten-proker {
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    .kontoru {
+      width: 100%;
+      height: 50vh;
+      object-fit: cover;
+      padding-top: 20px;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 8.3rem;
+    left: 30%;
+    width: 50%;
+    line-height: 1;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Atur warna teks */
+    text-align: left;
+  }
+
+  .overlay-bawah {
+    position: absolute;
+    top: 26rem;
+    left: 30%;
+    width: 50%;
+    line-height: 1;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Atur warna teks */
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  .konten-our-proker {
+    .overlay {
+      top: 5rem;
+    }
+
+    .overlay-bawah {
+      top: 20rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .konten-our-proker {
+    .overlay {
+      top: 9rem;
+    }
+
+    .overlay-bawah {
+      top: 27.4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .konten-our-proker {
+    .overlay {
+      top: 11rem;
+    }
+
+    .overlay-bawah {
+      top: 35.5rem;
+    }
+  }
+}

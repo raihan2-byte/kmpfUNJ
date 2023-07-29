@@ -1,0 +1,24 @@
+.short-video-parent {
+  width: 95%;
+  margin: 2rem auto;
+  .short-video-child {
+    display: flex;
+
+    .konten img {
+      width: 80vh;
+      border: 2px solid black;
+      border-radius: 10%;
+    }
+
+    .teks-video-short {
+      margin-left: 40px;
+      text-align: justify;
+      line-height: 1.5;
+      width: 50%;
+
+      .link-barang {
+        margin-top: 10px;
+      }
+    }
+  }
+}

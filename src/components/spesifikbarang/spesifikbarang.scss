@@ -1,0 +1,37 @@
+.sepesifik-barang-parent {
+  margin-top: 3rem;
+  width: 95%;
+  margin: 2rem auto;
+}
+
+.barang-foto-barang {
+  display: flex;
+  /* width: 80%; */
+
+  .barang-section {
+    .mySwiper {
+      width: 600px; /* Ganti 400px dengan lebar yang sesuai */
+    }
+
+    .foto-barang img {
+      border: 3px solid #000;
+      border-radius: 10%;
+      object-fit: cover;
+      width: 100%; /* Ganti 200px dengan lebar gambar yang sesuai */
+      height: 70vh;
+    }
+  }
+
+  .teks-barang {
+    width: 40%;
+    margin-left: 20px;
+    .judul-barang-spesifik {
+      font-size: 30px;
+    }
+    .btn-barang {
+      width: 10rem;
+      height: 50px;
+      margin-left: -10px;
+    }
+  }
+}

@@ -1,104 +1,318 @@
 @use "../../scss/index" as *;
 
 .parent {
-  .kelas-foga {
-    padding: 1rem 0;
-    margin-top: 7rem;
-
-    .foga {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 30%;
-      height: 300px;
-      background-image: url("https://picsum.photos/1500/500");
-      border-radius: 10%;
-
-      h1 {
-        font-size: 25px;
-        color: white;
-        text-align: center;
-        padding-top: 16rem;
-      }
-    }
-
-    // .Kelas-fotografi {
-    //   margin-top: 10px;
-
-    //   h1 {
-    //     text-align: center;
-    //     font-size: 40px;
-    //   }
-    // }
-  }
+  margin-top: 8rem;
   .kelas-fotografi {
-    justify-content: center;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    place-items: center;
+    padding: 20px;
 
-    .kelas-jurnalis-parent {
-      justify-content: center;
+    .kelas-jurnalis {
+      background-image: url("https://picsum.photos/1500/500");
+      background-size: cover;
+      width: 60%;
+      height: 70vh;
+      border-radius: 10%;
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 10px 5px 5px black;
 
-      .kelas-jurnalis-left {
-        background-image: url("https://picsum.photos/1500/500");
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        height: 300px;
-      }
-
-      .kelas-jurnalis-right {
-        width: 100%;
+      .judul-jurnalis,
+      .teks-jurnalis {
+        font-size: 20px;
         text-align: center;
+        color: white;
       }
     }
-    .kelas-salon-parent {
-      justify-content: center;
+    .kelas-salon {
+      background-image: url("https://picsum.photos/1500/500");
+      background-size: cover;
+      width: 60%;
+      height: 70vh;
+      border-radius: 10%;
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 10px 5px 5px black;
 
-      .kelas-salon-left {
-        width: 100%;
+      .judul-salon,
+      .teks-salon {
+        font-size: 20px;
         text-align: center;
-      }
-
-      .kelas-salon-right {
-        background-image: url("https://picsum.photos/1500/500");
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        height: 300px;
+        color: white;
       }
     }
-
-    .kelas-alternatif-parent {
-      justify-content: center;
+    .kelas-alternatif {
+      background-image: url("https://picsum.photos/1500/500");
+      background-size: cover;
+      width: 60%;
+      height: 70vh;
+      border-radius: 10%;
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 10px 5px 5px black;
 
-      .kelas-alternatif-left {
-        background-image: url("https://picsum.photos/1500/500");
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        height: 300px;
-      }
-
-      .kelas-alternatif-right {
-        width: 100%;
+      .judul-alternatif,
+      .teks-alternatif {
+        font-size: 20px;
         text-align: center;
+        color: white;
       }
     }
   }
+}
 
-  .members-parent {
+.video-reels {
+  background-color: #edceab;
+  margin: 1rem 2rem;
+  border-radius: $border-radius;
+  padding-bottom: 2rem;
+  cursor: default;
+
+  h1 {
+    color: $whiteColor;
     text-align: center;
+    font-size: 70px;
+  }
 
-    img {
-      width: 100%;
-      justify-content: center;
-      border-radius: 5%;
+  .mySwiper {
+    margin: 0 4rem;
+
+    h5 {
+      color: $blackColor;
+      margin: 0;
+      padding-right: 50px;
+      text-align: center;
+    }
+    p {
+      color: $blackColor;
+      margin: 0;
+      padding-right: 50px;
+      text-align: center;
+    }
+    .photo {
+      width: 30vh;
+      height: 40vh;
+      object-fit: cover;
+      border: 3px solid #000;
+    }
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  .parent {
+    .kelas-fotografi {
+      .kelas-jurnalis {
+        height: 50vh;
+
+        .judul-jurnalis,
+        .teks-jurnalis {
+          font-size: 15px;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      .kelas-salon {
+        height: 50vh;
+
+        .judul-salon,
+        .teks-salon {
+          font-size: 15px;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      .kelas-alternatif {
+        height: 50vh;
+
+        .judul-alternatif,
+        .teks-alternatif {
+          font-size: 15px;
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+
+    .video-reels {
+      h1 {
+        font-size: 65px;
+      }
+      .mySwiper {
+        .photo {
+          width: 25vh;
+          height: 40vh;
+          object-fit: cover;
+          border: 3px solid #000;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .parent {
+    .kelas-fotografi {
+      .kelas-jurnalis {
+        height: 40vh;
+
+        .judul-jurnalis,
+        .teks-jurnalis {
+          font-size: 13px;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      .kelas-salon {
+        height: 40vh;
+
+        .judul-salon,
+        .teks-salon {
+          font-size: 13px;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      .kelas-alternatif {
+        height: 40vh;
+
+        .judul-alternatif,
+        .teks-alternatif {
+          font-size: 13px;
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+
+    .video-reels {
+      h1 {
+        font-size: 60px;
+      }
+      .mySwiper {
+        .photo {
+          width: 25vh;
+          height: 37vh;
+          object-fit: cover;
+          border: 3px solid #000;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .parent {
+    .kelas-fotografi {
+      .kelas-jurnalis {
+        height: 40vh;
+
+        .judul-jurnalis,
+        .teks-jurnalis {
+          font-size: 10px;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      .kelas-salon {
+        height: 40vh;
+
+        .judul-salon,
+        .teks-salon {
+          font-size: 10px;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      .kelas-alternatif {
+        height: 40vh;
+
+        .judul-alternatif,
+        .teks-alternatif {
+          font-size: 10px;
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+
+    .video-reels {
+      h1 {
+        font-size: 40px;
+      }
+      .mySwiper {
+        .photo {
+          width: 25vh;
+          height: 33vh;
+          object-fit: cover;
+          border: 3px solid #000;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .parent {
+    .kelas-fotografi {
+      .kelas-jurnalis {
+        height: 35vh;
+
+        .judul-jurnalis,
+        .teks-jurnalis {
+          font-size: 8px;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      .kelas-salon {
+        height: 35vh;
+
+        .judul-salon,
+        .teks-salon {
+          font-size: 8px;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      .kelas-alternatif {
+        height: 35vh;
+
+        .judul-alternatif,
+        .teks-alternatif {
+          font-size: 8px;
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+
+    .video-reels {
+      h1 {
+        font-size: 30px;
+      }
+      .mySwiper {
+        .photo {
+          width: 25vh;
+          height: 29vh;
+          object-fit: cover;
+          border: 3px solid #000;
+        }
+      }
     }
   }
 }

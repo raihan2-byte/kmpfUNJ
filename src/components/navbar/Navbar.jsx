@@ -17,7 +17,7 @@ const navbarContent = [
   },
   {
     display: "Product & Services",
-    path: "/product",
+    path: "/productservice",
     content: [
       { name: "Product & Services", path: "/product" },
       { name: "Rent & Price", path: "/rent" },
@@ -28,13 +28,14 @@ const navbarContent = [
     path: "/berita",
     content: [
       { name: "News", path: "/berita" },
-      { name: "Artikel KMPF", path: "/upload-foto" },
-      { name: "PhotoTalk", path: "/" },
+      { name: "Artikel KMPF", path: "/artikel" },
+      { name: "Karya KMPF", path: "/upload-foto" },
+      { name: "PhotoTalk", path: "/phototalk" },
     ],
   },
   {
     display: "About Us",
-    path: "/",
+    path: "/aboutus",
     content: [],
   },
 ];
@@ -68,7 +69,11 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="buttonDisplay">
-          <Hamburger onToggle={(toggled) => (toggled ? setAddClass("isActive") : setAddClass(""))} />
+          <Hamburger
+            onToggle={(toggled) =>
+              toggled ? setAddClass("isActive") : setAddClass("")
+            }
+          />
         </div>
       </div>
     </div>

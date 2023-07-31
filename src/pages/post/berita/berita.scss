@@ -1,0 +1,30 @@
+.berita-admin {
+  margin: 2rem;
+  background-color: aliceblue;
+  .content {
+    .input-field {
+      margin-top: 10px;
+    }
+
+    .input-field input {
+      width: 600px; /* Lebar input */
+      height: 60px; /* Tinggi input */
+      font-size: 16px; /* Ukuran teks di dalam input */
+      padding: 10px; /* Ruang antara teks dan batas input */
+      border: 1px solid #ccc; /* Gaya garis batas input */
+      border-radius: 5px; /* Gaya sudut border */
+      margin-top: 20px;
+    }
+
+    /* Contoh styling tambahan jika ingin mengubah tampilan ketika input aktif */
+    .input-field input:focus {
+      border-color: #007bff; /* Warna border ketika input aktif */
+      box-shadow: 0 0 5px #007bff; /* Efek bayangan ketika input aktif */
+    }
+  }
+  .action button {
+    margin-top: 20px;
+    width: 100px; /* Lebar input */
+    height: 40px; /* Tinggi input */
+  }
+}

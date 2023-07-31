@@ -1,18 +1,45 @@
 import React from "react";
 import "./login.scss";
+import API from "../../api/API";
 
-const login = () => {
+const Login = () => {
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const user = { email, password };
+    await API.post("/users/login", user)
+      .then((response) => {
+        localStorage.setItem("token", response.data.data.token);
+      })
+      .catch((error) => {
+        // console.log("error->" + error);
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+        alert(message);
+      });
+  };
   return (
     <div class="login-form">
-      <form>
-        <h1>Login</h1>
+      <h1>Login</h1>
+      <form onSubmit={handleSubmit}>
         <div class="content">
           <div class="input-field">
-            <input type="email" placeholder="Email" autocomplete="nope" />
+            <input
+              type="email"
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+              autocomplete="nope"
+            />
           </div>
           <div class="input-field">
             <input
               type="password"
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"
               autocomplete="new-password"
             />
@@ -30,4 +57,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

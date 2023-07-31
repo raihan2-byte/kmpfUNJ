@@ -16,7 +16,8 @@ import { Pagination, Navigation } from "swiper";
 
 import "./header.scss";
 
-const Header = () => {
+const Header = ({ news }) => {
+  console.log(news);
   return (
     <div className="header">
       <div className="header__left">
@@ -25,30 +26,14 @@ const Header = () => {
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Headline Terbaru</h2>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Headline Terbaru</h2>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Headline Terbaru</h2>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Headline Terbaru</h2>
-            </div>
-          </SwiperSlide>
+          {news?.map((data) => (
+            <SwiperSlide>
+              <img src={Headline} alt="text" className="kontoru" />
+              <div className="overlay">
+                <h2>{data.berita_message}</h2>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       <div className="header__right">

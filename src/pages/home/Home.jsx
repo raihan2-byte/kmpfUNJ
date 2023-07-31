@@ -17,10 +17,12 @@ import Footer from "../../components/footer/Footer";
 import API from "../../api/API";
 
 const Home = () => {
+  const [news, setNews] = React.useState([]);
+
   const getAllNews = async () => {
     await API.get("/berita/")
       .then((response) => {
-        console.log(response.data);
+        setNews(response.data.data);
       })
       .catch((error) => {
         console.log(error);
@@ -32,19 +34,26 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Header />
+      <Header news={news} />
       <div className="rental-foto">
         <a href="/berita">
-          <div className="fotografi">
-            <h1>Menyediakan Jasa Fotografi</h1>
-            <div className="book-now">
-              <Button onClick="null">Book Now</Button>
+          <div className="fotografi-parent">
+            <div className="fotografi">
+              <h1>Menyediakan Jasa Fotografi</h1>
+              <div className="book-now">
+                <Button onClick="null">Book Now</Button>
+              </div>
             </div>
           </div>
         </a>
         <a href="/rent">
-          <div className="rental">
-            <h1>Meminjamkan dan Menyewakan Alat Fotografi</h1>
+          <div className="rental-parent">
+            <div className="rental">
+              <h1>Meminjamkan dan Menyewakan Alat Fotografi</h1>
+              <div className="book-now">
+                <Button onClick="null">Book Now</Button>
+              </div>
+            </div>
           </div>
         </a>
         {/* <div className="galery">

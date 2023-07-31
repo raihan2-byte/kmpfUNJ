@@ -4,7 +4,7 @@
   position: relative;
   text-align: center;
   flex: column;
-  font-family: "Courier New", Courier, monospace;
+  // font-family: "Courier New", Courier, monospace;
   h2 {
     margin: 10px;
   }
@@ -91,3 +91,55 @@
 //   width: 100%;
 //   height: 100px; /* Atur tinggi sesuai kebutuhan Anda */
 // }
+
+@media only screen and (max-width: 1110px) {
+}
+
+@media only screen and (max-width: 970px) {
+  .aboutus-parent {
+    // font-family: "Courier New", Courier, monospace;
+    h2 {
+    }
+
+    .aboutus {
+      .mySwiper {
+        //   flex: column;
+        img {
+        }
+      }
+
+      .text-kanan {
+      }
+    }
+
+    .text-aboutus {
+      h3,
+      h4 {
+      }
+    }
+
+    .text-usaha {
+      h3,
+      h4 {
+      }
+    }
+    .detail-usaha {
+    }
+
+    .team {
+      h3 {
+      }
+
+      .team-child {
+        .nama {
+        }
+      }
+
+      img {
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}

@@ -21,6 +21,12 @@ import Newskonten from "../components/newskonten/newskonten";
 import Artikel from "../pages/artikel/artikel";
 import Phototalk from "../pages/phototalk/phototalk";
 import ShortVideo from "../components/shortvideo/shortvideo";
+import CreatePhotoTalk from "../pages/post/phototalk/phototalk";
+import CreateShortVideo from "../pages/post/shortvideo/shortvideo";
+import CreateBarang from "../pages/post/barang/barang";
+import CreateBerita from "../pages/post/berita/berita";
+import CreateArtikel from "../pages/post/artikel/artikel";
+import CreateMerch from "../pages/post/merch/merch";
 
 const Routes = () => {
   return (
@@ -45,6 +51,12 @@ const Routes = () => {
       <Route path="/artikel" element={<Artikel />} />
       <Route path="/phototalk" element={<Phototalk />} />
       <Route path="/short-video" element={<ShortVideo />} />
+      <Route path="/create-phototalk" element={<CreatePhotoTalk />} />
+      <Route path="/create-short-video" element={<CreateShortVideo />} />
+      <Route path="/create-barang" element={<CreateBarang />} />
+      <Route path="/create-berita" element={<CreateBerita />} />
+      <Route path="/create-artikel" element={<CreateArtikel />} />
+      <Route path="/create-merch" element={<CreateMerch />} />
     </Switch>
   );
 };

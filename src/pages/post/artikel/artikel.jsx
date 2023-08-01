@@ -5,27 +5,22 @@ import { TrixEditor } from "react-trix";
 
 const Artikel = () => {
   const [judul, setJudul] = React.useState("");
-  const [deskripsi, setDeskripsi] = React.useState("");
-  const [file, setFile] = React.useState("");
-  const handleEditorReady = (editor) => {
-    // this is a reference back to the editor if you want to
-    // do editing programatically
-  };
+  const [message, setMessage] = React.useState("");
+  const [file, setFile] = React.useState(null);
+  const handleEditorReady = (editor) => {};
   const handleChange = (html, text) => {
-    // html is the new html content
-    // text is the new text content
-    setDeskripsi(text);
+    setMessage(text);
   };
   const changeHandler = (e) => {
     const file = e.target.files[0];
-    setFile(file);
+    setFile(file.name);
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const user = { judul, deskripsi, file };
-    await API.post("/phototalk/", user)
+    const artikel = { judul, message, file };
+    await API.post("/artikel/", artikel, { headers: { Authorization: `Bearer ${localStorage.getItem("token")}`, Accept: "application/json" } })
       .then((response) => {
-        alert();
+        console.log(response);
       })
       .catch((error) => {
         // console.log("error->" + error);

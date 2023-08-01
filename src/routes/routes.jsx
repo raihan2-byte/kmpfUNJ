@@ -27,6 +27,7 @@ import CreateBarang from "../pages/post/barang/barang";
 import CreateBerita from "../pages/post/berita/berita";
 import CreateArtikel from "../pages/post/artikel/artikel";
 import CreateMerch from "../pages/post/merch/merch";
+import ProtectRouter from "../pages/protectRoute/ProtectRouter";
 
 const Routes = () => {
   return (
@@ -37,12 +38,20 @@ const Routes = () => {
       <Route path="/berita" element={<Berita />} />
       <Route path="/rent" element={<Rent />} />
       <Route path="/upload-foto" element={<UploadFoto />} />
-      <Route path="/admin" element={<Dashboard />} />
-      <Route path="/berita-admin" element={<BeritaAdmin />} />
-      <Route path="/barang-admin" element={<BarangAdmin />} />
-      <Route path="/phototalk-admin" element={<PhotoTalkAdmin />} />
-      <Route path="/kmpf-admin" element={<KmpfAdmin />} />
-      <Route path="/merch-admin" element={<MerchAdmin />} />
+      <Route element={<ProtectRouter />}>
+        <Route path="/admin" element={<Dashboard />} />
+        <Route path="/berita-admin" element={<BeritaAdmin />} />
+        <Route path="/barang-admin" element={<BarangAdmin />} />
+        <Route path="/phototalk-admin" element={<PhotoTalkAdmin />} />
+        <Route path="/kmpf-admin" element={<KmpfAdmin />} />
+        <Route path="/merch-admin" element={<MerchAdmin />} />
+        <Route path="/create-phototalk" element={<CreatePhotoTalk />} />
+        <Route path="/create-short-video" element={<CreateShortVideo />} />
+        <Route path="/create-barang" element={<CreateBarang />} />
+        <Route path="/create-berita" element={<CreateBerita />} />
+        <Route path="/create-artikel" element={<CreateArtikel />} />
+        <Route path="/create-merch" element={<CreateMerch />} />
+      </Route>
       <Route path="/login" element={<Login />} />
       <Route path="/spesifik" element={<Spesifik />} />
       <Route path="/aboutus" element={<Aboutus />} />
@@ -51,12 +60,6 @@ const Routes = () => {
       <Route path="/artikel" element={<Artikel />} />
       <Route path="/phototalk" element={<Phototalk />} />
       <Route path="/short-video" element={<ShortVideo />} />
-      <Route path="/create-phototalk" element={<CreatePhotoTalk />} />
-      <Route path="/create-short-video" element={<CreateShortVideo />} />
-      <Route path="/create-barang" element={<CreateBarang />} />
-      <Route path="/create-berita" element={<CreateBerita />} />
-      <Route path="/create-artikel" element={<CreateArtikel />} />
-      <Route path="/create-merch" element={<CreateMerch />} />
     </Switch>
   );
 };

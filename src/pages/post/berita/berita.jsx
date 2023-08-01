@@ -25,7 +25,7 @@ const Berita = () => {
     const user = { judul, deskripsi, file };
     await API.post("/berita/", user, { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } })
       .then((response) => {
-        alert();
+        console.log(response);
       })
       .catch((error) => {
         // console.log("error->" + error);

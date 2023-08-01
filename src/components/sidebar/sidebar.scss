@@ -95,11 +95,19 @@
   transition: width 0.3s ease;
 }
 #sidebar .side-menu li a.logout {
+  all: unset;
   color: red;
+  font-size: 16px;
+  margin-left: 40px;
+  cursor: pointer;
 }
 
 #sidebar .logout {
+  all: unset;
+  color: red;
+  font-size: 16px;
   margin-left: 40px;
+  cursor: pointer;
 }
 
 #sidebar .side-menu li .link:hover {

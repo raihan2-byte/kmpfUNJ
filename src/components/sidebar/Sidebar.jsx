@@ -31,6 +31,10 @@ const sidebarContent = [
 
 const Sidebar = () => {
   const location = useLocation();
+  const logout = () => {
+    localStorage.clear();
+    window.location.href = "/";
+  };
   return (
     <section id="sidebar">
       <a href="/" className="brand">
@@ -41,12 +45,7 @@ const Sidebar = () => {
         {sidebarContent.map((item, index) => {
           return (
             <li key={index}>
-              <Link
-                className={`${
-                  item.path === location.pathname.toString() ? "active" : ""
-                } link`}
-                to={item.path}
-              >
+              <Link className={`${item.path === location.pathname.toString() ? "active" : ""} link`} to={item.path}>
                 <i className="bx bxs-group"></i>
                 <span className="text">{item.display}</span>
               </Link>
@@ -54,10 +53,10 @@ const Sidebar = () => {
           );
         })}
         <li>
-          <a href="/" className="logout">
+          <button onClick={logout} className="logout">
             <i className="bx bxs-log-out-circle"></i>
             <span className="text">Logout</span>
-          </a>
+          </button>
         </li>
       </ul>
     </section>

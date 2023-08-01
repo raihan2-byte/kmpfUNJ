@@ -11,11 +11,7 @@ const barang = () => {
             <input type="nama" placeholder="nama" autocomplete="nope" />
           </div>
           <div class="input-field">
-            <input
-              type="harga"
-              placeholder="harga"
-              autocomplete="new-deskripsi"
-            />
+            <input type="harga" placeholder="harga" autocomplete="new-deskripsi" />
           </div>
           <div class="input-field">
             <input type="file" placeholder="file" autocomplete="nope" />

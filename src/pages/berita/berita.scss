@@ -16,8 +16,8 @@
       // margin-right: auto;
       margin: auto 30px;
       color: black;
-      font-size: 20px;
-      font-weight: 500;
+      font-size: 25px;
+      font-weight: 800;
     }
     .berita-child {
       display: flex;
@@ -105,21 +105,31 @@
       // }
     }
     .news-archieve {
-      // display: flex;
       margin: auto 1rem;
 
-      hr {
-        border-color: black;
-        margin: auto;
-        // position: absolute;
-        // top: 50%;
-        // left: 15%;
-        // right: 10px;
-        // transform: translateY(-50%);
+      h3 {
+        position: relative;
+        font-weight: 800;
+
+        &::after {
+          content: "";
+          position: absolute;
+          margin-left: 20px;
+          top: 50%;
+          // max-width: 800px;
+          width: 86%;
+          height: 2px;
+          background-color: $blackColor;
+
+          @include tablet {
+            width: 80%;
+          }
+
+          @include mobile {
+            width: 78%;
+          }
+        }
       }
-    }
-    News {
-      background-color: white;
     }
   }
   .tambahan {

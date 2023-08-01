@@ -13,7 +13,7 @@ const berita = () => {
       <div className="berita-parent">
         <div className="space">
           <div className="text">
-            <p>Judul dan Headline Berita</p>
+            <h3>Judul dan Headline Berita</h3>
             <p>Tanggal</p>
           </div>
           <div className="berita-child">
@@ -40,7 +40,6 @@ const berita = () => {
           </div>
           <div className="news-archieve">
             <h3>News Archieve</h3>
-            <hr style={{ borderBlockColor: "black" }} />
           </div>
           <News />
           <News />

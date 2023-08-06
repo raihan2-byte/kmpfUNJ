@@ -1,24 +1,29 @@
 @use "../../scss/index" as *;
 
 .short-video-parent {
-  width: 95%;
   margin: 2rem auto;
   .short-video-child {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 30px;
 
-    .konten img {
-      width: 60vh;
-      height: 60vh;
-      border: 2px solid black;
-      border-radius: 10%;
+    .konten {
+      img {
+        background-position: center;
+        background-size: cover;
+        max-width: 500px;
+        width: 100%;
+        height: 500px;
+        border: 2px solid black;
+        border-radius: 10%;
+      }
     }
 
     .teks-video-short {
-      margin-left: -100px;
+      max-width: 500px;
+      width: 100%;
       text-align: justify;
       line-height: 1.5;
-      // width: 50%;
 
       .link-barang {
         margin-top: 10px;

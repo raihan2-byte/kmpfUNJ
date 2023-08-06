@@ -29,7 +29,7 @@ const navbarContent = [
     content: [
       { name: "News", path: "/berita" },
       { name: "Artikel KMPF", path: "/artikel" },
-      { name: "Karya KMPF", path: "/upload-foto" },
+      // { name: "Karya KMPF", path: "/upload-foto" },
       { name: "PhotoTalk", path: "/phototalk" },
     ],
   },

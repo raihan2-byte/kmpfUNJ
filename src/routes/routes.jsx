@@ -6,7 +6,7 @@ import Kelas from "../pages/kelas/kelas";
 import Product from "../pages/product/product";
 import Berita from "../pages/berita/berita";
 import Rent from "../pages/Renting/Rent";
-import UploadFoto from "../pages/upload-foto/uploadfoto";
+// import UploadFoto from "../pages/upload-foto/uploadfoto";
 import Spesifik from "../components/spesifikbarang/spesifikbarang";
 import Dashboard from "../pages/admin/dashboard/dashboard";
 import BeritaAdmin from "../pages/admin/beritaAdmin/berita";
@@ -37,7 +37,7 @@ const Routes = () => {
       <Route path="/product" element={<Product />} />
       <Route path="/berita" element={<Berita />} />
       <Route path="/rent" element={<Rent />} />
-      <Route path="/upload-foto" element={<UploadFoto />} />
+      {/* <Route path="/upload-foto" element={<UploadFoto />} /> */}
       <Route element={<ProtectRouter />}>
         <Route path="/admin" element={<Dashboard />} />
         <Route path="/berita-admin" element={<BeritaAdmin />} />
@@ -59,7 +59,7 @@ const Routes = () => {
       <Route path="/news-konten" element={<Newskonten />} />
       <Route path="/artikel" element={<Artikel />} />
       <Route path="/phototalk" element={<Phototalk />} />
-      <Route path="/short-video" element={<ShortVideo />} />
+      <Route path="/short-video/:id" element={<ShortVideo />} />
     </Switch>
   );
 };

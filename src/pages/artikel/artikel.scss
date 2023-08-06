@@ -21,6 +21,7 @@
         height: 40vh;
         object-fit: cover;
         padding: 8px;
+        filter: brightness(60%);
       }
 
       .overlay {
@@ -60,6 +61,7 @@
 
         .overlay {
           top: 3.5rem;
+          font-size: 14px;
         }
       }
       .our-proker {
@@ -70,8 +72,77 @@
   }
 }
 
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 768px) {
+  .artikel-parent {
+    .judul-artikel {
+    }
+
+    .konten {
+      .sub-artikel {
+      }
+      .konten-jurnalistik {
+        .kontoru {
+        }
+
+        .overlay {
+          top: 5rem;
+          font-size: 10px;
+        }
+      }
+      .our-proker {
+        h3 {
+        }
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
+  .artikel-parent {
+    .judul-artikel {
+    }
+
+    .konten {
+      .sub-artikel {
+      }
+      .konten-jurnalistik {
+        .kontoru {
+        }
+
+        .overlay {
+          top: 7.5rem;
+          font-size: 8px;
+        }
+      }
+      .our-proker {
+        h3 {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .artikel-parent {
+    .judul-artikel {
+    }
+
+    .konten {
+      .sub-artikel {
+      }
+      .konten-jurnalistik {
+        .kontoru {
+        }
+
+        .overlay {
+          top: 7.5rem;
+          font-size: 6px;
+        }
+      }
+      .our-proker {
+        h3 {
+        }
+      }
+    }
+  }
 }

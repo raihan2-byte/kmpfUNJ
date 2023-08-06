@@ -1,23 +1,130 @@
+@use "../../scss/index" as *;
+
 .short-video-parent {
   width: 95%;
   margin: 2rem auto;
   .short-video-child {
     display: flex;
+    justify-content: space-evenly;
 
     .konten img {
-      width: 80vh;
+      width: 60vh;
+      height: 60vh;
       border: 2px solid black;
       border-radius: 10%;
     }
 
     .teks-video-short {
-      margin-left: 40px;
+      margin-left: -100px;
       text-align: justify;
       line-height: 1.5;
-      width: 50%;
+      // width: 50%;
 
       .link-barang {
         margin-top: 10px;
+      }
+    }
+  }
+  // @include tablet {
+  //   .short-video-parent {
+  //     .short-video-child {
+  //       display: flex;
+  //       flex-direction: column;
+  //       .konten img {
+  //         width: 70vh;
+  //       }
+
+  //       .teks-video-short {
+  //         .link-barang {
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+@media screen and (max-width: 910px) {
+  .short-video-parent {
+    .short-video-child {
+      .konten img {
+        width: 70vh;
+      }
+
+      .teks-video-short {
+        .link-barang {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .short-video-parent {
+    .short-video-child {
+      .konten img {
+        width: 65vh;
+      }
+
+      .teks-video-short {
+        font-size: 12px;
+        margin: auto;
+        .link-barang {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .short-video-parent {
+    .short-video-child {
+      .konten img {
+        width: 55vh;
+      }
+
+      .teks-video-short {
+        font-size: 10px;
+        .link-barang {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .short-video-parent {
+    .short-video-child {
+      .konten img {
+        width: 50vh;
+      }
+
+      .teks-video-short {
+        width: 80%;
+        font-size: 9px;
+        .link-barang {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .short-video-parent {
+    .short-video-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .konten img {
+        width: 50vh;
+      }
+
+      .teks-video-short {
+        width: 80%;
+        font-size: 9px;
+        .link-barang {
+        }
       }
     }
   }

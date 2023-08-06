@@ -1,31 +1,43 @@
 import React from "react";
 import "./shortvideo.scss";
-import Headline from "../assets/Headline1.jpg";
+// import Headline from "../assets/Headline1.jpg";
 // import Button from "../button/Button";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import API from "../../api/API";
 
-const shortvideo = () => {
+const Shortvideo = () => {
+  const params = useParams();
+  const [shortvideo, setShortVideo] = React.useState([]);
+  console.log(shortvideo);
+  const getShortVideo = async (id) => {
+    await API.get(`short-video/${id}`)
+      .then((response) => {
+        setShortVideo(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  React.useEffect(() => {
+    getShortVideo(params.id);
+  }, [params.id]);
+
   return (
     <div className="short-video-parent">
       <div className="short-video-child">
         <div className="konten">
-          <img src={Headline} alt="img" />
+          <img src={shortvideo.FileName} alt="img" />
         </div>
         <div className="teks-video-short">
           <div className="judul-video-short">
-            <h3>KMPF UNJ GOES TO MALANG</h3>
+            <h3>{shortvideo.Judul}</h3>
           </div>
           <div className="teks-video-short-child">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
-              animi laudantium doloremque provident adipisci molestias
-              temporibus voluptates reprehenderit delectus quasi odio cumque
-              sunt aliquam illo exercitationem, eum vel itaque deserunt?
-            </p>
+            <p>{shortvideo.Deskripsi}</p>
           </div>
           <div className="link-barang">
             <p>Source : </p>
-            <Link>http://localhost:3000/short-video</Link>
+            <Link>{shortvideo.Source}</Link>
           </div>
         </div>
       </div>
@@ -33,4 +45,4 @@ const shortvideo = () => {
   );
 };
 
-export default shortvideo;
+export default Shortvideo;

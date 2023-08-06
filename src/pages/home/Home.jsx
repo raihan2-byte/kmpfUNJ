@@ -20,7 +20,7 @@ const Home = () => {
   const [news, setNews] = React.useState([]);
 
   const getAllNews = async () => {
-    await API.get("/berita/")
+    await API.get("berita/")
       .then((response) => {
         setNews(response.data.data);
       })

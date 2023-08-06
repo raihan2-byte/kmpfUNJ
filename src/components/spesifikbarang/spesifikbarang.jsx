@@ -54,6 +54,10 @@ const spesifikbarang = () => {
               sunt aliquam illo exercitationem, eum vel itaque deserunt?
             </p>
           </div>
+          <div className="teks-price-spesifik">
+            <h1 className="rupiah">Rp</h1>
+            <h1 className="price">100.000</h1>
+          </div>
           <div className="btn-barang">
             <Button>Book Now</Button>
           </div>

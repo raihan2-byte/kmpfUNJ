@@ -45,7 +45,12 @@ const Sidebar = () => {
         {sidebarContent.map((item, index) => {
           return (
             <li key={index}>
-              <Link className={`${item.path === location.pathname.toString() ? "active" : ""} link`} to={item.path}>
+              <Link
+                className={`${
+                  item.path === location.pathname.toString() ? "active" : ""
+                } link`}
+                to={item.path}
+              >
                 <i className="bx bxs-group"></i>
                 <span className="text">{item.display}</span>
               </Link>

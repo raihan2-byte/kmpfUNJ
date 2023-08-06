@@ -9,8 +9,23 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Headline from "../../components/assets/Headline1.jpg";
 import { Pagination, Navigation } from "swiper";
+import API from "../../api/API";
 
-const phototalk = () => {
+const Phototalk = () => {
+  const [news, setNews] = React.useState([]);
+
+  const getAllNews = async () => {
+    await API.get("berita/")
+      .then((response) => {
+        setNews(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  React.useEffect(() => {
+    getAllNews();
+  }, []);
   return (
     <>
       <Navbar />
@@ -71,4 +86,4 @@ const phototalk = () => {
   );
 };
 
-export default phototalk;
+export default Phototalk;

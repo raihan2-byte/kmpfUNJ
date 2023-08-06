@@ -4,7 +4,7 @@ import "./phototalk.scss";
 import Berita from "../../../components/assets/Headline1.jpg";
 import Sidebar from "../../../components/sidebar/Sidebar";
 
-const phototalk = () => {
+const Phototalk = () => {
   return (
     <div>
       <Sidebar />
@@ -101,4 +101,4 @@ const phototalk = () => {
   );
 };
 
-export default phototalk;
+export default Phototalk;

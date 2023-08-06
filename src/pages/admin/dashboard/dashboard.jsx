@@ -8,14 +8,13 @@ const admin = () => {
   return (
     <div>
       <Sidebar />
-
       <section id="content">
         <main>
           <div class="head-title">
             <div class="left">
               <h1>Admin</h1>
               <ul class="breadcrumb">
-                <li>user</li>
+                <li>User</li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
                 </li>
@@ -49,7 +48,7 @@ const admin = () => {
                     <td>
                       <p>John Doe</p>
                     </td>
-                    <td>
+                    <td className="btn">
                       <Button>Delete</Button>
                       <Button>Update</Button>
                     </td>

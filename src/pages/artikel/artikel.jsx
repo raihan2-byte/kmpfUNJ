@@ -31,6 +31,36 @@ const artikel = () => {
               modules={[Pagination, Navigation]}
               className="mySwiper"
               slidesPerView={3}
+              breakpoints={{
+                270: {
+                  slidesPerView: 1,
+                  spaceBetween: 2,
+                },
+                290: {
+                  slidesPerView: 1,
+                  spaceBetween: 2,
+                },
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 2,
+                },
+                350: {
+                  slidesPerView: 2,
+                  spaceBetween: 2,
+                },
+                500: {
+                  slidesPerView: 2,
+                  spaceBetween: 1,
+                },
+                668: {
+                  slidesPerView: 3,
+                  spaceBetween: 1,
+                },
+                820: {
+                  slidesPerView: 3,
+                  spaceBetween: 1,
+                },
+              }}
               loop={true}
               spaceBetween={10}
             >
@@ -77,6 +107,36 @@ const artikel = () => {
               modules={[Pagination, Navigation]}
               className="mySwiper"
               slidesPerView={3}
+              breakpoints={{
+                270: {
+                  slidesPerView: 1,
+                  spaceBetween: 2,
+                },
+                290: {
+                  slidesPerView: 1,
+                  spaceBetween: 2,
+                },
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 2,
+                },
+                350: {
+                  slidesPerView: 2,
+                  spaceBetween: 2,
+                },
+                500: {
+                  slidesPerView: 2,
+                  spaceBetween: 1,
+                },
+                668: {
+                  slidesPerView: 3,
+                  spaceBetween: 1,
+                },
+                820: {
+                  slidesPerView: 3,
+                  spaceBetween: 1,
+                },
+              }}
               loop={true}
               spaceBetween={10}
             >
@@ -122,6 +182,36 @@ const artikel = () => {
               modules={[Pagination, Navigation]}
               className="mySwiper"
               slidesPerView={3}
+              breakpoints={{
+                270: {
+                  slidesPerView: 1,
+                  spaceBetween: 2,
+                },
+                290: {
+                  slidesPerView: 1,
+                  spaceBetween: 2,
+                },
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 2,
+                },
+                350: {
+                  slidesPerView: 2,
+                  spaceBetween: 2,
+                },
+                500: {
+                  slidesPerView: 2,
+                  spaceBetween: 1,
+                },
+                668: {
+                  slidesPerView: 3,
+                  spaceBetween: 1,
+                },
+                820: {
+                  slidesPerView: 3,
+                  spaceBetween: 1,
+                },
+              }}
               loop={true}
               spaceBetween={10}
             >

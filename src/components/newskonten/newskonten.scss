@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     margin: auto;
-    width: 90%;
+    width: 95%;
 
     .foto-parent {
       margin: auto;
@@ -19,7 +19,7 @@
       }
       .text-konten {
         .text {
-          width: 55%;
+          width: 59%;
           text-align: justify;
         }
       }
@@ -30,7 +30,7 @@
 
         .foto {
           img {
-            width: 110vh;
+            width: 100%;
             height: 70vh;
           }
         }
@@ -99,6 +99,204 @@
         }
         .tags-news {
           font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1110px) {
+}
+
+@media screen and (max-width: 910px) {
+  .news-konten-parent {
+    .news-konten-img {
+      .foto-parent {
+        .judul-konten {
+        }
+        .text-konten {
+          .text {
+            width: 64%;
+          }
+        }
+
+        .foto-konten {
+          .foto {
+            img {
+            }
+          }
+          .news-recomendation {
+            .konten-recomendation {
+              h4 {
+              }
+
+              .konten-recomendation-child {
+                .photo-news {
+                  img {
+                    height: 17vh;
+                  }
+                }
+
+                .text-news {
+                  .judul-news {
+                    h3 {
+                      font-size: 11px;
+                    }
+                  }
+
+                  .tags {
+                    .seperator {
+                    }
+
+                    .tags-spesifik {
+                      font-size: 10px;
+                      .date {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .pembuat {
+          .date,
+          .tags-news {
+          }
+          .tags-news {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news-konten-parent {
+    .news-konten-img {
+      .foto-parent {
+        .judul-konten {
+        }
+        .text-konten {
+          .text {
+            width: 63%;
+          }
+        }
+
+        .foto-konten {
+          .foto {
+            img {
+              width: 90%;
+            }
+          }
+          .news-recomendation {
+            .konten-recomendation {
+              h4 {
+                font-size: 4vh;
+              }
+
+              .konten-recomendation-child {
+                .photo-news {
+                  img {
+                    width: 15vh;
+                    height: 16vh;
+                  }
+                }
+
+                .text-news {
+                  .judul-news {
+                    h3 {
+                      font-size: 9px;
+                    }
+                  }
+
+                  .tags {
+                    .seperator {
+                    }
+
+                    .tags-spesifik {
+                      font-size: 9px;
+                      .date {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .pembuat {
+          .date,
+          .tags-news {
+          }
+          .tags-news {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news-konten-parent {
+    .news-konten-img {
+      .foto-parent {
+        .judul-konten {
+        }
+        .text-konten {
+          .text {
+            width: 63%;
+          }
+        }
+
+        .foto-konten {
+          .foto {
+            img {
+              width: 90%;
+            }
+          }
+          .news-recomendation {
+            .konten-recomendation {
+              h4 {
+                font-size: 4vh;
+              }
+
+              .konten-recomendation-child {
+                .photo-news {
+                  img {
+                    width: 15vh;
+                    height: 13vh;
+                  }
+                }
+
+                .text-news {
+                  .judul-news {
+                    h3 {
+                      font-size: 9px;
+                    }
+                  }
+
+                  .tags {
+                    .seperator {
+                    }
+
+                    .tags-spesifik {
+                      font-size: 9px;
+                      .date {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .pembuat {
+          .date,
+          .tags-news {
+          }
+          .tags-news {
+          }
         }
       }
     }

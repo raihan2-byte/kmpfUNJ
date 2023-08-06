@@ -48,7 +48,7 @@ const kmpf = () => {
                       <p>Mahasiswa UNJ MPLS</p>
                     </td>
                     <td>
-                      <p>Photo Mahasiswa UNJ Yang Sedang Mengikuti MPLS</p>
+                      <p>Photo Mahasiswa UNJ </p>
                     </td>
                     <td>
                       <img src={Berita} alt="text" />
@@ -64,7 +64,7 @@ const kmpf = () => {
                       <p>Mahasiswa UNJ MPLS</p>
                     </td>
                     <td>
-                      <p>Photo Mahasiswa UNJ Yang Sedang Mengikuti MPLS</p>
+                      <p>Photo Mahasiswa UNJ </p>
                     </td>
                     <td>
                       <img src={Berita} alt="text" />
@@ -80,7 +80,7 @@ const kmpf = () => {
                       <p>Mahasiswa UNJ MPLS</p>
                     </td>
                     <td>
-                      <p>Photo Mahasiswa UNJ Yang Sedang Mengikuti MPLS</p>
+                      <p>Photo Mahasiswa UNJ </p>
                     </td>
                     <td>
                       <img src={Berita} alt="text" />

@@ -14,7 +14,7 @@ const barang = () => {
             <div class="left">
               <h1>Admin</h1>
               <ul class="breadcrumb">
-                <li>Berita</li>
+                <li>Barang</li>
                 <li>
                   <i class="bx bx-chevron-right"></i>
                 </li>

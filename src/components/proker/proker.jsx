@@ -17,6 +17,28 @@ const proker = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
         slidesPerView={2}
+        breakpoints={{
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 2,
+          },
+          350: {
+            slidesPerView: 1,
+            spaceBetween: 2,
+          },
+          500: {
+            slidesPerView: 2,
+            spaceBetween: 1,
+          },
+          668: {
+            slidesPerView: 2,
+            spaceBetween: 1,
+          },
+          820: {
+            slidesPerView: 2,
+            spaceBetween: 1,
+          },
+        }}
         loop={true}
         spaceBetween={10}
       >
@@ -29,7 +51,7 @@ const proker = () => {
           </div>
           <div className="konten-proker">
             <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay-bawah">
+            <div className="overlay">
               <h2>Judul dan Headline Berita</h2>
             </div>
           </div>
@@ -43,7 +65,7 @@ const proker = () => {
           </div>
           <div className="konten-proker">
             <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay-bawah">
+            <div className="overlay">
               <h2>Judul dan Headline Berita</h2>
             </div>
           </div>
@@ -57,7 +79,7 @@ const proker = () => {
           </div>
           <div className="konten-proker">
             <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay-bawah">
+            <div className="overlay">
               <h2>Judul dan Headline Berita</h2>
             </div>
           </div>
@@ -71,7 +93,7 @@ const proker = () => {
           </div>
           <div className="konten-proker">
             <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay-bawah">
+            <div className="overlay">
               <h2>Judul dan Headline Berita</h2>
             </div>
           </div>
@@ -85,7 +107,7 @@ const proker = () => {
           </div>
           <div className="konten-proker">
             <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay-bawah">
+            <div className="overlay">
               <h2>Judul dan Headline Berita</h2>
             </div>
           </div>

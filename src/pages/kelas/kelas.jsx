@@ -3,7 +3,7 @@ import "./kelas.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
-import PhotoTalk from "../../components/assets/phototalk.jpg";
+// import PhotoTalk from "../../components/assets/phototalk.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,8 +11,23 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper";
+import API from "../../api/API";
 
-const kelas = () => {
+const Kelas = () => {
+  const [shortvideo, setShortVideo] = React.useState([]);
+  console.log(shortvideo);
+  const getAllShortVideo = async () => {
+    await API.get("short-video/")
+      .then((response) => {
+        setShortVideo(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  React.useEffect(() => {
+    getAllShortVideo();
+  }, []);
   return (
     <>
       <Navbar />
@@ -78,36 +93,13 @@ const kelas = () => {
             modules={[Pagination]}
             className="mySwiper"
           >
-            <SwiperSlide>
-              <a href="/short-video">
-                <img src={PhotoTalk} alt="" className="photo" />
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="/short-video">
-                <img src={PhotoTalk} alt="" className="photo" />
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="/short-video">
-                <img src={PhotoTalk} alt="" className="photo" />
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="/short-video">
-                <img src={PhotoTalk} alt="" className="photo" />
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="/short-video">
-                <img src={PhotoTalk} alt="" className="photo" />
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="/short-video">
-                <img src={PhotoTalk} alt="" className="photo" />
-              </a>
-            </SwiperSlide>
+            {shortvideo?.map((item) => (
+              <SwiperSlide>
+                <a href={`/short-video/${item.ID}`}>
+                  <img src={item.FileName} alt="" className="photo" />
+                </a>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
@@ -116,4 +108,4 @@ const kelas = () => {
   );
 };
 
-export default kelas;
+export default Kelas;

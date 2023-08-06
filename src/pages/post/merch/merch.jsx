@@ -3,22 +3,37 @@ import "./merch.scss";
 import API from "../../../api/API";
 
 const Merch = () => {
-  const [nama, setNama] = React.useState("");
-  const [harga, setHarga] = React.useState("");
-  const [file, setFile] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [price, setPrice] = React.useState("");
+  const [file, setFile] = React.useState(null);
+
+  const changeHandler = (e) => {
+    const file = e.target.files[0];
+    setFile(file);
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const user = { nama, harga, file };
-    await API.post("/merch/", user).catch((error) => {
-      // console.log("error->" + error);
-      const message =
-        (error.response &&
-          error.response.data &&
-          error.response.data.message) ||
-        error.message ||
-        error.toString();
-      alert(message);
-    });
+    const merch = { name, price, file };
+    await API.post("merch/", merch, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        Accept: "application/json",
+        "Content-Type": "multipart/form-data",
+      },
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        // console.log("error->" + error);
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+        alert(message);
+      });
   };
   return (
     <div className="merch-admin">
@@ -28,7 +43,7 @@ const Merch = () => {
           <div class="input-field">
             <input
               type="Nama"
-              onChange={(e) => setNama(e.target.value)}
+              onChange={(e) => setName(e.target.value)}
               placeholder="Nama"
               autocomplete="nope"
             />
@@ -36,7 +51,7 @@ const Merch = () => {
           <div class="input-field">
             <input
               type="Harga"
-              onChange={(e) => setHarga(e.target.value)}
+              onChange={(e) => setPrice(e.target.value)}
               placeholder="Harga"
               autocomplete="new-deskripsi"
             />
@@ -44,7 +59,7 @@ const Merch = () => {
           <div class="input-field">
             <input
               type="file"
-              onChange={(e) => setFile(e.target.value)}
+              onChange={changeHandler}
               placeholder="file"
               autocomplete="nope"
             />

@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Headline from "../../components/assets/Headline1.jpg";
+// import Headline from "../../components/assets/Headline1.jpg";
 
 import Proker from "../../components/assets/proker-terbaru.JPG";
 import Karya from "../../components/assets/karya-terbaru.jpg";
@@ -27,8 +27,8 @@ const Header = ({ news }) => {
           className="mySwiper"
         >
           {news?.map((data) => (
-            <SwiperSlide>
-              <img src={Headline} alt="text" className="kontoru" />
+            <SwiperSlide key={data.id}>
+              <img src={data.file_name} alt="text" className="kontoru" />
               <div className="overlay">
                 <h2>{data.berita_message}</h2>
               </div>

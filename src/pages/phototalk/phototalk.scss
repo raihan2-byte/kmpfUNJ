@@ -12,7 +12,7 @@
       text-align: justify;
       width: 70%;
       margin: auto;
-      font-size: 20px;
+      font-size: 30px;
       margin-bottom: 3rem;
     }
   }
@@ -41,7 +41,7 @@
           left: 25%;
           width: 50%;
           line-height: 1;
-          font-size: 3rem;
+          font-size: 3.5rem;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -53,7 +53,7 @@
   }
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1110px) {
   .phototalk-parent {
     .phototalk-teks {
       h3 {
@@ -63,25 +63,44 @@
     }
     .phototalk-konten {
       .section {
-        .swiper-button-prev,
-        .swiper-button-next {
-        }
-
         /* Untuk mengubah warna panah navigasi saat di hover */
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
-        }
+
         .konten {
           width: 88%;
           .kontoru {
           }
           .overlay {
+            font-size: 40px;
           }
         }
       }
     }
   }
 }
+
+// @media screen and (max-width: 970px) {
+//   .phototalk-parent {
+//     .phototalk-teks {
+//       h3 {
+//       }
+//       p {
+//       }
+//     }
+//     .phototalk-konten {
+//       .section {
+//         /* Untuk mengubah warna panah navigasi saat di hover */
+
+//         .konten {
+//           width: 88%;
+//           .kontoru {
+//           }
+//           .overlay {
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 @media screen and (max-width: 768px) {
   .phototalk-parent {
@@ -93,20 +112,106 @@
     }
     .phototalk-konten {
       .section {
-        .swiper-button-prev,
-        .swiper-button-next {
-        }
-
-        /* Untuk mengubah warna panah navigasi saat di hover */
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
-        }
         .konten {
           width: 82%;
           .kontoru {
           }
           .overlay {
-            font-size: 2.3rem;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .phototalk-parent {
+    .phototalk-teks {
+      h3 {
+      }
+      p {
+      }
+    }
+    .phototalk-konten {
+      .section {
+        .konten {
+          width: 82%;
+          .kontoru {
+          }
+          .overlay {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .phototalk-parent {
+    .phototalk-teks {
+      h3 {
+      }
+      p {
+      }
+    }
+    .phototalk-konten {
+      .section {
+        .konten {
+          .kontoru {
+          }
+          .overlay {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .phototalk-parent {
+    .phototalk-teks {
+      h3 {
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+    .phototalk-konten {
+      .section {
+        .konten {
+          width: 70%;
+          .kontoru {
+            width: 100%;
+          }
+          .overlay {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .phototalk-parent {
+    .phototalk-teks {
+      h3 {
+      }
+      p {
+      }
+    }
+    .phototalk-konten {
+      .section {
+        .konten {
+          width: 70%;
+          .kontoru {
+            width: 100%;
+          }
+          .overlay {
+            font-size: 14px;
           }
         }
       }

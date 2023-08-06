@@ -13,18 +13,29 @@ const Artikel = () => {
   };
   const changeHandler = (e) => {
     const file = e.target.files[0];
-    setFile(file.name);
+    setFile(file);
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
     const artikel = { judul, message, file };
-    await API.post("/artikel/", artikel, { headers: { Authorization: `Bearer ${localStorage.getItem("token")}`, Accept: "application/json" } })
+    await API.post("/artikel/", artikel, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        Accept: "application/json",
+        "Content-Type": "multipart/form-data",
+      },
+    })
       .then((response) => {
         console.log(response);
       })
       .catch((error) => {
         // console.log("error->" + error);
-        const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
         alert(message);
       });
   };
@@ -34,13 +45,28 @@ const Artikel = () => {
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         <div class="content">
           <div class="input-field">
-            <input type="Judul" onChange={(e) => setJudul(e.target.value)} placeholder="judul" autocomplete="nope" />
+            <input
+              type="Judul"
+              onChange={(e) => setJudul(e.target.value)}
+              placeholder="judul"
+              autocomplete="nope"
+            />
           </div>
           <div class="input-field">
-            <input type="file" onChange={changeHandler} placeholder="file" autocomplete="nope" />
+            <input
+              type="file"
+              onChange={changeHandler}
+              placeholder="file"
+              autocomplete="nope"
+            />
           </div>
           <div className="input-field">
-            <TrixEditor className="custom-css-class" placeholder="deskripsi" onChange={handleChange} onEditorReady={handleEditorReady} />
+            <TrixEditor
+              className="custom-css-class"
+              placeholder="deskripsi"
+              onChange={handleChange}
+              onEditorReady={handleEditorReady}
+            />
           </div>
         </div>
         <div class="action">

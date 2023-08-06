@@ -21,16 +21,12 @@ const Header = ({ news }) => {
   return (
     <div className="header">
       <div className="header__left">
-        <Swiper
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
+        <Swiper navigation={true} modules={[Pagination, Navigation]} className="mySwiper">
           {news?.map((data) => (
             <SwiperSlide key={data.id}>
               <img src={data.file_name} alt="text" className="kontoru" />
               <div className="overlay">
-                <h2>{data.berita_message}</h2>
+                <h2>{data.judul}</h2>
               </div>
             </SwiperSlide>
           ))}

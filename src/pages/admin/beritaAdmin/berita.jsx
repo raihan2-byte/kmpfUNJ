@@ -1,14 +1,30 @@
 import React from "react";
 import "./berita.scss";
 import Button from "../../../components/button/Button";
-import Berita from "../../../components/assets/Headline1.jpg";
 import Sidebar from "../../../components/sidebar/Sidebar";
+import API from "../../../api/API";
+import SweatAlert from "../../../sweetaleet/SweetAlert";
 
-const user = () => {
+const Berita = () => {
+  const [berita, setBerita] = React.useState([]);
+  console.log(berita);
+  const getAllNews = async () => {
+    await API.get("/berita/")
+      .then((response) => {
+        setBerita(response.data.data);
+      })
+      .catch((error) => {
+        const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
+        SweatAlert(message, "warning");
+      });
+  };
+  React.useEffect(() => {
+    getAllNews();
+  }, []);
+
   return (
     <div>
       <Sidebar />
-
       <section id="content">
         <main>
           <div class="head-title">
@@ -37,51 +53,26 @@ const user = () => {
               <table>
                 <thead>
                   <tr>
-                    <th>Headline Berita</th>
+                    <th>Headline berita</th>
                     <th>Photo</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <p>Headline berita UNJ</p>
-                    </td>
-                    <td>
-                      <img src={Berita} alt="text" />
-                    </td>
-                    <td>
-                      <Button>Create</Button>
-                      <Button>Delete</Button>
-                      <Button>Get</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>Headline berita UNJ</p>
-                    </td>
-                    <td>
-                      <img src={Berita} alt="text" />
-                    </td>
-                    <td>
-                      <Button>Create</Button>
-                      <Button>Delete</Button>
-                      <Button>Get</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>Headline berita UNJ</p>
-                    </td>
-                    <td>
-                      <img src={Berita} alt="text" />
-                    </td>
-                    <td>
-                      <Button>Create</Button>
-                      <Button>Delete</Button>
-                      <Button>Get</Button>
-                    </td>
-                  </tr>
+                  {berita?.map((item) => (
+                    <tr key={item.id}>
+                      <td>
+                        <p>{item.judul}</p>
+                      </td>
+                      <td>
+                        <img src={item.file_name} alt="text" />
+                      </td>
+                      <td>
+                        <Button>Delete</Button>
+                        <Button>Get</Button>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -92,4 +83,4 @@ const user = () => {
   );
 };
 
-export default user;
+export default Berita;

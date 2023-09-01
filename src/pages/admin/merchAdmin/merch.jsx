@@ -1,9 +1,30 @@
 import React from "react";
 import Button from "../../../components/button/Button";
-import Berita from "../../../components/assets/Headline1.jpg";
 import Sidebar from "../../../components/sidebar/Sidebar";
+import SweatAlert from "../../../sweetaleet/SweetAlert";
+import API from "../../../api/API";
 
-const merch = () => {
+const Merch = () => {
+  const [merch, setMerch] = React.useState([]);
+  console.log(merch);
+  const getAllMerch = async () => {
+    await API.get("/merch/")
+      .then((response) => {
+        setMerch(response.data.data);
+      })
+      .catch((error) => {
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+        SweatAlert(message, "warning");
+      });
+  };
+  React.useEffect(() => {
+    getAllMerch();
+  }, []);
   return (
     <div>
       <Sidebar />
@@ -22,6 +43,13 @@ const merch = () => {
                   <a class="active" href="/">
                     Home
                   </a>
+                </li>
+                <li>
+                  <Button
+                    onClick={() => (window.location.href = "/create-merch")}
+                  >
+                    Create
+                  </Button>
                 </li>
               </ul>
             </div>
@@ -43,54 +71,24 @@ const merch = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <p>Baju</p>
-                    </td>
-                    <td>
-                      <p>100.000</p>
-                    </td>
-                    <td>
-                      <img src={Berita} alt="text" />
-                    </td>
-                    <td>
-                      <Button>Create</Button>
-                      <Button>Delete</Button>
-                      <Button>Get</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>Baju</p>
-                    </td>
-                    <td>
-                      <p>100.000</p>
-                    </td>
-                    <td>
-                      <img src={Berita} alt="text" />
-                    </td>
-                    <td>
-                      <Button>Create</Button>
-                      <Button>Delete</Button>
-                      <Button>Get</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>Baju</p>
-                    </td>
-                    <td>
-                      <p>100.000</p>
-                    </td>
-                    <td>
-                      <img src={Berita} alt="text" />
-                    </td>
-                    <td>
-                      <Button>Create</Button>
-                      <Button>Delete</Button>
-                      <Button>Get</Button>
-                    </td>
-                  </tr>
+                  {merch?.map((item) => (
+                    <tr key={item.ID}>
+                      <td>
+                        <p>{item.Name}</p>
+                      </td>
+                      <td>
+                        <p>100.000</p>
+                      </td>
+                      <td>
+                        <img src={item.FileName} alt="text" />
+                      </td>
+                      <td>
+                        <Button>Create</Button>
+                        <Button>Delete</Button>
+                        <Button>Get</Button>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -101,4 +99,4 @@ const merch = () => {
   );
 };
 
-export default merch;
+export default Merch;

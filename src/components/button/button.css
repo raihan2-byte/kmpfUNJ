@@ -1,0 +1,17 @@
+button {
+  cursor: pointer;
+}
+
+.btn {
+  border: 4px solid transparent;
+  background-color: #705333;
+  color: #f4f4f4;
+  padding: 0 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  position: relative;
+}
+.btn:hover {
+  background-color: #a67843;
+}/*# sourceMappingURL=button.css.map */

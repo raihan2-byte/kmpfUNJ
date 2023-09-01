@@ -21,20 +21,10 @@ import PersonalDev from "../../components/assets/Personnel-Developement_.jpg";
 import PaD from "../../components/assets/Photography-Developement.jpg";
 import PaM from "../../components/assets/ProductandMerchandise_.jpg";
 import Sekre from "../../components/assets/SekretarisUmum.jpg";
+import PBR from "../../components/assets/Icha.jpg";
 // import Ketua from "../../components/assets/Ketua-Organisasi.jpg";
 
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-
 const aboutus = () => {
-  const mapStyles = {
-    height: "400px",
-    width: "100%",
-  };
-
-  const location = {
-    lat: -6.2088,
-    lng: 106.8456,
-  };
   return (
     <>
       <Navbar />
@@ -63,6 +53,16 @@ const aboutus = () => {
                         kefotografian mahasiswa di lingkungan Universitas Negeri
                         Jakarta.
                       </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className="slide">
+                  <div className="tes">
+                    <div className="foto-about">
+                      <img src={AboutUs1} alt="text" />
+                    </div>
+                    <div className="teks-about">
+                      <h3>KMPF UNJ</h3>
                       <p>
                         KMPF UNJ didirikan tanggal 8 November 1980, oleh 8
                         mahasiswa dari berbagai disiplin ilmu, yang pada saat
@@ -243,7 +243,7 @@ const aboutus = () => {
             </div>
             <div className="bagus">
               <div className="bagus-child">
-                <img src={Ketua} alt="kamera" />
+                <img src={PBR} alt="kamera" />
                 {/* ga ada fotonya */}
               </div>
               <div className="nama">Hairunnisa N</div>
@@ -258,7 +258,7 @@ const aboutus = () => {
             </div>
             <div className="bagus">
               <div className="bagus-child">
-                <img src={PD} alt="kamera" />
+                <img src={PersonalDev} alt="kamera" />
                 {/* ga ada fotonya */}
               </div>
               <div className="nama">Fiorina</div>
@@ -274,15 +274,17 @@ const aboutus = () => {
           </div>
         </div>
         <div className="maps">
-          <LoadScript googleMapsApiKey="YOUR_API_KEY">
-            <GoogleMap
-              mapContainerStyle={mapStyles}
-              center={location}
-              zoom={15}
-            >
-              <Marker position={location} />
-            </GoogleMap>
-          </LoadScript>
+          <iframe
+            className="maps-konten"
+            title="rges"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5328555632914!2d106.8793362!3d-6.193198100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f4ed1e967ac3%3A0x704ee641c7bd58e8!2sGedung%20G.%20Unit%20Kegiatan%20Mahasiswa%2C%20Universitas%20Negeri%20Jakarta!5e0!3m2!1sid!2sid!4v1691387663920!5m2!1sid!2sid"
+            width="600"
+            height="450"
+            style={{ border: "0" }}
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
       <Footer />

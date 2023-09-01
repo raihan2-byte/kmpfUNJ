@@ -8,9 +8,9 @@ const producservice = () => {
   return (
     <div className="product-service">
       <>
-        <Navbar />
+        {/* <Navbar />
         <Products />
-        <Rent />
+        <Rent /> */}
       </>
     </div>
   );

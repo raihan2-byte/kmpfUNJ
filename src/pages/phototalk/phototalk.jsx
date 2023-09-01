@@ -12,19 +12,19 @@ import { Pagination, Navigation } from "swiper";
 import API from "../../api/API";
 
 const Phototalk = () => {
-  const [news, setNews] = React.useState([]);
-
-  const getAllNews = async () => {
-    await API.get("berita/")
+  const [phototalk, setPhototalk] = React.useState([]);
+  console.log(phototalk);
+  const getAllPhototalk = async () => {
+    await API.get("phototalk/")
       .then((response) => {
-        setNews(response.data.data);
+        setPhototalk(response.data.data);
       })
       .catch((error) => {
         console.log(error);
       });
   };
   React.useEffect(() => {
-    getAllNews();
+    getAllPhototalk();
   }, []);
   return (
     <>
@@ -45,38 +45,16 @@ const Phototalk = () => {
               modules={[Pagination, Navigation]}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <div className="konten">
-                  <img src={Headline} alt="text" className="kontoru" />
-                  <div className="overlay">
-                    <h2>Headline Terbaru</h2>
+              {phototalk?.map((item) => (
+                <SwiperSlide>
+                  <div className="konten">
+                    <img src={item.FileName} alt="text" className="kontoru" />
+                    <div className="overlay">
+                      <h2>{item.Judul}</h2>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="konten">
-                  <img src={Headline} alt="text" className="kontoru" />
-                  <div className="overlay">
-                    <h2>Headline Terbaru</h2>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="konten">
-                  <img src={Headline} alt="text" className="kontoru" />
-                  <div className="overlay">
-                    <h2>Headline Terbaru</h2>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="konten">
-                  <img src={Headline} alt="text" className="kontoru" />
-                  <div className="overlay">
-                    <h2>Headline Terbaru</h2>
-                  </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>

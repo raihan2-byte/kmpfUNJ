@@ -1,0 +1,115 @@
+.sub-our-proker {
+  text-align: left;
+}
+
+.konten-our-proker .konten-proker {
+  width: 97%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.konten-our-proker .konten-proker a {
+  width: 100%;
+  position: relative;
+}
+.konten-our-proker .konten-proker a .kontoru {
+  filter: brightness(65%);
+  width: 100%;
+  height: 50vh;
+  -o-object-fit: fill;
+     object-fit: fill;
+  padding-top: 20px;
+}
+.konten-our-proker .konten-proker a .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 1;
+  height: 50vh;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Atur warna teks */
+  text-align: left;
+  max-width: 300px;
+  width: 100%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1110px) {
+  .konten-our-proker .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 1;
+    height: 50vh;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Atur warna teks */
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .konten-our-proker .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 1;
+    height: 50vh;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Atur warna teks */
+    text-align: left;
+  }
+  .konten-our-proker .overlay-bawah {
+    top: 27.4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .konten-our-proker .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 1;
+    height: 50vh;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Atur warna teks */
+    text-align: left;
+  }
+  .konten-our-proker .overlay-bawah {
+    top: 35.5rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .konten-our-proker .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 1;
+    height: 50vh;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Atur warna teks */
+    text-align: left;
+  }
+  .konten-our-proker .overlay-bawah {
+    top: 35.5rem;
+  }
+}/*# sourceMappingURL=proker.css.map */

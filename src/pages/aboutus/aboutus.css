@@ -1,0 +1,258 @@
+.aboutus-parent {
+  background-color: antiquewhite;
+  margin: 6rem 10px;
+  position: relative;
+  text-align: center;
+  flex: column;
+  padding: 10px;
+}
+.aboutus-parent h2 {
+  text-decoration: underline;
+  margin: 10px;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 40px;
+}
+.aboutus-parent .aboutus {
+  width: 100%;
+  margin: auto;
+}
+.aboutus-parent .aboutus .mySwiper {
+  width: 100%;
+}
+.aboutus-parent .aboutus .mySwiper .slide {
+  text-align: justify;
+  display: flex;
+}
+.aboutus-parent .aboutus .mySwiper .slide .tes {
+  display: flex;
+}
+.aboutus-parent .aboutus .mySwiper .slide .tes .foto-about {
+  width: 50%;
+  margin: auto;
+}
+.aboutus-parent .aboutus .mySwiper .slide .tes .foto-about img {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 10%;
+}
+.aboutus-parent .aboutus .mySwiper .slide .tes .teks-about {
+  width: 50%;
+  margin: auto;
+  padding-right: 30px;
+  padding-left: 20px;
+}
+.aboutus-parent .aboutus .mySwiper .slide .tes .teks-about h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.aboutus-parent .aboutus .mySwiper .slide .tes .teks-about p {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.aboutus-parent .text-aboutus {
+  text-align: left;
+  font-size: 25px;
+  margin: 0 20px;
+  width: 90%;
+  position: relative;
+}
+.aboutus-parent .text-aboutus h3 {
+  letter-spacing: 5px;
+}
+.aboutus-parent .text-aboutus h3,
+.aboutus-parent .text-aboutus h4 {
+  padding-top: 10px;
+  margin-bottom: 5px;
+}
+.aboutus-parent .text-usaha {
+  text-align: left;
+  font-size: 25px;
+  margin: 20px 20px;
+  width: 90%;
+  position: relative;
+}
+.aboutus-parent .text-usaha h3,
+.aboutus-parent .text-usaha h4 {
+  margin-bottom: 5px;
+}
+.aboutus-parent .detail-usaha {
+  margin-left: 15px;
+}
+.aboutus-parent .team {
+  margin: 0.7rem 10px;
+}
+.aboutus-parent .team h3 {
+  font-size: 30px;
+}
+.aboutus-parent .team .team-child {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+}
+.aboutus-parent .team .team-child .nama {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.aboutus-parent .team img {
+  margin-top: 10px;
+  width: 40%;
+  border-radius: 10%;
+}
+.aboutus-parent .maps {
+  margin-top: 3rem;
+  width: 100%;
+}
+.aboutus-parent .maps .maps-konten {
+  width: 95%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1110px) {
+  .aboutus-parent .aboutus .mySwiper .slide .tes .teks-about p {
+    font-size: 16.5px;
+  }
+  .aboutus-parent .text-aboutus {
+    font-size: 20px;
+  }
+  .aboutus-parent .text-usaha {
+    font-size: 20px;
+  }
+  .aboutus-parent .team h3 {
+    font-size: 20px;
+  }
+  .aboutus-parent .team .team-child .nama {
+    font-size: 15px;
+  }
+  .aboutus-parent .team .team-child .jabatan {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 910px) {
+  .aboutus-parent .aboutus .mySwiper .slide .tes .teks-about p {
+    font-size: 14.5px;
+  }
+  .aboutus-parent .text-aboutus {
+    font-size: 18px;
+  }
+  .aboutus-parent .text-usaha {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 790px) {
+  .aboutus-parent .aboutus .mySwiper .slide .tes .teks-about p {
+    font-size: 11.5px;
+  }
+  .aboutus-parent .text-aboutus {
+    font-size: 15px;
+  }
+  .aboutus-parent .text-usaha {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .aboutus-parent .aboutus .mySwiper .slide .tes .teks-about p {
+    font-size: 9.5px;
+  }
+  .aboutus-parent .text-aboutus {
+    font-size: 13px;
+  }
+  .aboutus-parent .text-usaha {
+    font-size: 13px;
+  }
+  .aboutus-parent .team h3 {
+    font-size: 17px;
+  }
+  .aboutus-parent .team .team-child .nama {
+    font-size: 12px;
+  }
+  .aboutus-parent .team .team-child .jabatan {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .aboutus-parent .aboutus .mySwiper .slide .tes .teks-about p {
+    font-size: 7.5px;
+  }
+  .aboutus-parent .text-aboutus {
+    font-size: 11px;
+  }
+  .aboutus-parent .text-usaha {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 475px) {
+  .aboutus-parent h2 {
+    font-size: 25px;
+  }
+  .aboutus-parent .aboutus .mySwiper .slide .tes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutus-parent .aboutus .mySwiper .slide .tes .foto-about img {
+    width: 100%;
+  }
+  .aboutus-parent .aboutus .mySwiper .slide .tes .teks-about {
+    width: 75%;
+    margin-left: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .aboutus-parent .aboutus .mySwiper .slide .tes .teks-about h3 {
+    text-align: center;
+    margin-left: 10px;
+  }
+  .aboutus-parent .aboutus .mySwiper .slide .tes .teks-about p {
+    font-size: 9px;
+  }
+  .aboutus-parent .text-aboutus {
+    font-size: 9px;
+  }
+  .aboutus-parent .text-usaha {
+    font-size: 9px;
+  }
+  .aboutus-parent .team h3 {
+    font-size: 15px;
+  }
+  .aboutus-parent .team .team-child .nama {
+    font-size: 10px;
+  }
+  .aboutus-parent .team .team-child .jabatan {
+    font-size: 9px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .aboutus-parent h2 {
+    font-size: 20px;
+  }
+  .aboutus-parent .aboutus .mySwiper .slide .tes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutus-parent .aboutus .mySwiper .slide .tes .teks-about p {
+    font-size: 8px;
+  }
+  .aboutus-parent .text-aboutus {
+    font-size: 9px;
+  }
+  .aboutus-parent .text-usaha {
+    font-size: 9px;
+  }
+  .aboutus-parent .team h3 {
+    font-size: 13px;
+  }
+  .aboutus-parent .team .team-child .nama {
+    font-size: 8px;
+  }
+  .aboutus-parent .team .team-child .jabatan {
+    font-size: 7px;
+  }
+}/*# sourceMappingURL=aboutus.css.map */

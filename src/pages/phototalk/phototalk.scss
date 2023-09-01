@@ -28,25 +28,31 @@
       .swiper-button-next:hover {
         color: #00ff00; /* Ganti dengan warna yang Anda inginkan */
       }
-      .konten {
-        width: 93%;
-        margin: auto;
-        .kontoru {
-          width: 100%;
-          border-radius: 10%;
-        }
-        .overlay {
-          position: absolute;
-          top: 4rem;
-          left: 25%;
-          width: 50%;
-          line-height: 1;
-          font-size: 3.5rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: white; /* Atur warna teks */
-          text-align: center;
+
+      .mySwiper {
+        width: 100%;
+        .konten {
+          .kontoru {
+            // position: relative;
+            margin: auto;
+            width: 100%;
+            padding: 30px;
+            height: 110vh;
+            border-radius: 10%;
+          }
+          .overlay {
+            position: absolute;
+            top: 4rem;
+            left: 25%;
+            width: 50%;
+            line-height: 1;
+            font-size: 3.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white; /* Atur warna teks */
+            text-align: center;
+          }
         }
       }
     }
@@ -66,7 +72,6 @@
         /* Untuk mengubah warna panah navigasi saat di hover */
 
         .konten {
-          width: 88%;
           .kontoru {
           }
           .overlay {
@@ -91,7 +96,7 @@
 //         /* Untuk mengubah warna panah navigasi saat di hover */
 
 //         .konten {
-//           width: 88%;
+//  8%;
 //           .kontoru {
 //           }
 //           .overlay {
@@ -113,7 +118,6 @@
     .phototalk-konten {
       .section {
         .konten {
-          width: 82%;
           .kontoru {
           }
           .overlay {
@@ -136,7 +140,6 @@
     .phototalk-konten {
       .section {
         .konten {
-          width: 82%;
           .kontoru {
           }
           .overlay {

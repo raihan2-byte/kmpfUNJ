@@ -4,6 +4,7 @@ import Button from "../../../components/button/Button";
 import Sidebar from "../../../components/sidebar/Sidebar";
 import API from "../../../api/API";
 import SweatAlert from "../../../sweetaleet/SweetAlert";
+import { MdDelete } from "react-icons/md";
 
 const Berita = () => {
   const [berita, setBerita] = React.useState([]);
@@ -14,7 +15,12 @@ const Berita = () => {
         setBerita(response.data.data);
       })
       .catch((error) => {
-        const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
         SweatAlert(message, "warning");
       });
   };
@@ -25,35 +31,40 @@ const Berita = () => {
   return (
     <div>
       <Sidebar />
-      <section id="content">
+      <section id="test">
         <main>
-          <div class="head-title">
-            <div class="left">
+          <div className="head-title">
+            <div className="left">
               <h1>Admin</h1>
-              <ul class="breadcrumb">
+              <ul className="breadcrumb">
                 <li>Berita</li>
                 <li>
-                  <i class="bx bx-chevron-right"></i>
+                  <i className="bx bx-chevron-right"></i>
                 </li>
                 <li>
-                  <a class="active" href="/">
+                  <a className="active" href="/">
                     Home
                   </a>
+                </li>
+                <li>
+                  <Button
+                    onClick={() => (window.location.href = "/create-berita")}
+                  >
+                    Create
+                  </Button>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="table-data">
-            <div class="order">
-              <div class="head">
+          <div className="table-data">
+            <div className="order">
+              <div className="head">
                 <h3>List Berita</h3>
-                <i class="bx bx-search"></i>
-                <i class="bx bx-filter"></i>
               </div>
               <table>
                 <thead>
                   <tr>
-                    <th>Headline berita</th>
+                    <th>Judul Berita</th>
                     <th>Photo</th>
                     <th>Action</th>
                   </tr>
@@ -68,7 +79,9 @@ const Berita = () => {
                         <img src={item.file_name} alt="text" />
                       </td>
                       <td>
-                        <Button>Delete</Button>
+                        <Button>
+                          <MdDelete />
+                        </Button>
                         <Button>Get</Button>
                       </td>
                     </tr>

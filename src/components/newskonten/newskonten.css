@@ -1,0 +1,219 @@
+.news-konten-parent {
+  margin-top: 7rem;
+}
+.news-konten-parent .news-konten-img {
+  margin-top: 30px;
+  margin: auto;
+  width: 95%;
+}
+.news-konten-parent .news-konten-img .foto-parent {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.news-konten-parent .news-konten-img .foto-parent .judul-konten {
+  width: 100%;
+  font-size: 7vh;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.news-konten-parent .news-konten-img .foto-parent .text-konten {
+  font-size: 18px;
+}
+.news-konten-parent .news-konten-img .foto-parent .text-konten .text {
+  width: 100%;
+  text-align: justify;
+  font-size: 18px;
+}
+.news-konten-parent .news-konten-img .foto-parent .foto-konten {
+  display: flex;
+  justify-content: space-between;
+}
+.news-konten-parent .news-konten-img .foto-parent .foto-konten .kiri {
+  width: 70%;
+}
+.news-konten-parent .news-konten-img .foto-parent .foto-konten .foto img {
+  border-radius: 10%;
+  width: 100%;
+  height: 90vh;
+}
+.news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation {
+  width: 30%;
+  margin-left: 20px;
+}
+.news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation {
+  margin-top: 10px;
+  margin-left: auto;
+}
+.news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation h4 {
+  font-size: 5vh;
+}
+.news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child {
+  display: flex;
+  margin-top: 10px;
+}
+.news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .photo-news img {
+  width: 90%;
+  height: 13vh;
+  border-radius: 10px;
+}
+.news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .text-news {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-left: 5px;
+}
+.news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .text-news .judul-news h3 {
+  font-size: 15px;
+}
+.news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .text-news .tags .seperator {
+  border-top: 1px solid black;
+  margin-top: 10px;
+}
+.news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .text-news .tags .tags-spesifik {
+  display: flex;
+}
+.news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .text-news .tags .tags-spesifik .date {
+  margin-left: 10px;
+}
+.news-konten-parent .news-konten-img .foto-parent .pembuat {
+  display: flex;
+}
+.news-konten-parent .news-konten-img .foto-parent .pembuat .date,
+.news-konten-parent .news-konten-img .foto-parent .pembuat .tags-news {
+  margin-left: 5px;
+}
+@media screen and (max-width: 920px) {
+  .news-konten-parent .news-konten-img .foto-parent .judul-konten {
+    font-size: 40px;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .text-konten .text {
+    width: 100%;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .kiri {
+    width: 100%;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .foto img {
+    width: 100%;
+    height: 70vh;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation {
+    width: 100%;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation h4 {
+    font-size: 2.5vh;
+    margin-left: 0px;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .titit {
+    display: flex;
+    justify-content: space-between;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .photo-news img {
+    width: 90%;
+    height: 10vh;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .text-news .judul-news h3 {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .news-konten-parent .news-konten-img .foto-parent .text-konten .text {
+    width: 100%;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .foto img {
+    width: 100%;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation h4 {
+    font-size: 2.5vh;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .photo-news img {
+    width: 90%;
+    height: 10vh;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .text-news .judul-news h3 {
+    font-size: 11px;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .text-news .tags .tags-spesifik {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .news-konten-parent .news-konten-img .foto-parent .judul-konten {
+    font-size: 20px;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .text-konten .text {
+    width: 100%;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .foto img {
+    width: 100%;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation h4 {
+    font-size: 4vh;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .photo-news img {
+    width: 90%;
+    height: 13vh;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .text-news .judul-news h3 {
+    font-size: 9px;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .text-news .tags .tags-spesifik {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .news-konten-parent .news-konten-img .foto-parent .text-konten .text {
+    width: 100%;
+    font-size: 18px;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .kiri {
+    width: 100%;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .foto img {
+    width: 100%;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation {
+    margin-top: 10px;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation h4 {
+    font-size: 3vh;
+    text-align: center;
+    text-decoration: underline;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .titit {
+    display: flex;
+    justify-content: space-between;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child {
+    display: flex;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .photo-news img {
+    width: 100%;
+    height: 12vh;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .text-news .judul-news h3 {
+    font-size: 8px;
+  }
+  .news-konten-parent .news-konten-img .foto-parent .foto-konten .news-recomendation .konten-recomendation .konten-recomendation-child .text-news .tags .tags-spesifik {
+    font-size: 7px;
+  }
+}/*# sourceMappingURL=newskonten.css.map */

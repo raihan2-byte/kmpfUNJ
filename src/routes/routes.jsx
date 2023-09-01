@@ -3,7 +3,7 @@ import React from "react";
 import { Route, Routes as Switch } from "react-router-dom";
 import Home from "../pages/home/Home";
 import Kelas from "../pages/kelas/kelas";
-import Product from "../pages/product/product";
+import Product from "../pages/products/product";
 import Berita from "../pages/berita/berita";
 import Rent from "../pages/Renting/Rent";
 // import UploadFoto from "../pages/upload-foto/uploadfoto";
@@ -16,7 +16,7 @@ import KmpfAdmin from "../pages/admin/kmpfAdmin/kmpf";
 import MerchAdmin from "../pages/admin/merchAdmin/merch";
 import Login from "../components/login/login";
 import Aboutus from "../pages/aboutus/aboutus";
-import Producservice from "../pages/productservice/producservice";
+// import Producservice from "../pages/productservice/producservice";
 import Newskonten from "../components/newskonten/newskonten";
 import Artikel from "../pages/artikel/artikel";
 import Phototalk from "../pages/phototalk/phototalk";
@@ -28,13 +28,13 @@ import CreateBerita from "../pages/post/berita/berita";
 import CreateArtikel from "../pages/post/artikel/artikel";
 import CreateMerch from "../pages/post/merch/merch";
 import ProtectRouter from "../pages/protectRoute/ProtectRouter";
-
+import Merch from "../pages/merch/merch";
 const Routes = () => {
   return (
     <Switch>
       <Route path="/" element={<Home />} />
       <Route path="/kelas" element={<Kelas />} />
-      <Route path="/product" element={<Product />} />
+      <Route path="/productservice" element={<Product />} />
       <Route path="/berita" element={<Berita />} />
       <Route path="/rent" element={<Rent />} />
       {/* <Route path="/upload-foto" element={<UploadFoto />} /> */}
@@ -55,10 +55,12 @@ const Routes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/spesifik" element={<Spesifik />} />
       <Route path="/aboutus" element={<Aboutus />} />
-      <Route path="/productservice" element={<Producservice />} />
-      <Route path="/news-konten" element={<Newskonten />} />
+      {/* <Route path="/productservice" element={<Producservice />} /> */}
+      <Route path="/berita/:id" element={<Newskonten />} />
       <Route path="/artikel" element={<Artikel />} />
       <Route path="/phototalk" element={<Phototalk />} />
+      <Route path="/merch" element={<Merch />} />
+
       <Route path="/short-video/:id" element={<ShortVideo />} />
     </Switch>
   );

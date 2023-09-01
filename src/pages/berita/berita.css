@@ -1,0 +1,373 @@
+.berita-parent {
+  margin: 7rem 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.berita-parent .space {
+  display: flex;
+  flex-direction: column;
+  margin: auto 3rem;
+}
+.berita-parent .space .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 25px;
+  font-weight: 800;
+}
+.berita-parent .space .text h3,
+.berita-parent .space .text p {
+  margin-right: auto;
+}
+.berita-parent .space .berita-child {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  place-items: center;
+  color: white;
+  font-size: 20px;
+  padding-top: 30px;
+}
+.berita-parent .space .berita-child p {
+  margin-top: 10vh;
+  font-size: 24px;
+  color: white;
+}
+.berita-parent .space .berita-child .card {
+  position: relative;
+}
+.berita-parent .space .berita-child .card img {
+  border-radius: 10%;
+  width: 100%;
+  height: 450px;
+  filter: brightness(65%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 1px;
+}
+.berita-parent .space .berita-child .card .card-content {
+  width: 100%;
+}
+.berita-parent .space .berita-child .card .card-content .card-title-left {
+  position: absolute;
+  width: 60%;
+  top: 30%;
+  bottom: 0;
+  left: 20%;
+  right: 0;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.berita-parent .space .news-archieve {
+  margin: auto 1rem;
+}
+.berita-parent .space .news-archieve h3 {
+  font-size: 30px;
+  position: relative;
+  font-weight: 800;
+}
+.berita-parent .space .news-archieve h3::after {
+  content: "";
+  position: absolute;
+  margin-left: 20px;
+  top: 50%;
+  width: 85%;
+  height: 2px;
+  background-color: black;
+}
+.berita-parent .tambahan .tambahan-child {
+  display: flex;
+  justify-content: center;
+}
+.berita-parent .tambahan .tambahan-child .karya,
+.berita-parent .tambahan .tambahan-child .proker {
+  width: 50%;
+  margin: 40px;
+  position: relative;
+}
+.berita-parent .tambahan .tambahan-child .karya img,
+.berita-parent .tambahan .tambahan-child .proker img {
+  width: 100%;
+  height: 100vh;
+}
+.berita-parent .tambahan .tambahan-child .karya Button,
+.berita-parent .tambahan .tambahan-child .proker Button {
+  width: 100px;
+  margin: 20px auto;
+}
+.berita-parent .tambahan .tambahan-child .karya h3,
+.berita-parent .tambahan .tambahan-child .proker h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.berita-parent .tambahan .tambahan-child .karya .image h5,
+.berita-parent .tambahan .tambahan-child .proker .image h5 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60vh;
+  font-size: 33px;
+  color: white;
+}
+.berita-parent .tambahan .tambahan-child .karya {
+  display: flex;
+  flex-direction: column;
+}
+.berita-parent .tambahan .tambahan-child .proker {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1100px) {
+  .berita-parent .space .berita-child .card .card-content .card-title-left {
+    font-size: 20px;
+  }
+  .berita-parent .space .archieve .news-archieve h3 {
+    font-size: 23px;
+  }
+  .berita-parent .space .archieve .news-archieve h3::after {
+    width: 84%;
+  }
+}
+@media screen and (max-width: 910px) {
+  .berita-parent .space .berita-child .card img {
+    height: 400px;
+  }
+  .berita-parent .space .archieve .news-archieve h3::after {
+    width: 80%;
+  }
+  .berita-parent .tambahan .tambahan-child .karya h3,
+  .berita-parent .tambahan .tambahan-child .proker h3 {
+    font-size: 25px;
+  }
+  .berita-parent .tambahan .tambahan-child .karya img,
+  .berita-parent .tambahan .tambahan-child .proker img {
+    height: 40vh;
+  }
+  .berita-parent .tambahan .tambahan-child .karya .image h5,
+  .berita-parent .tambahan .tambahan-child .proker .image h5 {
+    margin: auto;
+    width: 90%;
+    font-size: 27px;
+    height: 33vh;
+  }
+}
+@media screen and (max-width: 772px) {
+  .berita-parent .space .text {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .berita-parent .space .berita-child .card img {
+    height: 350px;
+  }
+  .berita-parent .space .berita-child .card .card-content .card-title-left {
+    width: 80%;
+    font-size: 18px;
+    left: 10%;
+  }
+  .berita-parent .space .archieve .news-archieve h3::after {
+    width: 78%;
+  }
+}
+@media screen and (max-width: 772px) and (max-width: 720px) {
+  .berita-parent .space .archieve .news-archieve h3::after {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 772px) {
+  .berita-parent .tambahan .tambahan-child .karya h3,
+  .berita-parent .tambahan .tambahan-child .proker h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .berita-parent .tambahan .tambahan-child .karya img,
+  .berita-parent .tambahan .tambahan-child .proker img {
+    height: 40vh;
+  }
+  .berita-parent .tambahan .tambahan-child .karya .image h5,
+  .berita-parent .tambahan .tambahan-child .proker .image h5 {
+    height: 35vh;
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 670px) {
+  .berita-parent .space .berita-child .card img {
+    height: 300px;
+  }
+  .berita-parent .space .berita-child .card .card-content .card-title-left {
+    font-size: 10px;
+  }
+  .berita-parent .space .archieve .news-archieve h3::after {
+    width: 72%;
+  }
+  .berita-parent .tambahan .tambahan-child .karya h3,
+  .berita-parent .tambahan .tambahan-child .proker h3 {
+    font-size: 17px;
+  }
+  .berita-parent .tambahan .tambahan-child .karya img,
+  .berita-parent .tambahan .tambahan-child .proker img {
+    height: 50vh;
+  }
+  .berita-parent .tambahan .tambahan-child .karya .image h5,
+  .berita-parent .tambahan .tambahan-child .proker .image h5 {
+    font-size: 15px;
+    height: 52vh;
+  }
+}
+@media screen and (max-width: 580px) {
+  .berita-parent .space .berita-child .card img {
+    height: 250px;
+  }
+  .berita-parent .space .berita-child .card .card-content .card-title-left {
+    font-size: 12px;
+  }
+  .berita-parent .space .archieve .news-archieve h3 {
+    font-size: 18px;
+  }
+  .berita-parent .space .archieve .news-archieve h3::after {
+    width: 72%;
+  }
+  .berita-parent .tambahan .tambahan-child .karya h3,
+  .berita-parent .tambahan .tambahan-child .proker h3 {
+    font-size: 12px;
+  }
+  .berita-parent .tambahan .tambahan-child .karya img,
+  .berita-parent .tambahan .tambahan-child .proker img {
+    height: 40vh;
+  }
+  .berita-parent .tambahan .tambahan-child .karya .image h5,
+  .berita-parent .tambahan .tambahan-child .proker .image h5 {
+    font-size: 15px;
+    height: 45vh;
+  }
+}
+@media screen and (max-width: 475px) {
+  .berita-parent .space .text {
+    margin: auto 10px;
+    font-size: 15px;
+  }
+  .berita-parent .space .berita-child {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    place-items: center;
+  }
+  .berita-parent .space .berita-child .card img {
+    height: 200px;
+  }
+  .berita-parent .space .berita-child .card .card-content .card-title-left {
+    font-size: 12px;
+  }
+  .berita-parent .space .archieve .news-archieve h3 {
+    font-size: 16px;
+  }
+  .berita-parent .space .archieve .news-archieve h3::after {
+    width: 70%;
+  }
+  .berita-parent .tambahan .tambahan-child .karya h3,
+  .berita-parent .tambahan .tambahan-child .proker h3 {
+    font-size: 12px;
+  }
+  .berita-parent .tambahan .tambahan-child .karya img,
+  .berita-parent .tambahan .tambahan-child .proker img {
+    height: 23vh;
+  }
+  .berita-parent .tambahan .tambahan-child .karya .image h5,
+  .berita-parent .tambahan .tambahan-child .proker .image h5 {
+    font-size: 13px;
+    height: 38vh;
+  }
+}
+@media screen and (max-width: 376px) {
+  .berita-parent .space .text {
+    margin: auto 10px;
+    font-size: 15px;
+  }
+  .berita-parent .space .berita-child {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    place-items: center;
+  }
+  .berita-parent .space .berita-child .card img {
+    height: 170px;
+  }
+  .berita-parent .space .berita-child .card .card-content .card-title-left {
+    font-size: 12px;
+  }
+  .berita-parent .space .archieve .news-archieve h3 {
+    font-size: 15px;
+  }
+  .berita-parent .space .archieve .news-archieve h3::after {
+    width: 68%;
+  }
+  .berita-parent .tambahan .tambahan-child .karya h3,
+  .berita-parent .tambahan .tambahan-child .proker h3 {
+    font-size: 12px;
+  }
+  .berita-parent .tambahan .tambahan-child .karya img,
+  .berita-parent .tambahan .tambahan-child .proker img {
+    height: 22vh;
+  }
+  .berita-parent .tambahan .tambahan-child .karya .image h5,
+  .berita-parent .tambahan .tambahan-child .proker .image h5 {
+    font-size: 12px;
+    height: 35vh;
+  }
+}
+@media screen and (max-width: 376px) and (max-width: 325px) {
+  .berita-parent .tambahan .tambahan-child .karya .image h5,
+  .berita-parent .tambahan .tambahan-child .proker .image h5 {
+    height: 33vh;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .berita-parent .space .text {
+    font-size: 10px;
+    font-weight: 900;
+  }
+  .berita-parent .space .archieve .news-archieve h3 {
+    font-size: 13px;
+  }
+  .berita-parent .space .archieve .news-archieve h3::after {
+    width: 55%;
+  }
+  .berita-parent .tambahan .tambahan-child .karya h3,
+  .berita-parent .tambahan .tambahan-child .proker h3 {
+    font-size: 10px;
+  }
+  .berita-parent .tambahan .tambahan-child .karya img,
+  .berita-parent .tambahan .tambahan-child .proker img {
+    height: 25vh;
+    width: 20vh;
+    padding: 10px;
+  }
+  .berita-parent .tambahan .tambahan-child .karya .image h5,
+  .berita-parent .tambahan .tambahan-child .proker .image h5 {
+    width: 50%;
+    margin: auto;
+    font-size: 7px;
+    height: 45vh;
+  }
+  .berita-parent .tambahan .tambahan-child .karya Button,
+  .berita-parent .tambahan .tambahan-child .proker Button {
+    padding: 0;
+    font-size: 6px;
+    width: 60%;
+  }
+  .berita-parent .tambahan .tambahan-child .karya .teks-tambahan,
+  .berita-parent .tambahan .tambahan-child .proker .teks-tambahan {
+    font-size: 8px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=berita.css.map */

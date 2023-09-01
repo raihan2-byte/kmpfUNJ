@@ -1,0 +1,100 @@
+.phototalk-parent {
+  margin-top: 7rem;
+}
+.phototalk-parent .phototalk-teks h3 {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  font-size: 40px;
+}
+.phototalk-parent .phototalk-teks p {
+  padding-top: 3rem;
+  text-align: justify;
+  width: 70%;
+  margin: auto;
+  font-size: 30px;
+  margin-bottom: 3rem;
+}
+.phototalk-parent .phototalk-konten .section {
+  /* Untuk mengubah warna panah navigasi saat di hover */
+}
+.phototalk-parent .phototalk-konten .section .swiper-button-prev,
+.phototalk-parent .phototalk-konten .section .swiper-button-next {
+  color: #ff0000; /* Ganti dengan warna yang Anda inginkan */
+}
+.phototalk-parent .phototalk-konten .section .swiper-button-prev:hover,
+.phototalk-parent .phototalk-konten .section .swiper-button-next:hover {
+  color: #00ff00; /* Ganti dengan warna yang Anda inginkan */
+}
+.phototalk-parent .phototalk-konten .section .mySwiper {
+  width: 100%;
+}
+.phototalk-parent .phototalk-konten .section .mySwiper .konten .kontoru {
+  margin: auto;
+  width: 100%;
+  padding: 30px;
+  height: 110vh;
+  border-radius: 10%;
+}
+.phototalk-parent .phototalk-konten .section .mySwiper .konten .overlay {
+  position: absolute;
+  top: 4rem;
+  left: 25%;
+  width: 50%;
+  line-height: 1;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Atur warna teks */
+  text-align: center;
+}
+
+@media screen and (max-width: 1110px) {
+  .phototalk-parent .phototalk-konten .section {
+    /* Untuk mengubah warna panah navigasi saat di hover */
+  }
+  .phototalk-parent .phototalk-konten .section .konten .overlay {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .phototalk-parent .phototalk-konten .section .konten .overlay {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .phototalk-parent .phototalk-konten .section .konten .overlay {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .phototalk-parent .phototalk-konten .section .konten .overlay {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 468px) {
+  .phototalk-parent .phototalk-teks p {
+    font-size: 13px;
+  }
+  .phototalk-parent .phototalk-konten .section .konten {
+    width: 70%;
+  }
+  .phototalk-parent .phototalk-konten .section .konten .kontoru {
+    width: 100%;
+  }
+  .phototalk-parent .phototalk-konten .section .konten .overlay {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .phototalk-parent .phototalk-konten .section .konten {
+    width: 70%;
+  }
+  .phototalk-parent .phototalk-konten .section .konten .kontoru {
+    width: 100%;
+  }
+  .phototalk-parent .phototalk-konten .section .konten .overlay {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=phototalk.css.map */

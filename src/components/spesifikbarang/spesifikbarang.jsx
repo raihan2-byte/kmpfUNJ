@@ -4,13 +4,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 import Headline from "../assets/Headline1.jpg";
 import Button from "../button/Button";
+import { useParams } from "react-router-dom";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import API from "../../api/API";
 
-const spesifikbarang = () => {
+const Spesifikbarang = () => {
+  const params = useParams();
+  const [barang, setBarang] = React.useState([]);
+  console.log(barang);
+  const getBarang = async (id) => {
+    await API.get(`short-video/${id}`)
+      .then((response) => {
+        setBarang(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  React.useEffect(() => {
+    getBarang(params.id);
+  }, [params.id]);
   return (
     <div className="sepesifik-barang-parent">
       <div className="barang-foto-barang">
@@ -67,4 +84,4 @@ const spesifikbarang = () => {
   );
 };
 
-export default spesifikbarang;
+export default Spesifikbarang;

@@ -4,68 +4,106 @@ import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import News from "../../components/news/news";
 import Button from "../../components/button/Button";
-import Headline from "../../components/assets/Headline1.jpg";
+import API from "../../api/API";
 
-const berita = () => {
+const Berita = () => {
+  const [berita, setBerita] = React.useState([]);
+  const getAllBeritaa = async () => {
+    await API.get("berita/")
+      .then((response) => {
+        setBerita(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  React.useEffect(() => {
+    getAllBeritaa();
+  }, []);
+  const sortedBerita = berita.sort((a, b) => b.ID - a.ID);
+  const lastThreeBerita = sortedBerita.slice(0, 3);
+
+  function formatTanggal(dateString) {
+    const createdAt = new Date(dateString);
+    return `${createdAt.getFullYear()}-${
+      createdAt.getMonth() + 1
+    }-${createdAt.getDate()}`;
+  }
+
+  const spaceBerita = lastThreeBerita.slice(0, 1); // Ambil yang terbaru untuk space
+  const beritaChildBerita = berita.slice(1).slice(0, 3); // Ambil 3 terbaru untuk berita-child
+  const archieveBerita = berita.slice(4).slice(0, 4);
+  const maxBeritaChild = window.innerWidth <= 475 ? 2 : 3;
+  const beritaChildTampilan = beritaChildBerita.slice(0, maxBeritaChild);
+  const artikelFiltered = berita.filter((item) => item.tags_id === 5);
+  const prokerFiltered = berita.filter((item) => item.tags_id === 4);
+
   return (
     <>
       <Navbar />
       <div className="berita-parent">
         <div className="space">
-          <div className="text">
-            <h3>Judul dan Headline Berita</h3>
-            <p>Tanggal</p>
-          </div>
+          {spaceBerita.slice(0, 1).map((item) => (
+            <a href={`/berita/${item.id}`} key={item.id}>
+              <div className="text">
+                <img src={item.file_name} alt="text" className="kontoru" />
+                <h3>{item.judul}</h3>
+                <p>{formatTanggal(item.created_at)}</p>
+              </div>
+            </a>
+          ))}
+
           <div className="berita-child">
-            <div class="card">
-              <img src={Headline} alt="text" className="kontoru" />
-              <div class="card-content">
-                <h3 class="card-title-left">Judul dan HeadlineBerita</h3>
-              </div>
-            </div>
-            <div class="card">
-              <img src={Headline} alt="text" className="kontoru" />
+            {beritaChildTampilan
+              // .slice(1)
+              // .slice(0, window.innerWidth <= 575 ? 2 : 3)
+              // .reverse()
+              .map((item) => (
+                <a href={`/berita/${item.id}`}>
+                  <div class="card">
+                    <img src={item.file_name} alt="text" className="kontoru" />
 
-              <div class="card-content">
-                <h3 class="card-title-middle">Judul dan HeadlineBerita</h3>
-              </div>
-            </div>
-            <div class="card">
-              <img src={Headline} alt="text" className="kontoru" />
-
-              <div class="card-content">
-                <h3 class="card-title-right">Judul dan HeadlineBerita</h3>
-              </div>
-            </div>
+                    <div class="card-content">
+                      <h3 class="card-title-left">{item.judul}</h3>
+                    </div>
+                  </div>
+                </a>
+              ))}
           </div>
-          <div className="news-archieve">
-            <h3>News Archieve</h3>
+          <div className="archieve">
+            <div className="news-archieve">
+              <h3>News Archieve</h3>
+            </div>
+            <News className="archieve-konten" berita={archieveBerita} />
           </div>
-          <News />
-          <News />
-          <News />
-          <News />
         </div>
         <div className="tambahan">
           <div className="tambahan-child">
-            <div className="karya">
-              <h3>Karya Archieve</h3>
-              <div className="image">
-                <h5>Judul dan Headline Berita</h5>
-                <img src={Headline} alt="img" />
+            {artikelFiltered.slice(0, 1).map((item) => (
+              <div className="karya">
+                <h3 className="teks-tambahan">Karya Archieve</h3>
+                <a href={`/berita/${item.id}`} key={item.id}>
+                  <div className="image">
+                    <h5>{item.judul}</h5>
+                    <img src={item.file_name} alt="img" />
+                  </div>
+                </a>
+                <Button className="btn">More</Button>
               </div>
-              <Button>More</Button>
-            </div>
+            ))}
             {/* <hr className="garis" /> */}
-            <div className="proker">
-              <h3>Proker Archieve</h3>
-              <div className="image">
-                <h5>Judul dan Headline Berita</h5>
-                <img src={Headline} alt="img" />
+            {prokerFiltered.slice(0, 1).map((item) => (
+              <div className="proker">
+                <h3 className="teks-tambahan">Proker Archieve</h3>
+                <a href={`/berita/${item.id}`} key={item.id}>
+                  <div className="image">
+                    <h5>{item.judul}</h5>
+                    <img src={item.file_name} alt="img" />
+                  </div>
+                </a>
+                <Button className="btn">More</Button>
               </div>
-
-              <Button>More</Button>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -74,4 +112,4 @@ const berita = () => {
   );
 };
 
-export default berita;
+export default Berita;

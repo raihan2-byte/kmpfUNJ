@@ -1,40 +1,63 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./dashboard.scss";
-// import { Link } from "react-router-dom";
 import Button from "../../../components/button/Button";
 import Sidebar from "../../../components/sidebar/Sidebar";
+import API from "../../../api/API";
+import SweatAlert from "../../../sweetaleet/SweetAlert";
+import { MdDelete } from "react-icons/md";
 
-const admin = () => {
+const Admin = () => {
+  const [admin, setAdmin] = useState([]);
+
+  const getAllUsers = async () => {
+    try {
+      const response = await API.get("/users/");
+      setAdmin(response.data.data);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      SweatAlert(message, "warning");
+    }
+  };
+
+  useEffect(() => {
+    getAllUsers();
+  }, []);
+
   return (
     <div>
       <Sidebar />
       <section id="content">
         <main>
-          <div class="head-title">
-            <div class="left">
+          <div className="head-title">
+            <div className="left">
               <h1>Admin</h1>
-              <ul class="breadcrumb">
+              <ul className="breadcrumb">
                 <li>User</li>
                 <li>
-                  <i class="bx bx-chevron-right"></i>
+                  <i className="bx bx-chevron-right"></i>
                 </li>
                 <li>
-                  <a class="active" href="/">
+                  <a className="active" href="/">
                     Home
                   </a>
                 </li>
                 <li>
-                  <Button>Get All User</Button>
+                  <Button onClick={getAllUsers}>Get All User</Button>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="table-data">
-            <div class="order">
-              <div class="head">
+          <div className="table-data">
+            <div className="order">
+              <div className="head">
                 <h3>List User</h3>
-                <i class="bx bx-search"></i>
-                <i class="bx bx-filter"></i>
+                <i className="bx bx-search"></i>
+                <i className="bx bx-filter"></i>
               </div>
               <table>
                 <thead>
@@ -44,51 +67,18 @@ const admin = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <p>John Doe</p>
-                    </td>
-                    <td className="btn">
-                      <Button>Delete</Button>
-                      <Button>Update</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>John Doe</p>
-                    </td>
-                    <td>
-                      <Button>Delete</Button>
-                      <Button>Update</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>John Doe</p>
-                    </td>
-                    <td>
-                      <Button>Delete</Button>
-                      <Button>Update</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>John Doe</p>
-                    </td>
-                    <td>
-                      <Button>Delete</Button>
-                      <Button>Update</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>John Doe</p>
-                    </td>
-                    <td>
-                      <Button>Delete</Button>
-                      <Button>Update</Button>
-                    </td>
-                  </tr>
+                  {admin.map((item) => (
+                    <tr key={item.id}>
+                      <td>
+                        <p>{item.Username}</p>
+                      </td>
+                      <td>
+                        <Button className="btn">
+                          <MdDelete />
+                        </Button>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -99,4 +89,4 @@ const admin = () => {
   );
 };
 
-export default admin;
+export default Admin;

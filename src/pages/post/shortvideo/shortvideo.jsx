@@ -1,6 +1,7 @@
 import React from "react";
 import "./shortvideo.scss";
 import API from "../../../api/API";
+import SweatAlert from "../../../sweetaleet/SweetAlert";
 
 const Shortvideo = () => {
   const [judul, setJudul] = React.useState("");
@@ -22,6 +23,10 @@ const Shortvideo = () => {
         "Content-Type": "multipart/form-data",
       },
     })
+      .then((response) => {
+        console.log(response.data);
+        SweatAlert("Berhasil menambahkan data", "success");
+      })
       .then((response) => {
         console.log(response);
       })

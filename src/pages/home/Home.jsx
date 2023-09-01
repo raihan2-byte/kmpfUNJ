@@ -15,6 +15,7 @@ import { Pagination } from "swiper";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import API from "../../api/API";
+import { useParams } from "react-router-dom";
 
 const Home = () => {
   const [news, setNews] = React.useState([]);
@@ -31,6 +32,7 @@ const Home = () => {
   React.useEffect(() => {
     getAllNews();
   }, []);
+
   return (
     <>
       <Navbar />
@@ -77,17 +79,21 @@ const Home = () => {
               clickable: true,
             }}
             breakpoints={{
-              640: {
+              390: {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
               768: {
-                slidesPerView: 4,
-                spaceBetween: 40,
+                slidesPerView: 3,
+                spaceBetween: 20,
               },
               1024: {
                 slidesPerView: 5,
-                spaceBetween: 50,
+                spaceBetween: 20,
               },
             }}
             modules={[Pagination]}

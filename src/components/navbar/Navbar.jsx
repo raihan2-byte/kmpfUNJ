@@ -19,8 +19,9 @@ const navbarContent = [
     display: "Product & Services",
     path: "/productservice",
     content: [
-      { name: "Product & Services", path: "/product" },
+      { name: "Product & Services", path: "/productservice" },
       { name: "Rent & Price", path: "/rent" },
+      { name: "Merch", path: "/merch" },
     ],
   },
   {

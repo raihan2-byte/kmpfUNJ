@@ -37,8 +37,12 @@ const Shortvideo = () => {
           </div>
           <div className="link-barang">
             <p>Source : </p>
-            <Link>{shortvideo.Source}</Link>
+            <Link to={shortvideo.Source}>{shortvideo.Source}</Link>
           </div>
+          {/* <div className="link-barang">
+            <p>Dibuat : </p>
+            <Link>{shortvideo.CreatedAt}</Link>
+          </div> */}
         </div>
       </div>
     </div>

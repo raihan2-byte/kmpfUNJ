@@ -8,23 +8,24 @@
   gap: 10px;
 
   &__left {
+    width: 50%;
     overflow: hidden;
     margin: 0;
 
     .kontoru {
       width: 100%;
       height: 500px;
-      object-fit: cover;
+      object-fit: fill;
       filter: brightness(60%);
     }
 
     .overlay {
       position: absolute;
       top: 4rem;
-      left: 25%;
-      width: 50%;
+      left: 12%;
+      width: 80%;
       line-height: 1;
-      font-size: 3rem;
+      font-size: 1.8rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -35,9 +36,11 @@
   }
 
   &__right {
+    width: 50%;
     display: flex;
     gap: 10px;
     flex-direction: column;
+    position: relative;
 
     &__top,
     &__bottom {
@@ -45,7 +48,7 @@
       position: relative;
 
       img {
-        width: 650px;
+        width: 100%;
         height: 242px;
         object-fit: cover;
         filter: brightness(60%);
@@ -55,9 +58,9 @@
         margin: 0;
         width: 100%;
         position: absolute;
-        top: 50%;
-        left: 75%;
-        transform: translate(-50%, -50%);
+        top: 0;
+        left: 0;
+        // transform: translate(-50%, -50%);
         z-index: 1;
         color: #f1f1f1;
         font-weight: 900;
@@ -79,6 +82,7 @@
     flex-direction: column;
 
     &__left {
+      width: 100%;
       overflow: hidden;
       margin: 0;
 
@@ -87,7 +91,6 @@
         top: 8rem;
         left: 25%;
         width: 50%;
-        font-size: 3rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -128,12 +131,6 @@
         width: 100%;
       }
     }
-  }
-}
-
-@media only screen and (max-width: 1110px) {
-  .header {
-    width: 100%;
   }
 }
 

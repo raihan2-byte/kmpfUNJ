@@ -1,0 +1,30 @@
+.berita-admin {
+  margin: 2rem;
+  background-color: aliceblue;
+}
+.berita-admin h1 {
+  margin-bottom: 20px;
+}
+.berita-admin .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Contoh styling tambahan jika ingin mengubah tampilan ketika input aktif */
+}
+.berita-admin .content .input-field input {
+  width: 100%; /* Lebar input */
+  height: 60px; /* Tinggi input */
+  font-size: 16px; /* Ukuran teks di dalam input */
+  padding: 10px; /* Ruang antara teks dan batas input */
+  border: 1px solid #ccc; /* Gaya garis batas input */
+  border-radius: 5px; /* Gaya sudut border */
+}
+.berita-admin .content .input-field input:focus {
+  border-color: #007bff; /* Warna border ketika input aktif */
+  box-shadow: 0 0 5px #007bff; /* Efek bayangan ketika input aktif */
+}
+.berita-admin .action button {
+  margin-top: 20px;
+  width: 100px; /* Lebar input */
+  height: 40px; /* Tinggi input */
+}/*# sourceMappingURL=berita.css.map */

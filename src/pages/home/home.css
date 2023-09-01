@@ -1,0 +1,162 @@
+.rental-foto {
+  background-color: white;
+  color: #f4f4f4;
+  padding: 2rem 0;
+  margin-top: 1.3rem;
+}
+.rental-foto .fotografi-parent {
+  background-color: #ffc918;
+  color: #f4f4f4;
+  height: 650px;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+.rental-foto .fotografi-parent .fotografi {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../../components/assets/menyediakan-foto-grafi.jpg");
+  background-repeat: no-repeat;
+  cursor: default;
+}
+.rental-foto .fotografi-parent .fotografi h1 {
+  position: absolute;
+  color: white;
+  max-width: 800px;
+  font-size: 3rem;
+  margin: 0;
+  padding-top: 1rem;
+  padding-left: 5rem;
+  font-size: 5rem;
+}
+.rental-foto .fotografi-parent .fotografi .book-now {
+  position: absolute;
+  left: 80%;
+  bottom: 20px;
+  transform: translate(-50%, -20px);
+}
+.rental-foto .rental-parent {
+  background-color: #ffc918;
+  color: #f4f4f4;
+  height: 650px;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+.rental-foto .rental-parent .rental {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../../components/assets/Meminjamkan-dan-menyewakan-alat-fotografi.jpg");
+  background-repeat: no-repeat;
+  cursor: default;
+}
+.rental-foto .rental-parent .rental h1 {
+  position: absolute;
+  color: white;
+  max-width: 1000px;
+  margin: 0;
+  padding-top: 0.2rem;
+  padding-left: 5rem;
+  font-size: 5rem;
+}
+.rental-foto .rental-parent .rental .book-now {
+  position: absolute;
+  left: 80%;
+  bottom: 20px;
+  transform: translate(-50%, -20px);
+}
+
+.galery {
+  background-color: #ffc918;
+  color: #f4f4f4;
+  height: 350px;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+.galery .background {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url("https://picsum.photos/1500/500");
+}
+.galery .background h1 {
+  position: absolute;
+  right: 5rem;
+  font-size: 5rem;
+  color: white;
+}
+
+.phototalk {
+  background-color: #ffc918;
+  margin: 1rem 2rem;
+  border-radius: 30px;
+  padding-bottom: 2rem;
+  cursor: default;
+}
+.phototalk h1 {
+  color: #f4f4f4;
+  text-align: center;
+  font-size: 5rem;
+}
+.phototalk .mySwiper {
+  margin: 0 4rem;
+}
+.phototalk .mySwiper h5,
+.phototalk .mySwiper p {
+  color: #222;
+  margin: 0;
+  padding-right: 50px;
+  text-align: center;
+}
+@media only screen and (max-width: 910px) {
+  .phototalk .mySwiper h5,
+  .phototalk .mySwiper p {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 801px) {
+  .phototalk .mySwiper h5,
+  .phototalk .mySwiper p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .phototalk .mySwiper h5,
+  .phototalk .mySwiper p {
+    font-size: 14px;
+  }
+}
+.phototalk .mySwiper .photo {
+  background-size: fill;
+  width: 25vh;
+  height: 30vh;
+  border-radius: 10%;
+}
+@media only screen and (max-width: 400px) {
+  .phototalk .mySwiper .photo {
+    width: 15vh;
+    height: 17vh;
+  }
+}
+@media only screen and (max-width: 910px) {
+  .phototalk .mySwiper .photo {
+    width: 20vh;
+    height: 17vh;
+  }
+}
+@media only screen and (max-width: 801px) {
+  .phototalk .mySwiper .photo {
+    width: 16vh;
+    height: 17vh;
+  }
+}/*# sourceMappingURL=home.css.map */

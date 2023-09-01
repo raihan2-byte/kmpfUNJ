@@ -7,8 +7,18 @@ import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Headline from "../../components/assets/Headline1.jpg";
-const proker = () => {
+const proker = ({ news }) => {
+  const pairedItems = [];
+  for (let i = 0; i < news.length; i += 2) {
+    if (i + 1 < news.length) {
+      pairedItems.push([news[i], news[i + 1]]);
+    } else {
+      pairedItems.push([news[i], null]);
+    }
+  }
+
+  console.log(news);
+
   return (
     <div className="konten-our-proker">
       <div className="sub-our-proker">{/* <h4>Proker</h4> */}</div>
@@ -42,76 +52,40 @@ const proker = () => {
         loop={true}
         spaceBetween={10}
       >
-        <SwiperSlide>
-          <div className="konten-proker">
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Judul dan Headline Berita</h2>
+        {pairedItems.map((pair, index) => (
+          <SwiperSlide key={index}>
+            <div className="konten-proker-container">
+              {pair[0] && (
+                <div className="konten-proker">
+                  <a href={`/berita/${pair[0].id}`}>
+                    <img
+                      src={pair[0].file_name}
+                      alt="text"
+                      className="kontoru"
+                    />
+                    <div className="overlay">
+                      <h2>{pair[0].judul}</h2>
+                    </div>
+                  </a>
+                </div>
+              )}
+              {pair[1] && (
+                <div className="konten-proker">
+                  <a href={`/berita/${pair[1].id}`}>
+                    <img
+                      src={pair[1].file_name}
+                      alt="text"
+                      className="kontoru"
+                    />
+                    <div className="overlay">
+                      <h2>{pair[1].judul}</h2>
+                    </div>
+                  </a>
+                </div>
+              )}
             </div>
-          </div>
-          <div className="konten-proker">
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Judul dan Headline Berita</h2>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="konten-proker">
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Judul dan Headline Berita</h2>
-            </div>
-          </div>
-          <div className="konten-proker">
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Judul dan Headline Berita</h2>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="konten-proker">
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Judul dan Headline Berita</h2>
-            </div>
-          </div>
-          <div className="konten-proker">
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Judul dan Headline Berita</h2>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="konten-proker">
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Judul dan Headline Berita</h2>
-            </div>
-          </div>
-          <div className="konten-proker">
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Judul dan Headline Berita</h2>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="konten-proker">
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Judul dan Headline Berita</h2>
-            </div>
-          </div>
-          <div className="konten-proker">
-            <img src={Headline} alt="text" className="kontoru" />
-            <div className="overlay">
-              <h2>Judul dan Headline Berita</h2>
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

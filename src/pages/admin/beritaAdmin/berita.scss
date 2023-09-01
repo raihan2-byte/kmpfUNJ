@@ -1,0 +1,109 @@
+/* dashboard.scss */
+
+/* MAIN */
+#test main {
+  width: 100%;
+  padding: 36px 24px;
+  font-family: var(--poppins);
+  max-height: calc(100vh - 56px);
+  overflow-y: auto;
+}
+
+#test main .head-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 16px;
+  flex-wrap: wrap;
+}
+
+#test main .head-title .left h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: black;
+}
+
+#test main .head-title .left .breadcrumb {
+  display: flex;
+  align-items: center;
+  grid-gap: 16px;
+}
+
+#test main .head-title .left .breadcrumb li {
+  color: black;
+}
+
+#test main .head-title .left .breadcrumb li a.active {
+  color: black;
+  pointer-events: unset;
+}
+
+#test main .table-data {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 24px;
+  margin-top: 24px;
+  width: 100%;
+  color: black;
+}
+
+#test main .table-data > div {
+  border-radius: 20px;
+  background: antiquewhite;
+  padding: 24px;
+  overflow-x: auto;
+}
+
+#test main .table-data .head {
+  display: flex;
+  align-items: center;
+  grid-gap: 16px;
+  margin-bottom: 24px;
+}
+
+#test main .table-data .head h3 {
+  margin-right: auto;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#test main .table-data .head .bx {
+  cursor: pointer;
+}
+
+#test main .table-data .order {
+  flex-grow: 1;
+  flex-basis: 500px;
+}
+
+#test main .table-data .order table {
+  width: 80%;
+  border-collapse: collapse;
+}
+
+#test main .table-data .order table th {
+  padding-bottom: 12px;
+  font-size: 13px;
+  text-align: left;
+  border-bottom: 1px solid grey;
+}
+
+#test main .table-data .order table td {
+  padding: 16px 10px;
+}
+
+#test main .table-data .order table td img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#test main .table-data .btn {
+  width: 50px;
+  padding: 0;
+  font-size: 15px;
+}
+
+/* ... (gaya media query sesuai kebutuhan) */

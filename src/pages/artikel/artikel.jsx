@@ -11,8 +11,30 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Headline from "../../components/assets/Headline1.jpg";
 import Proker from "../../components/proker/proker";
+import API from "../../api/API";
 
-const artikel = () => {
+const Artikel = () => {
+  const [berita, setBerita] = React.useState([]);
+  const getAllBeritaa = async () => {
+    await API.get("berita/")
+      .then((response) => {
+        setBerita(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  React.useEffect(() => {
+    getAllBeritaa();
+  }, []);
+
+  const beritaJurnalistik = berita.filter((item) => item.tags_id === 1);
+  const beritaSalon = berita.filter((item) => item.tags_id === 2);
+  const beritaAlternatif = berita.filter((item) => item.tags_id === 3);
+  const beritaArchieve = berita.filter((item) => item.tags_id === 4);
+  const beritaArtikel = berita.filter((item) => item.tags_id === 5);
+
+  console.log(berita);
   return (
     <>
       <Navbar />
@@ -20,7 +42,6 @@ const artikel = () => {
         <div className="judul-artikel">
           <h3>Karya Archieve</h3>
         </div>
-
         <div className="konten">
           <div className="sub-artikel">
             <h4>Jurnalistik</h4>
@@ -64,37 +85,16 @@ const artikel = () => {
               loop={true}
               spaceBetween={10}
             >
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
-              {/* Duplicate slides */}
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
+              {beritaJurnalistik?.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <a href={`/berita/${item.id}`}>
+                    <img src={item.file_name} alt="text" className="kontoru" />
+                  </a>
+                  <div className="overlay">
+                    <h2>{item.judul}</h2>
+                  </div>
+                </SwiperSlide>
+              ))}
               {/* End of duplicate slides */}
             </Swiper>
           </div>
@@ -140,37 +140,16 @@ const artikel = () => {
               loop={true}
               spaceBetween={10}
             >
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
-              {/* Duplicate slides */}
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
+              {beritaSalon?.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <a href={`/berita/${item.id}`}>
+                    <img src={item.file_name} alt="text" className="kontoru" />
+                  </a>
+                  <div className="overlay">
+                    <h2>{item.judul}</h2>
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
           <div className="konten-jurnalistik">
@@ -215,47 +194,26 @@ const artikel = () => {
               loop={true}
               spaceBetween={10}
             >
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
-              {/* Duplicate slides */}
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={Headline} alt="text" className="kontoru" />
-                <div className="overlay">
-                  <h2>Judul dan Headline Berita</h2>
-                </div>
-              </SwiperSlide>
+              {beritaAlternatif?.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <a href={`/berita/${item.id}`}>
+                    <img src={item.file_name} alt="text" className="kontoru" />
+                  </a>
+                  <div className="overlay">
+                    <h2>{item.judul}</h2>
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
           <div className="our-proker">
             <h3>Proker Archieve</h3>
-            <Proker />
+            <Proker news={beritaArchieve} />
           </div>
 
           <div className="our-proker">
             <h3>Our Article</h3>
-            <Proker />
+            <Proker news={beritaArtikel} />
           </div>
         </div>
       </div>
@@ -264,4 +222,4 @@ const artikel = () => {
   );
 };
 
-export default artikel;
+export default Artikel;

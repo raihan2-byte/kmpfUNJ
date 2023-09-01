@@ -1,27 +1,34 @@
 import React from "react";
 import "./news.scss";
-import Image from "../../components/assets/Headline1.jpg";
+// import Image from "../../components/assets/Headline1.jpg";
 
-const news = () => {
+const News = ({ berita }) => {
+  console.log(berita);
   return (
     <div className="news-parent">
-      <div className="photo-news">
-        <img src={Image} alt="news" />
-      </div>
-      <div className="text-news">
-        <div className="judul-news">
-          <h3>Judul dan headline berita blablbabla</h3>
-        </div>
-        <div className="tags">
-          <div className="tags-spesifik">
-            <p className="tag">karya</p>
-            <p className="date">10-07-2023</p>
+      {berita?.map((data) => (
+        <div className="tes">
+          <a href={`/berita/${data.id}`} key={data.id}>
+            <div className="photo-news">
+              <img src={data.file_name} alt="news" />
+            </div>
+          </a>
+          <div className="text-news">
+            <div className="judul-news">
+              <h3>{data.judul}</h3>
+            </div>
+            <div className="tags">
+              <div className="tags-spesifik">
+                <p className="tag">{data.TagsData.nama}</p>
+                <p className="date">10-07-2023</p>
+              </div>
+              <div className="seperator"></div>
+            </div>
           </div>
-          <div className="seperator"></div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };
 
-export default news;
+export default News;

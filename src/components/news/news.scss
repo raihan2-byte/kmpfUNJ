@@ -1,45 +1,44 @@
 .news-parent {
-  display: flex;
-  //   width: 55%;
-  margin-right: auto;
-  padding-top: 1rem;
-  margin-left: 10px;
-  background-color: white;
-  padding-bottom: 1rem;
-  justify-content: center;
-
-  .photo-news {
-    img {
-      width: 45vh;
-      border-radius: 10px;
-    }
-  }
-
-  .text-news {
-    margin: 10px;
+  .tes {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
+    margin-left: auto;
+    padding-top: 1rem;
+    margin-left: 10px;
+    padding-bottom: 1rem;
 
-    .judul-news {
+    .photo-news {
+      img {
+        width: 70vh;
+        height: 70vh;
+        border-radius: 10px;
+      }
     }
 
-    .tags {
-      // display: block;
-      //   flex-direction: column    ;
-      .seperator {
-        /* Menerapkan border sebagai garis pemisah */
-        border-top: 1px solid black;
-        margin-top: 10px; /* Atur jarak antara garis pemisah dengan konten sekitarnya */
+    .text-news {
+      width: 100%;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      font-size: 20px;
+
+      .judul-news {
       }
 
-      .tags-spesifik {
-        display: flex;
-        .date {
-          margin-left: 10px;
+      .tags {
+        .seperator {
+          position: relative;
+          border-top: 1px solid black;
+          margin-top: 10px;
         }
-        // justify-content: space-between;
+
+        .tags-spesifik {
+          display: flex;
+          .date {
+            margin-left: 10px;
+          }
+        }
       }
     }
   }
@@ -48,23 +47,73 @@
 @media only screen and (max-width: 1110px) {
 }
 
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 912px) {
   .news-parent {
-    .photo-news {
-      img {
-        width: 35vh;
-        border-radius: 10px;
+    .tes {
+      .photo-news {
+        img {
+          width: 30vh;
+          height: 35vh;
+          border-radius: 10px;
+        }
+      }
+    }
+    .text-news {
+      .judul-news {
+        font-size: 19px;
+      }
+      .tags {
+        .seperator {
+        }
+
+        .tags-spesifik {
+          font-size: 16px;
+          .date {
+          }
+        }
       }
     }
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .news-parent {
-    .photo-news {
-      img {
-        width: 25vh;
-        border-radius: 10px;
+    .tes {
+      .photo-news {
+        img {
+          width: 30vh;
+          height: 35vh;
+          border-radius: 10px;
+        }
+      }
+    }
+    .text-news {
+      .judul-news {
+        font-size: 19px;
+      }
+      .tags {
+        .seperator {
+        }
+
+        .tags-spesifik {
+          font-size: 17px;
+          .date {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .news-parent {
+    .tes {
+      .photo-news {
+        img {
+          width: 30vh;
+          height: 35vh;
+          border-radius: 10px;
+        }
       }
     }
   }
@@ -72,32 +121,86 @@
 
 @media only screen and (max-width: 475px) {
   .news-parent {
-    .photo-news {
-      img {
-        width: 20vh;
-        border-radius: 10px;
-      }
-    }
-
-    .judul-news {
-      font-size: 8px;
-    }
-
-    .tags {
-      // display: block;
-      //   flex-direction: column    ;
-      .seperator {
-        /* Menerapkan border sebagai garis pemisah */
-        border-top: 1px solid black;
-        margin-top: 10px; /* Atur jarak antara garis pemisah dengan konten sekitarnya */
-      }
-
-      .tags-spesifik {
-        display: flex;
-        .date {
-          margin-left: 10px;
+    .tes {
+      .photo-news {
+        img {
+          width: 20vh;
+          height: 25vh;
+          border-radius: 10px;
         }
-        // justify-content: space-between;
+      }
+
+      .text-news {
+        .judul-news {
+          font-size: 12px;
+        }
+        .tags {
+          .seperator {
+          }
+
+          .tags-spesifik {
+            font-size: 12px;
+            .date {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 368px) {
+  .news-parent {
+    .tes {
+      .photo-news {
+        img {
+          width: 18vh;
+          height: 20vh;
+          border-radius: 10px;
+        }
+      }
+
+      .text-news {
+        .judul-news {
+          font-size: 10px;
+        }
+        .tags {
+          .seperator {
+          }
+
+          .tags-spesifik {
+            font-size: 12px;
+            .date {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 285px) {
+  .news-parent {
+    .tes {
+      .photo-news {
+        img {
+        }
+      }
+
+      .text-news {
+        .judul-news {
+          font-size: 9px;
+        }
+        .tags {
+          .seperator {
+          }
+
+          .tags-spesifik {
+            font-size: 10px;
+            .date {
+            }
+          }
+        }
       }
     }
   }

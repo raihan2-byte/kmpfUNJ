@@ -1,8 +1,8 @@
 @use "../../scss/index" as *;
 
 .berita-parent {
-  margin: 7rem 10px;
-  padding-top: 2rem;
+  margin: 7rem 0;
+  // padding-top: 2rem;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -11,19 +11,31 @@
   .space {
     display: flex;
     flex-direction: column;
-    margin: auto 4rem;
+    margin: auto 3rem;
     .text {
-      // margin-right: auto;
-      margin: auto 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 30%;
+      }
+      h3,
+      p {
+        margin-right: auto;
+        // margin-left: 1rem;
+      }
       color: black;
       font-size: 25px;
       font-weight: 800;
     }
     .berita-child {
-      display: flex;
-      justify-content: space-between;
-      // grid-template-columns: repeat(3, 33.3%);
-      // place-items: center;
+      // width: fit-content;
+      display: grid;
+      // justify-content: space-between;
+      grid-template-columns: repeat(3, 33.3%);
+      place-items: center;
       color: white;
       font-size: 20px;
       padding-top: 30px;
@@ -37,77 +49,41 @@
       .card {
         position: relative;
         img {
+          border-radius: 10%;
           width: 100%;
+          height: 450px;
+          filter: brightness(65%);
           // border: 1px solid #ccc;
           // border-radius: 10%;
-          padding: 10px;
+          object-fit: cover;
+          padding: 1px;
         }
-        // padding: 20px;
-        // display: grid;
-        // align-items: center;
-        // // background-size: 100%;
-        // // background-size: cover;
-        // // background-image: url(../../components/assets/Headline1.jpg);
 
-        // overflow: hidden;
-        // width: 90%;
-        // height: 35vh;
-        // margin: 10px;
         .card-content {
           width: 100%;
           .card-title-left {
             position: absolute;
-            width: 50%;
+            width: 60%;
             top: 30%;
             bottom: 0;
-            left: 25%;
+            left: 20%;
 
             right: 0;
-            font-size: 20px;
+            font-size: 25px;
             color: white;
             text-align: center;
             display: flex;
             justify-content: center;
             // align-items: center;
           }
-
-          .card-title-middle {
-            position: absolute;
-            width: 50%;
-            top: 30%;
-            bottom: 0;
-            left: 25%;
-            right: 0;
-            font-size: 20px;
-            color: white;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-          }
-
-          .card-title-right {
-            position: absolute;
-            width: 50%;
-            top: 30%;
-            bottom: 0;
-            left: 25%;
-            right: 0;
-            font-size: 20px;
-            color: white;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-          }
         }
       }
-      // News {
-      //   margin: 100px;
-      // }
     }
     .news-archieve {
       margin: auto 1rem;
 
       h3 {
+        font-size: 30px;
         position: relative;
         font-weight: 800;
 
@@ -117,34 +93,27 @@
           margin-left: 20px;
           top: 50%;
           // max-width: 800px;
-          width: 86%;
+          width: 85%;
           height: 2px;
-          background-color: $blackColor;
-
-          @include tablet {
-            width: 80%;
-          }
-
-          @include mobile {
-            width: 78%;
-          }
+          background-color: black;
         }
       }
     }
   }
   .tambahan {
-    // background-color: rgb(200, 200, 200);
     .tambahan-child {
       display: flex;
       justify-content: center;
-      // margin: 10px;
 
       .karya,
       .proker {
+        width: 50%;
         margin: 40px;
+        position: relative;
+
         img {
           width: 100%;
-          height: 100%;
+          height: 100vh;
         }
         Button {
           width: 100px;
@@ -155,11 +124,17 @@
           margin-bottom: 20px;
         }
         .image h5 {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           position: absolute;
-          top: 30px;
-          left: 10px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 60vh;
+          font-size: 33px;
           color: white;
-          background-color: white;
         }
       }
 
@@ -178,128 +153,137 @@
   }
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1100px) {
   .berita-parent {
     .space {
-      .text {
-      }
       .berita-child {
-        p {
-        }
-
         .card {
-          img {
-          }
-
           .card-content {
             .card-title-left {
-              font-size: 15px;
-            }
-
-            .card-title-middle {
-              font-size: 15px;
-            }
-
-            .card-title-right {
-              font-size: 15px;
+              font-size: 20px;
             }
           }
         }
       }
-      .n30s-archieve {
-        hr {
-        }
-      }
-      News {
-        background-color: white;
-      }
-    }
-    .tambahan {
-      .tambahan-child {
-        .karya,
-        .proker {
-          img {
-          }
-          Button {
-          }
+      .archieve {
+        .news-archieve {
           h3 {
-            font-size: 25px;
+            font-size: 23px;
+            &::after {
+              width: 84%;
+            }
           }
-          .image h5 {
-          }
         }
-
-        .karya {
-        }
-        .proker {
-        }
-        // .garis {
-        //   border-color: black;
-        // }
       }
     }
   }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 910px) {
   .berita-parent {
     .space {
-      .text {
-      }
       .berita-child {
-        p {
-        }
-
         .card {
           img {
+            // width: 48vh;
+            height: 400px;
           }
 
           .card-content {
             .card-title-left {
-              font-size: 10px;
-            }
-
-            .card-title-middle {
-              font-size: 10px;
-            }
-
-            .card-title-right {
-              font-size: 10px;
             }
           }
         }
       }
-      .news-archieve {
-        hr {
+      .archieve {
+        .news-archieve {
+          h3 {
+            &::after {
+              // max-width: 800px;
+              width: 80%;
+            }
+          }
         }
-      }
-      News {
-        background-color: white;
       }
     }
     .tambahan {
       .tambahan-child {
         .karya,
         .proker {
-          img {
-          }
-          Button {
-          }
           h3 {
-            font-size: 20px;
+            font-size: 25px;
+          }
+
+          img {
+            height: 40vh;
+          }
+
+          .image h5 {
+            margin: auto;
+            width: 90%;
+            font-size: 27px;
+            height: 33vh;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 772px) {
+  .berita-parent {
+    .space {
+      .text {
+        font-size: 20px;
+        font-weight: 800;
+      }
+      .berita-child {
+        .card {
+          img {
+            // width: 43vh;
+            height: 350px;
+          }
+
+          .card-content {
+            .card-title-left {
+              width: 80%;
+              font-size: 18px;
+              left: 10%;
+            }
+          }
+        }
+      }
+      .archieve {
+        .news-archieve {
+          h3 {
+            &::after {
+              @media screen and (max-width: 720px) {
+                width: 75%;
+              }
+              width: 78%;
+            }
+          }
+        }
+      }
+    }
+    .tambahan {
+      .tambahan-child {
+        .karya,
+        .proker {
+          h3 {
+            font-size: 25px;
             margin-bottom: 10px;
           }
+
+          img {
+            height: 40vh;
+          }
+
           .image h5 {
+            height: 35vh;
+            font-size: 25px;
           }
         }
-
-        .karya {
-        }
-        .proker {
-        }
-        // .garis {
-        //   border-color: black;
-        // }
       }
     }
   }
@@ -311,58 +295,102 @@
       .text {
       }
       .berita-child {
-        p {
-        }
-
         .card {
           img {
+            // width: 43vh;
+            height: 300px;
           }
 
           .card-content {
             .card-title-left {
               font-size: 10px;
             }
-
-            .card-title-middle {
-              font-size: 10px;
-            }
-
-            .card-title-right {
-              font-size: 10px;
-            }
           }
         }
       }
-      .news-archieve {
-        hr {
+      .archieve {
+        .news-archieve {
+          h3 {
+            &::after {
+              // max-width: 800px;
+              width: 72%;
+            }
+          }
         }
-      }
-      News {
-        background-color: white;
       }
     }
     .tambahan {
       .tambahan-child {
         .karya,
         .proker {
-          img {
-          }
-          Button {
-          }
           h3 {
             font-size: 17px;
           }
+
+          img {
+            // filter: brightness(50%);
+            height: 50vh;
+          }
+
           .image h5 {
+            font-size: 15px;
+            height: 52vh;
+            // text-align: center;
           }
         }
+      }
+    }
+  }
+}
 
-        .karya {
+@media screen and (max-width: 580px) {
+  .berita-parent {
+    .space {
+      .berita-child {
+        .card {
+          img {
+            // width: 32vh;
+            height: 250px;
+          }
+
+          .card-content {
+            .card-title-left {
+              font-size: 12px;
+            }
+          }
         }
+      }
+      .archieve {
+        .news-archieve {
+          h3 {
+            font-size: 18px;
+            &::after {
+              // max-width: 800px;
+              width: 72%;
+            }
+          }
+        }
+      }
+    }
+    .tambahan {
+      .tambahan-child {
+        .karya,
         .proker {
+          h3 {
+            font-size: 12px;
+          }
+
+          img {
+            // filter: brightness(50%);
+            height: 40vh;
+          }
+
+          .image h5 {
+            font-size: 15px;
+            height: 45vh;
+            // text-align: center;
+          }
         }
-        // .garis {
-        //   border-color: black;
-        // }
       }
     }
   }
@@ -376,55 +404,185 @@
         font-size: 15px;
       }
       .berita-child {
-        p {
-        }
-
+        display: grid;
+        // justify-content: space-between;
+        grid-template-columns: repeat(2, 50%);
+        place-items: center;
         .card {
           img {
+            // width: 32vh;
+            height: 200px;
           }
 
           .card-content {
             .card-title-left {
-              font-size: 8px;
-            }
-
-            .card-title-middle {
-              font-size: 8px;
-            }
-
-            .card-title-right {
-              font-size: 8px;
+              font-size: 12px;
             }
           }
         }
       }
-      .n30s-archieve {
-        hr {
+      .archieve {
+        .news-archieve {
+          h3 {
+            font-size: 16px;
+            &::after {
+              // max-width: 800px;
+              width: 70%;
+            }
+          }
         }
-      }
-      News {
-        background-color: white;
       }
     }
     .tambahan {
       .tambahan-child {
         .karya,
         .proker {
-          img {
-          }
-          Button {
-          }
           h3 {
             font-size: 12px;
           }
+
+          img {
+            // filter: brightness(50%);
+            height: 23vh;
+          }
+
           .image h5 {
+            font-size: 13px;
+
+            height: 38vh;
+            // text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .berita-parent {
+    .space {
+      .text {
+        margin: auto 10px;
+        font-size: 15px;
+      }
+      .berita-child {
+        display: grid;
+        // justify-content: space-between;
+        grid-template-columns: repeat(2, 50%);
+        place-items: center;
+
+        .card {
+          img {
+            height: 170px;
+          }
+
+          .card-content {
+            .card-title-left {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .archieve {
+        .news-archieve {
+          h3 {
+            font-size: 15px;
+            &::after {
+              // max-width: 800px;
+              width: 68%;
+            }
+          }
+        }
+      }
+    }
+
+    .tambahan {
+      .tambahan-child {
+        .karya,
+        .proker {
+          h3 {
+            font-size: 12px;
+          }
+
+          img {
+            height: 22vh;
+          }
+
+          .image h5 {
+            @media screen and (max-width: 325px) {
+              height: 33vh;
+              font-size: 10px;
+            }
+            font-size: 12px;
+            height: 35vh;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .berita-parent {
+    .space {
+      .text {
+        font-size: 10px;
+        font-weight: 900;
+      }
+      .archieve {
+        .news-archieve {
+          h3 {
+            font-size: 13px;
+            &::after {
+              // max-width: 800px;
+              width: 55%;
+
+              // @include tablet {
+              //   width: 80%;
+              // }
+
+              // @include mobile {
+              //   width: 78%;
+              // }
+            }
+          }
+        }
+      }
+    }
+    .tambahan {
+      .tambahan-child {
+        .karya,
+        .proker {
+          h3 {
+            font-size: 10px;
+          }
+
+          img {
+            // filter: brightness(50%);
+            height: 25vh;
+            width: 20vh;
+            padding: 10px;
+          }
+
+          .image h5 {
+            width: 50%;
+            margin: auto;
+            font-size: 7px;
+            height: 45vh;
+            // text-align: center;
+          }
+
+          Button {
+            padding: 0;
+            font-size: 6px;
+            width: 60%;
+          }
+          .teks-tambahan {
+            font-size: 8px;
+            text-align: center;
           }
         }
 
-        .karya {
-        }
-        .proker {
-        }
         // .garis {
         //   border-color: black;
         // }

@@ -1,37 +1,33 @@
 .aboutus-parent {
-  background-color: antiquewhite;
-  margin: 7rem 10px;
+  background-color: white;
+  margin: 6rem 10px;
   position: relative;
   text-align: center;
   flex: column;
-  width: 100%;
-  // font-family: "Courier New", Courier, monospace;
+  padding: 10px;
   h2 {
+    text-decoration: underline;
     margin: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 40px;
   }
 
   .aboutus {
     width: 100%;
-    // display: flex;
-    // justify-content: center;
-    // margin: 10px 30px;
+    margin: auto;
 
     .mySwiper {
       width: 100%;
-      // height: 80vh;
       .slide {
         text-align: justify;
         display: flex;
-        // .teks-about {
-        //   margin: auto;
-
-        // }
 
         .tes {
           display: flex;
           .foto-about {
             width: 50%;
-
+            margin: auto;
             img {
               width: 100%;
               object-fit: fill;
@@ -43,32 +39,22 @@
             width: 50%;
             margin: auto;
             padding-right: 30px;
+            padding-left: 20px;
+
             h3 {
               text-align: center;
               margin-bottom: 10px;
+              // margin-left: 20px;
+              font-weight: bold;
             }
             p {
+              font-weight: 600;
               font-size: 20px;
               margin-bottom: 10px;
-              margin-left: 20px;
+              // margin-left: 20px;
             }
           }
         }
-      }
-      //   flex: column;
-    }
-
-    .text-kanan {
-      text-align: justify;
-      position: relative;
-      //   margin: 10px;
-      margin: auto 10px;
-      font-size: 20px;
-      h3 {
-        font-size: 30px;
-      }
-      p {
-        margin-bottom: 10px;
       }
     }
   }
@@ -76,26 +62,31 @@
   .text-aboutus {
     text-align: left;
     font-size: 25px;
-    margin: 0 50px;
+    margin: 0 20px;
     width: 90%;
     position: relative;
 
+    h3 {
+      letter-spacing: 5px;
+    }
+
     h3,
     h4 {
-      margin-bottom: 10px;
+      padding-top: 10px;
+      margin-bottom: 5px;
     }
   }
 
   .text-usaha {
     text-align: left;
     font-size: 25px;
-    margin: 30px 50px;
+    margin: 20px 20px;
     width: 90%;
     position: relative;
 
     h3,
     h4 {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
   }
   .detail-usaha {
@@ -103,10 +94,14 @@
   }
 
   .team {
+    padding: 40px;
+    border-radius: 5%;
+    background-color: #ffc918;
     margin: 0.7rem 10px;
 
     h3 {
       font-size: 30px;
+      margin-bottom: 20px;
     }
 
     .team-child {
@@ -122,44 +117,135 @@
 
     img {
       margin-top: 10px;
-      width: 30%;
+      width: 40%;
       border-radius: 10%;
+    }
+  }
+  .maps {
+    margin-top: 3rem;
+    width: 100%;
+    .maps-konten {
+      width: 95%;
+      margin: auto;
     }
   }
 }
 
-// .map-container {
-//   width: 100%;
-//   height: 100px; /* Atur tinggi sesuai kebutuhan Anda */
-// }
-
 @media only screen and (max-width: 1110px) {
-}
-
-@media only screen and (max-width: 970px) {
   .aboutus-parent {
-    // font-family: "Courier New", Courier, monospace;
     h2 {
     }
 
     .aboutus {
       .mySwiper {
-        //   flex: column;
-        img {
+        .slide {
+          .tes {
+            .foto-about {
+              img {
+              }
+            }
+
+            .teks-about {
+              h3 {
+              }
+              p {
+                font-size: 16.5px;
+              }
+            }
+          }
         }
       }
 
       .text-kanan {
+        h3 {
+        }
+        p {
+        }
       }
     }
 
     .text-aboutus {
+      font-size: 20px;
       h3,
       h4 {
       }
     }
 
     .text-usaha {
+      font-size: 20px;
+      h3,
+      h4 {
+      }
+    }
+    .detail-usaha {
+    }
+
+    .team {
+      h3 {
+        font-size: 20px;
+      }
+
+      .team-child {
+        .nama {
+          font-size: 15px;
+        }
+        .jabatan {
+          font-size: 12px;
+        }
+      }
+
+      img {
+      }
+    }
+    .maps {
+      .maps-konten {
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 910px) {
+  .aboutus-parent {
+    h2 {
+    }
+
+    .aboutus {
+      .mySwiper {
+        .slide {
+          .tes {
+            .foto-about {
+              img {
+              }
+            }
+
+            .teks-about {
+              h3 {
+              }
+              p {
+                font-size: 14.5px;
+              }
+            }
+          }
+        }
+      }
+
+      .text-kanan {
+        h3 {
+        }
+        p {
+        }
+      }
+    }
+
+    .text-aboutus {
+      font-size: 18px;
+      h3,
+      h4 {
+      }
+    }
+
+    .text-usaha {
+      font-size: 18px;
       h3,
       h4 {
       }
@@ -179,8 +265,383 @@
       img {
       }
     }
+    .maps {
+      .maps-konten {
+      }
+    }
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 790px) {
+  .aboutus-parent {
+    h2 {
+    }
+
+    .aboutus {
+      .mySwiper {
+        .slide {
+          .tes {
+            .foto-about {
+              img {
+              }
+            }
+
+            .teks-about {
+              h3 {
+              }
+              p {
+                font-size: 11.5px;
+              }
+            }
+          }
+        }
+      }
+
+      .text-kanan {
+        h3 {
+        }
+        p {
+        }
+      }
+    }
+
+    .text-aboutus {
+      font-size: 15px;
+      h3,
+      h4 {
+      }
+    }
+
+    .text-usaha {
+      font-size: 15px;
+      h3,
+      h4 {
+      }
+    }
+    .detail-usaha {
+    }
+
+    .team {
+      h3 {
+      }
+
+      .team-child {
+        .nama {
+        }
+      }
+
+      img {
+      }
+    }
+    .maps {
+      .maps-konten {
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .aboutus-parent {
+    h2 {
+    }
+
+    .aboutus {
+      .mySwiper {
+        .slide {
+          .tes {
+            .foto-about {
+              img {
+              }
+            }
+
+            .teks-about {
+              h3 {
+              }
+              p {
+                font-size: 9.5px;
+              }
+            }
+          }
+        }
+      }
+
+      .text-kanan {
+        h3 {
+        }
+        p {
+        }
+      }
+    }
+
+    .text-aboutus {
+      font-size: 13px;
+      h3,
+      h4 {
+      }
+    }
+
+    .text-usaha {
+      font-size: 13px;
+      h3,
+      h4 {
+      }
+    }
+    .detail-usaha {
+    }
+
+    .team {
+      h3 {
+        font-size: 17px;
+      }
+
+      .team-child {
+        .nama {
+          font-size: 12px;
+        }
+        .jabatan {
+          font-size: 10px;
+        }
+      }
+
+      img {
+      }
+    }
+    .maps {
+      .maps-konten {
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .aboutus-parent {
+    h2 {
+    }
+
+    .aboutus {
+      .mySwiper {
+        .slide {
+          .tes {
+            .foto-about {
+              img {
+              }
+            }
+
+            .teks-about {
+              h3 {
+              }
+              p {
+                font-size: 7.5px;
+              }
+            }
+          }
+        }
+      }
+
+      .text-kanan {
+        h3 {
+        }
+        p {
+        }
+      }
+    }
+
+    .text-aboutus {
+      font-size: 11px;
+      h3,
+      h4 {
+      }
+    }
+
+    .text-usaha {
+      font-size: 11px;
+      h3,
+      h4 {
+      }
+    }
+    .detail-usaha {
+    }
+
+    .team {
+      h3 {
+      }
+
+      .team-child {
+        .nama {
+        }
+      }
+
+      img {
+      }
+    }
+    .maps {
+      .maps-konten {
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .aboutus-parent {
+    h2 {
+      font-size: 25px;
+    }
+
+    .aboutus {
+      .mySwiper {
+        .slide {
+          .tes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .foto-about {
+              img {
+                width: 100%;
+              }
+            }
+
+            .teks-about {
+              width: 75%;
+              margin-left: 0;
+              margin: auto;
+              // margin: auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              h3 {
+                text-align: center;
+                margin-left: 10px;
+              }
+              p {
+                font-size: 9px;
+              }
+            }
+          }
+        }
+      }
+
+      .text-kanan {
+        h3 {
+        }
+        p {
+        }
+      }
+    }
+
+    .text-aboutus {
+      font-size: 9px;
+      h3,
+      h4 {
+      }
+    }
+
+    .text-usaha {
+      font-size: 9px;
+      h3,
+      h4 {
+      }
+    }
+    .detail-usaha {
+    }
+
+    .team {
+      h3 {
+        font-size: 15px;
+      }
+
+      .team-child {
+        .nama {
+          font-size: 10px;
+        }
+        .jabatan {
+          font-size: 9px;
+        }
+      }
+
+      img {
+      }
+    }
+    .maps {
+      .maps-konten {
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .aboutus-parent {
+    h2 {
+      font-size: 20px;
+    }
+
+    .aboutus {
+      .mySwiper {
+        .slide {
+          .tes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .foto-about {
+              img {
+              }
+            }
+
+            .teks-about {
+              h3 {
+              }
+              p {
+                font-size: 8px;
+              }
+            }
+          }
+        }
+      }
+
+      .text-kanan {
+        h3 {
+        }
+        p {
+        }
+      }
+    }
+
+    .text-aboutus {
+      font-size: 9px;
+      h3,
+      h4 {
+      }
+    }
+
+    .text-usaha {
+      font-size: 9px;
+      h3,
+      h4 {
+      }
+    }
+    .detail-usaha {
+    }
+
+    .team {
+      h3 {
+        font-size: 13px;
+      }
+
+      .team-child {
+        .nama {
+          font-size: 8px;
+        }
+        .jabatan {
+          font-size: 7px;
+        }
+      }
+
+      img {
+      }
+    }
+    .maps {
+      .maps-konten {
+      }
+    }
+  }
 }

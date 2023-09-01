@@ -20,7 +20,7 @@ const sidebarContent = [
     path: "/phototalk-admin",
   },
   {
-    display: "KMPF",
+    display: "Short Video",
     path: "/kmpf-admin",
   },
   {

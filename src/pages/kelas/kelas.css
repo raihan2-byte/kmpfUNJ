@@ -1,0 +1,261 @@
+.parent {
+  margin-top: 8rem;
+}
+.parent .kelas-fotografi {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  place-items: center;
+  padding: 20px;
+}
+.parent .kelas-fotografi .kelas-jurnalis {
+  background-image: url("../../components/assets/jurnalistik.jpg");
+  background-size: cover;
+  width: 80%;
+  height: 70vh;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 5px 5px black;
+}
+.parent .kelas-fotografi .kelas-jurnalis .judul-jurnalis,
+.parent .kelas-fotografi .kelas-jurnalis .teks-jurnalis {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+}
+.parent .kelas-fotografi .kelas-salon {
+  background-image: url("../../components/assets/Salon.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  height: 70vh;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 5px 5px black;
+}
+.parent .kelas-fotografi .kelas-salon .judul-salon,
+.parent .kelas-fotografi .kelas-salon .teks-salon {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+}
+.parent .kelas-fotografi .kelas-alternatif {
+  background-image: url("../../components/assets/Alternatif.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  height: 70vh;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 5px 5px black;
+}
+.parent .kelas-fotografi .kelas-alternatif .judul-alternatif,
+.parent .kelas-fotografi .kelas-alternatif .teks-alternatif {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+}
+
+.video-reels {
+  background-color: #15498e;
+  margin: 1rem 2rem;
+  border-radius: 30px;
+  padding-bottom: 2rem;
+  cursor: default;
+}
+.video-reels h1 {
+  color: #f4f4f4;
+  text-align: center;
+  font-size: 70px;
+  font-weight: 900;
+}
+.video-reels .mySwiper {
+  margin: 0 4rem;
+}
+.video-reels .mySwiper h5 {
+  color: #222;
+  margin: 0;
+  padding-right: 50px;
+  text-align: center;
+}
+.video-reels .mySwiper p {
+  color: #222;
+  margin: 0;
+  padding-right: 50px;
+  text-align: center;
+}
+.video-reels .mySwiper .photo {
+  width: 40vh;
+  height: 60vh;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 10%;
+}
+
+@media only screen and (max-width: 1110px) {
+  .parent .kelas-fotografi .kelas-jurnalis {
+    height: 50vh;
+  }
+  .parent .kelas-fotografi .kelas-jurnalis .judul-jurnalis,
+  .parent .kelas-fotografi .kelas-jurnalis .teks-jurnalis {
+    font-size: 15px;
+    text-align: center;
+    color: white;
+  }
+  .parent .kelas-fotografi .kelas-salon {
+    height: 50vh;
+  }
+  .parent .kelas-fotografi .kelas-salon .judul-salon,
+  .parent .kelas-fotografi .kelas-salon .teks-salon {
+    font-size: 15px;
+    text-align: center;
+    color: white;
+  }
+  .parent .kelas-fotografi .kelas-alternatif {
+    height: 50vh;
+  }
+  .parent .kelas-fotografi .kelas-alternatif .judul-alternatif,
+  .parent .kelas-fotografi .kelas-alternatif .teks-alternatif {
+    font-size: 15px;
+    text-align: center;
+    color: white;
+  }
+  .parent .video-reels h1 {
+    font-size: 65px;
+  }
+  .parent .video-reels .mySwiper .photo {
+    width: 25vh;
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: 3px solid #000;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .parent .kelas-fotografi .kelas-jurnalis {
+    height: 40vh;
+  }
+  .parent .kelas-fotografi .kelas-jurnalis .judul-jurnalis,
+  .parent .kelas-fotografi .kelas-jurnalis .teks-jurnalis {
+    font-size: 13px;
+    text-align: center;
+    color: white;
+  }
+  .parent .kelas-fotografi .kelas-salon {
+    height: 40vh;
+  }
+  .parent .kelas-fotografi .kelas-salon .judul-salon,
+  .parent .kelas-fotografi .kelas-salon .teks-salon {
+    font-size: 13px;
+    text-align: center;
+    color: white;
+  }
+  .parent .kelas-fotografi .kelas-alternatif {
+    height: 40vh;
+  }
+  .parent .kelas-fotografi .kelas-alternatif .judul-alternatif,
+  .parent .kelas-fotografi .kelas-alternatif .teks-alternatif {
+    font-size: 13px;
+    text-align: center;
+    color: white;
+  }
+  .parent .video-reels h1 {
+    font-size: 60px;
+  }
+  .parent .video-reels .mySwiper .photo {
+    width: 25vh;
+    height: 37vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: 3px solid #000;
+  }
+}
+@media screen and (max-width: 768px) {
+  .parent .kelas-fotografi .kelas-jurnalis {
+    height: 40vh;
+  }
+  .parent .kelas-fotografi .kelas-jurnalis .judul-jurnalis,
+  .parent .kelas-fotografi .kelas-jurnalis .teks-jurnalis {
+    font-size: 10px;
+    text-align: center;
+    color: white;
+  }
+  .parent .kelas-fotografi .kelas-salon {
+    height: 40vh;
+  }
+  .parent .kelas-fotografi .kelas-salon .judul-salon,
+  .parent .kelas-fotografi .kelas-salon .teks-salon {
+    font-size: 10px;
+    text-align: center;
+    color: white;
+  }
+  .parent .kelas-fotografi .kelas-alternatif {
+    height: 40vh;
+  }
+  .parent .kelas-fotografi .kelas-alternatif .judul-alternatif,
+  .parent .kelas-fotografi .kelas-alternatif .teks-alternatif {
+    font-size: 10px;
+    text-align: center;
+    color: white;
+  }
+  .parent .video-reels h1 {
+    font-size: 40px;
+  }
+  .parent .video-reels .mySwiper .photo {
+    width: 25vh;
+    height: 33vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: 3px solid #000;
+  }
+}
+@media screen and (max-width: 570px) {
+  .parent .kelas-fotografi .kelas-jurnalis {
+    height: 35vh;
+  }
+  .parent .kelas-fotografi .kelas-jurnalis .judul-jurnalis,
+  .parent .kelas-fotografi .kelas-jurnalis .teks-jurnalis {
+    font-size: 8px;
+    text-align: center;
+    color: white;
+  }
+  .parent .kelas-fotografi .kelas-salon {
+    height: 35vh;
+  }
+  .parent .kelas-fotografi .kelas-salon .judul-salon,
+  .parent .kelas-fotografi .kelas-salon .teks-salon {
+    font-size: 8px;
+    text-align: center;
+    color: white;
+  }
+  .parent .kelas-fotografi .kelas-alternatif {
+    height: 35vh;
+  }
+  .parent .kelas-fotografi .kelas-alternatif .judul-alternatif,
+  .parent .kelas-fotografi .kelas-alternatif .teks-alternatif {
+    font-size: 8px;
+    text-align: center;
+    color: white;
+  }
+  .parent .video-reels h1 {
+    font-size: 30px;
+  }
+  .parent .video-reels .mySwiper .photo {
+    width: 25vh;
+    height: 29vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: 3px solid #000;
+  }
+}/*# sourceMappingURL=kelas.css.map */

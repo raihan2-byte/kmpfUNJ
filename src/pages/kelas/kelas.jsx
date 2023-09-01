@@ -82,12 +82,12 @@ const Kelas = () => {
                 spaceBetween: 20,
               },
               768: {
-                slidesPerView: 4,
-                spaceBetween: 40,
+                slidesPerView: 3,
+                spaceBetween: 30,
               },
               1024: {
-                slidesPerView: 5,
-                spaceBetween: 50,
+                slidesPerView: 4,
+                spaceBetween: 40,
               },
             }}
             modules={[Pagination]}

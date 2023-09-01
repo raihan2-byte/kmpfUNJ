@@ -21,7 +21,14 @@ const Header = ({ news }) => {
   return (
     <div className="header">
       <div className="header__left">
-        <Swiper navigation={true} modules={[Pagination, Navigation]} className="mySwiper">
+        <Swiper
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
           {news?.map((data) => (
             <SwiperSlide key={data.id}>
               <img src={data.file_name} alt="text" className="kontoru" />
@@ -30,12 +37,15 @@ const Header = ({ news }) => {
               </div>
             </SwiperSlide>
           ))}
+          <div className="swiper-button-next" style={{ color: "white" }}></div>
+          <div className="swiper-button-prev" style={{ color: "white" }}></div>
         </Swiper>
       </div>
+
       <div className="header__right">
         <div className="header__right__top">
           <img src={Karya} alt="text" className="img-top" />
-          <h2 className="teks-right">Karya Terbaru</h2>
+          <h2 className="teks-right">Artikel Terbaru</h2>
         </div>
         <div className="header__right__bottom">
           <img src={Proker} alt="text" className="img-bot" />

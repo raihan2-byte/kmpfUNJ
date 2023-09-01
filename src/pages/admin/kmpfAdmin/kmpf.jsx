@@ -23,13 +23,22 @@ const kmpf = () => {
                     Home
                   </a>
                 </li>
+                <li>
+                  <Button
+                    onClick={() =>
+                      (window.location.href = "/create-short-video  ")
+                    }
+                  >
+                    Create
+                  </Button>
+                </li>
               </ul>
             </div>
           </div>
           <div class="table-data">
             <div class="order">
               <div class="head">
-                <h3>List KMPF</h3>
+                <h3>List Short Video</h3>
                 <i class="bx bx-search"></i>
                 <i class="bx bx-filter"></i>
               </div>
@@ -54,7 +63,6 @@ const kmpf = () => {
                       <img src={Berita} alt="text" />
                     </td>
                     <td>
-                      <Button>Create</Button>
                       <Button>Delete</Button>
                       <Button>Get</Button>
                     </td>
@@ -70,7 +78,6 @@ const kmpf = () => {
                       <img src={Berita} alt="text" />
                     </td>
                     <td>
-                      <Button>Create</Button>
                       <Button>Delete</Button>
                       <Button>Get</Button>
                     </td>
@@ -86,7 +93,6 @@ const kmpf = () => {
                       <img src={Berita} alt="text" />
                     </td>
                     <td>
-                      <Button>Create</Button>
                       <Button>Delete</Button>
                       <Button>Get</Button>
                     </td>

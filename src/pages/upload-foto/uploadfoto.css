@@ -1,0 +1,45 @@
+.upload-foto-parent {
+  background-color: #edceab;
+  margin: 7rem 10px;
+}
+.upload-foto-parent .tulisan {
+  padding-top: 2rem;
+  margin-left: 10vh;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+.upload-foto-parent .upload-foto-child {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 33.3%);
+  text-align: center;
+  height: 70vh;
+  color: white;
+  font-size: 20px;
+  padding-bottom: 2rem;
+}
+.upload-foto-parent .upload-foto-child .card {
+  display: grid;
+  place-items: center;
+  background-size: cover;
+  background-image: url(../../components/assets/proker-terbaru.JPG);
+  border: 1px solid #ccc;
+  width: 55vh;
+  height: 32vh;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.upload-foto-parent .upload-foto-child .card .card-content {
+  padding: 16px;
+}
+.upload-foto-parent .upload-foto-child .card .card-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: white;
+  text-align: center;
+}
+.upload-foto-parent .upload-foto-child .card .card-description {
+  font-size: 14px;
+  color: white;
+}/*# sourceMappingURL=uploadfoto.css.map */

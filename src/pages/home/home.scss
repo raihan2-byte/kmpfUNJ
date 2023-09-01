@@ -19,8 +19,8 @@
 
     .fotografi {
       position: relative;
-      width: 1500px;
-      max-width: 1500px;
+      width: 100%;
+      // max-width: 1500px;
       height: 600px;
       background-size: cover;
       background-position: center;
@@ -61,8 +61,7 @@
 
     .rental {
       position: relative;
-      width: 1500px;
-      max-width: 1500px;
+      width: 100%;
       height: 600px;
       background-size: cover;
       background-position: center;
@@ -101,8 +100,8 @@
 
   .background {
     position: relative;
-    width: 1500px;
-    max-width: 1500px;
+    width: 100%;
+
     height: 300px;
     background-image: url("https://picsum.photos/1500/500");
 
@@ -131,21 +130,44 @@
   .mySwiper {
     margin: 0 4rem;
 
-    h5 {
-      color: $blackColor;
-      margin: 0;
-      padding-right: 50px;
-      text-align: center;
-    }
+    h5,
     p {
+      @media only screen and (max-width: 910px) {
+        font-size: 20px;
+      }
+
+      @media only screen and (max-width: 801px) {
+        font-size: 18px;
+      }
+      @media only screen and (max-width: 400px) {
+        font-size: 14px;
+      }
+
       color: $blackColor;
       margin: 0;
       padding-right: 50px;
       text-align: center;
     }
+
     .photo {
+      @media only screen and (max-width: 400px) {
+        width: 15vh;
+        height: 17vh;
+      }
+
+      @media only screen and (max-width: 910px) {
+        width: 20vh;
+        height: 17vh;
+      }
+
+      @media only screen and (max-width: 801px) {
+        width: 16vh;
+        height: 17vh;
+      }
+      background-size: fill;
       width: 25vh;
-      height: 20vh;
+      height: 30vh;
+      border-radius: 10%;
     }
   }
 }

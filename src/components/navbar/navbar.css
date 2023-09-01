@@ -1,0 +1,105 @@
+.navbar {
+  height: 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: #f4f4f4;
+}
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  cursor: pointer;
+}
+.navbar .logo img {
+  width: 7vh;
+}
+.navbar .logo p {
+  margin: auto;
+}
+.navbar__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 100%;
+  position: relative;
+}
+.navbar__wrap__display {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+.navbar__wrap__display li {
+  padding: 5px 0;
+  font-weight: 500;
+  position: relative;
+  font-size: 1.3rem;
+  width: -moz-max-content;
+  width: max-content;
+}
+.navbar__wrap__display li .text {
+  color: #222;
+  transition: ease-out 0.3s;
+}
+.navbar__wrap__display li .text:hover {
+  color: #c69c6d;
+}
+.navbar__wrap__display .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.navbar__wrap__display .dropdown-content .text-content {
+  padding: 10px;
+  font-size: 16px;
+  color: #3c3c3c;
+  border: 1px solid #000000;
+  transition: 0.3s ease-in-out;
+  white-space: nowrap;
+}
+.navbar__wrap__display .dropdown-content .text-content:hover {
+  color: #c69c6d;
+}
+.navbar__wrap__display li:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 900px) {
+  .navbar__wrap__display {
+    position: absolute;
+    top: 0;
+    right: -230px;
+    display: block;
+    padding: 6rem 15px;
+    margin: 0;
+    width: 200px;
+    height: 100vh;
+    transition: ease-in-out 300ms;
+    background-color: #f4f4f4;
+    z-index: 20;
+  }
+  .navbar__wrap__display.isActive {
+    right: 0;
+  }
+  .navbar__wrap__display li {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+}
+.navbar__wrap .buttonDisplay {
+  display: none;
+  z-index: 21;
+}
+@media only screen and (max-width: 900px) {
+  .navbar__wrap .buttonDisplay {
+    display: block;
+  }
+}/*# sourceMappingURL=navbar.css.map */

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./newskonten.scss";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
@@ -6,11 +6,14 @@ import Headline from "../assets/Headline1.jpg";
 import { useParams } from "react-router-dom";
 import API from "../../api/API";
 import { MdPeopleAlt } from "react-icons/md";
+import News from "../news/news";
 
 // import News from "../news/news";
 const Newskonten = () => {
   const params = useParams();
   const [berita, setBerita] = React.useState({});
+  const [rekomendasiBerita, setRekomendasiBerita] = useState([]); // State untuk rekomendasi berita
+  const [excludeBeritaID, setExcludeBeritaID] = useState(null);
   // const beritaIterable = Array.from(berita);
   console.log(berita);
   const getBeritaID = async (id) => {
@@ -22,9 +25,33 @@ const Newskonten = () => {
         console.log(error);
       });
   };
+
+  const getRekomendasiBerita = async (excludeID) => {
+    await API.get(`/berita`)
+      .then((response) => {
+        // Filter berita berdasarkan ID yang harus dikecualikan
+        const filteredBerita = response.data.data.filter(
+          (item) => item.id !== excludeID
+        );
+        console.log(response);
+        // Set daftar rekomendasi berita
+        setRekomendasiBerita(filteredBerita);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   React.useEffect(() => {
     getBeritaID(params.id);
   }, [params.id]);
+
+  React.useEffect(() => {
+    // Ketika berita diambil, perbarui daftar rekomendasi berita
+    if (berita.id) {
+      getRekomendasiBerita(berita.id);
+    }
+  }, [berita.id]);
 
   function formatTanggal(dateString) {
     const createdAt = new Date(dateString);
@@ -91,46 +118,48 @@ const Newskonten = () => {
                         </div>
                       </div>
                     </div> */}
-                    {/* {Array.from(berita).map((item) => ( */}
-                    <div className="konten-recomendation-child">
-                      <a href={`/berita/${berita.id}`} key={berita.id}>
-                        <div className="photo-news">
-                          <img src={berita.file_name} alt="news" />
-                        </div>
-                      </a>
-                      <div className="text-news">
-                        <div className="judul-news">
-                          <h3>{berita.judul}</h3>
-                        </div>
-                        <div className="tags">
-                          <div className="tags-spesifik">
-                            <p className="tag">berita</p>
-                            <p className="date">10-07-2023</p>
+                    {/* {rekomendasiBerita.map((item) => (
+                      <div className="konten-recomendation-child" key={item.id}>
+                        <a href={`/berita/${item.id}`}>
+                          <div className="photo-news">
+                            <img src={item.file_name} alt="news" />
                           </div>
-                          <div className="seperator"></div>
+                        </a>
+                        <div className="text-news">
+                          <div className="judul-news">
+                            <h3>{item.judul}</h3>
+                          </div>
+                          <div className="tags">
+                            <div className="tags-spesifik">
+                              <p className="tag">berita</p>
+                              <p className="date">10-07-2023</p>
+                            </div>
+                            <div className="seperator"></div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    {/* ))} */}
-                    <div className="konten-recomendation-child">
-                      <a href={`/berita/${berita.id}`} key={berita.id}>
-                        <div className="photo-news">
-                          <img src={berita.file_name} alt="news" />
-                        </div>
-                      </a>
-                      <div className="text-news">
-                        <div className="judul-news">
-                          <h3>Judul dan headline berita blablbabla</h3>
-                        </div>
-                        <div className="tags">
-                          <div className="tags-spesifik">
-                            <p className="tag">karya</p>
-                            <p className="date">10-07-2023</p>
+                    ))} */}
+                    {rekomendasiBerita.map((item) => (
+                      <div className="konten-recomendation-child">
+                        <a href={`/berita/${item.id}`} key={item.id}>
+                          <div className="photo-news">
+                            <img src={item.file_name} alt="news" />
                           </div>
-                          <div className="seperator"></div>
+                        </a>
+                        <div className="text-news">
+                          <div className="judul-news">
+                            <h3>Judul dan headline berita blablbabla</h3>
+                          </div>
+                          <div className="tags">
+                            <div className="tags-spesifik">
+                              <p className="tag">karya</p>
+                              <p className="date">10-07-2023</p>
+                            </div>
+                            <div className="seperator"></div>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>

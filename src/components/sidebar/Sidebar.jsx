@@ -1,70 +1,91 @@
-import React from "react";
-import "./sidebar.scss";
-import { Link, useLocation } from "react-router-dom";
+// export default Sidebar;
 
-const sidebarContent = [
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./sidebar.scss";
+import { Spin as Hamburger } from "hamburger-react";
+import Button from "../button/Button";
+
+const navbarContent = [
   {
     display: "Users",
     path: "/admin",
+    content: [],
   },
   {
     display: "Berita",
     path: "/berita-admin",
+    content: [],
   },
   {
     display: "Barang",
     path: "/barang-admin",
+    content: [],
   },
   {
     display: "PhotoTalk",
     path: "/phototalk-admin",
+    content: [],
   },
   {
     display: "Short Video",
     path: "/kmpf-admin",
+    content: [],
   },
   {
     display: "Merch",
     path: "/merch-admin",
+    content: [],
   },
 ];
 
 const Sidebar = () => {
-  const location = useLocation();
+  const { pathname } = useLocation();
+  const [addClass, setAddClass] = React.useState("");
+  const active = navbarContent.findIndex((e) => e.path === pathname);
   const logout = () => {
     localStorage.clear();
     window.location.href = "/";
   };
+
   return (
-    <section id="sidebar">
-      <a href="/" className="brand">
-        <i className="bx bxs-smile"></i>
-        <span className="text">AdminHub</span>
-      </a>
-      <ul className="side-menu top">
-        {sidebarContent.map((item, index) => {
-          return (
-            <li key={index}>
-              <Link
-                className={`${
-                  item.path === location.pathname.toString() ? "active" : ""
-                } link`}
-                to={item.path}
-              >
-                <i className="bx bxs-group"></i>
-                <span className="text">{item.display}</span>
+    <div className="navbar">
+      <div className="navbar__wrap container">
+        <div className="logo">
+          {/* <img src={Logo} alt="kamera" /> */}
+          <a href="/">
+            <h3 style={{ color: "black" }}>Dashboard Admin</h3>
+          </a>
+        </div>
+        <ul className={`navbar__wrap__display ${addClass}`}>
+          {navbarContent.map((e, i) => (
+            <li key={i} className={`${i === active ? "active" : ""}`}>
+              <Link className="text" to={e.path}>
+                {e.display}
               </Link>
+              <div class="dropdown-content">
+                {e.content.map((e, i) => (
+                  <Link key={i} to={e.path} className="text-content">
+                    {e.name}
+                  </Link>
+                ))}
+              </div>
             </li>
-          );
-        })}
-        <li>
-          <button onClick={logout} className="logout">
-            <i className="bx bxs-log-out-circle"></i>
-            <span className="text">Logout</span>
-          </button>
-        </li>
-      </ul>
-    </section>
+          ))}
+        </ul>
+        <div className="buttonDisplay">
+          <Hamburger
+            onToggle={(toggled) =>
+              toggled ? setAddClass("isActive") : setAddClass("")
+            }
+          />
+        </div>
+        <Button onClick={logout} className="logout">
+          <i className="bx bxs-log-out-circle"></i>
+          <span className="text">Logout</span>
+        </Button>
+      </div>
+    </div>
   );
 };
 

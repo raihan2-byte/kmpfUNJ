@@ -18,6 +18,11 @@ import "./header.scss";
 
 const Header = ({ news }) => {
   console.log(news);
+
+  // Ambil satu berita pertama dari beritaArtikel
+
+  // Ambil satu berita pertama dari beritaArchieve
+
   return (
     <div className="parent">
       <div className="header">
@@ -32,7 +37,9 @@ const Header = ({ news }) => {
           >
             {news?.map((data) => (
               <SwiperSlide key={data.id}>
-                <img src={data.file_name} alt="text" className="kontoru" />
+                <a href={`/berita/${data.id}`}>
+                  <img src={data.file_name} alt="text" className="kontoru" />
+                </a>
                 <div className="overlay">
                   <h2>{data.judul}</h2>
                 </div>
@@ -71,14 +78,24 @@ const Header = ({ news }) => {
         </div>
       </div>
       <div className="update">
+        {/* {satuBeritaArtikel && ( */}
         <div className="header__right__top">
-          <img src={Karya} alt="text" className="img-top" />
-          <h2 className="teks-right">Artikel Terbaru</h2>
-        </div>
-        <div className="header__right__bottom">
-          <img src={Proker} alt="text" className="img-bot" />
+          <a href="/artikel">
+            <img src={Proker} alt="text" className="img-top" />
+          </a>
+
+          {/* <img src={Karya} alt="text" className="img-top" /> */}
           <h2 className="teks-right">Proker Terbaru</h2>
         </div>
+        {/* )} */}
+        {/* {satuBeritaArchieve && ( */}
+        <div className="header__right__bottom">
+          <a href={"/berita"}>
+            <img src={Karya} alt="text" className="img-bot" />
+          </a>
+          <h2 className="teks-right">Karya Terbaru</h2>
+        </div>
+        {/* )} */}
       </div>
     </div>
   );

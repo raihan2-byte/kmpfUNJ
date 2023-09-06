@@ -1,0 +1,54 @@
+.parent {
+  margin: 7rem 20px;
+  .top-parent {
+    display: flex;
+    // justify-content: flex-start;
+    // margin-left: 30px;
+
+    .parent-kontent {
+      margin: 10px;
+      margin-left: 0;
+    }
+  }
+  .kontent {
+    .list {
+      display: flex;
+      align-items: center;
+      .btn-create {
+        padding: 2px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.btn {
+  margin: 10px;
+}
+
+tbody img {
+  width: 10%;
+  border-radius: 20%;
+}

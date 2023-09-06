@@ -5,6 +5,7 @@ import Sidebar from "../../../components/sidebar/Sidebar";
 import API from "../../../api/API";
 import SweatAlert from "../../../sweetaleet/SweetAlert";
 import { MdDelete } from "react-icons/md";
+import { AiFillEye } from "react-icons/ai";
 
 const Berita = () => {
   const [berita, setBerita] = React.useState([]);
@@ -31,46 +32,37 @@ const Berita = () => {
   return (
     <div>
       <Sidebar />
-      <section id="test">
-        <main>
-          <div className="head-title">
-            <div className="left">
-              <h1>Admin</h1>
-              <ul className="breadcrumb">
-                <li>Berita</li>
-                <li>
-                  <i className="bx bx-chevron-right"></i>
-                </li>
-                <li>
-                  <a className="active" href="/">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <Button
-                    onClick={() => (window.location.href = "/create-berita")}
-                  >
-                    Create
-                  </Button>
-                </li>
-              </ul>
-            </div>
+      <div className="parent">
+        <div className="top-parent">
+          <div className="parent-kontent">
+            {" "}
+            <h2>Berita</h2>
+          </div>
+        </div>
+        <div className="kontent">
+          <div className="list">
+            <h4>List Berita</h4>
+            <a href="/create-berita">
+              <Button className="btn-create">Create Berita</Button>
+            </a>
           </div>
           <div className="table-data">
             <div className="order">
               <div className="head">
-                <h3>List Berita</h3>
+                {/* <h3>List User</h3> */}
+                <i className="bx bx-search"></i>
+                <i className="bx bx-filter"></i>
               </div>
               <table>
                 <thead>
                   <tr>
-                    <th>Judul Berita</th>
-                    <th>Photo</th>
+                    <th>Judul</th>
+                    <th>Image</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {berita?.map((item) => (
+                  {berita.map((item) => (
                     <tr key={item.id}>
                       <td>
                         <p>{item.judul}</p>
@@ -79,10 +71,16 @@ const Berita = () => {
                         <img src={item.file_name} alt="text" />
                       </td>
                       <td>
-                        <Button>
-                          <MdDelete />
+                        <Button className="btn">
+                          <a href={`/berita/delete/${item.id}`}>
+                            <MdDelete />
+                          </a>
                         </Button>
-                        <Button>Get</Button>
+                        <Button className="btn">
+                          <a href={`/berita/${item.id}`}>
+                            <AiFillEye />
+                          </a>
+                        </Button>
                       </td>
                     </tr>
                   ))}
@@ -90,8 +88,8 @@ const Berita = () => {
               </table>
             </div>
           </div>
-        </main>
-      </section>
+        </div>
+      </div>
     </div>
   );
 };

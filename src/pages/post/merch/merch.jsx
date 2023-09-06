@@ -1,10 +1,13 @@
 import React from "react";
 import "./merch.scss";
 import API from "../../../api/API";
+import SweatAlert from "../../../sweetaleet/SweetAlert";
 
 const Merch = () => {
   const [name, setName] = React.useState("");
   const [price, setPrice] = React.useState("");
+  const [link, setLink] = React.useState(null);
+
   const [file, setFile] = React.useState(null);
 
   const changeHandler = (e) => {
@@ -13,7 +16,7 @@ const Merch = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const merch = { name, price, file };
+    const merch = { name, price, link, file };
     await API.post("merch/", merch, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -22,17 +25,17 @@ const Merch = () => {
       },
     })
       .then((response) => {
-        console.log(response);
+        console.log(response.data);
+        SweatAlert("Berhasil menambahkan data", "success");
       })
       .catch((error) => {
-        // console.log("error->" + error);
         const message =
           (error.response &&
             error.response.data &&
             error.response.data.message) ||
           error.message ||
           error.toString();
-        alert(message);
+        SweatAlert(message, "warning");
       });
   };
   return (
@@ -54,6 +57,14 @@ const Merch = () => {
               onChange={(e) => setPrice(e.target.value)}
               placeholder="Harga"
               autocomplete="new-deskripsi"
+            />
+          </div>
+          <div class="input-field">
+            <input
+              type="shop link"
+              onChange={(e) => setLink(e.target.value)}
+              placeholder="shop link"
+              autocomplete="shop link"
             />
           </div>
           <div class="input-field">

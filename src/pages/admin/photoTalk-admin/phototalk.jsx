@@ -5,6 +5,8 @@ import "./phototalk.scss";
 import Sidebar from "../../../components/sidebar/Sidebar";
 import API from "../../../api/API";
 import SweatAlert from "../../../sweetaleet/SweetAlert";
+import { MdDelete } from "react-icons/md";
+import { AiFillEye } from "react-icons/ai";
 
 const Phototalk = () => {
   const [phototalk, setPhototalk] = React.useState([]);
@@ -30,37 +32,26 @@ const Phototalk = () => {
   return (
     <div>
       <Sidebar />
-      <section id="content">
-        <main>
-          <div class="head-title">
-            <div class="left">
-              <h1>Admin</h1>
-              <ul class="breadcrumb">
-                <li>PhotoTalk</li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                </li>
-                <li>
-                  <a class="active" href="/">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <Button
-                    onClick={() => (window.location.href = "/create-phototalk")}
-                  >
-                    Create
-                  </Button>
-                </li>
-              </ul>
-            </div>
+      <div className="parent">
+        <div className="top-parent">
+          <div className="parent-kontent">
+            {" "}
+            <h2>Phototalk</h2>
           </div>
-          <div class="table-data">
-            <div class="order">
-              <div class="head">
-                <h3>List PhotoTalk</h3>
-                <i class="bx bx-search"></i>
-                <i class="bx bx-filter"></i>
+        </div>
+        <div className="kontent">
+          <div className="list">
+            <h4>List Phototalk</h4>
+            <a href="/create-berita">
+              <Button className="btn-create">Create Phototalk</Button>
+            </a>
+          </div>
+          <div className="table-data">
+            <div className="order">
+              <div className="head">
+                {/* <h3>List User</h3> */}
+                <i className="bx bx-search"></i>
+                <i className="bx bx-filter"></i>
               </div>
               <table>
                 <thead>
@@ -84,8 +75,16 @@ const Phototalk = () => {
                         <img src={item.FileName} alt="text" />
                       </td>
                       <td>
-                        <Button>Delete</Button>
-                        <Button>Get</Button>
+                        <a href={`/phototalk/delete/${item.id}`}>
+                          <Button className="btn">
+                            <MdDelete />
+                          </Button>
+                        </a>
+                        <a href={`/phototalk/`}>
+                          <Button className="btn">
+                            <AiFillEye />
+                          </Button>
+                        </a>
                       </td>
                     </tr>
                   ))}
@@ -93,8 +92,8 @@ const Phototalk = () => {
               </table>
             </div>
           </div>
-        </main>
-      </section>
+        </div>
+      </div>
     </div>
   );
 };

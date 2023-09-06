@@ -5,6 +5,7 @@ import Footer from "../../components/footer/Footer";
 import News from "../../components/news/news";
 import Button from "../../components/button/Button";
 import API from "../../api/API";
+import { Link } from "react-router-dom";
 
 const Berita = () => {
   const [berita, setBerita] = React.useState([]);
@@ -88,7 +89,9 @@ const Berita = () => {
                     <img src={item.file_name} alt="img" />
                   </div>
                 </a>
-                <Button className="btn">More</Button>
+                <Link smooth to="/artikel#our-proker">
+                  <Button className="btn">More</Button>
+                </Link>
               </div>
             ))}
             {/* <hr className="garis" /> */}
@@ -101,7 +104,9 @@ const Berita = () => {
                     <img src={item.file_name} alt="img" />
                   </div>
                 </a>
-                <Button className="btn">More</Button>
+                <Link smooth to="/artikel#our-proker">
+                  <Button className="btn">More</Button>
+                </Link>
               </div>
             ))}
           </div>

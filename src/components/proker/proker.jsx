@@ -28,8 +28,12 @@ const proker = ({ news }) => {
         className="mySwiper"
         slidesPerView={2}
         breakpoints={{
+          290: {
+            slidesPerView: 1,
+            spaceBetween: 2,
+          },
           320: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 2,
           },
           350: {

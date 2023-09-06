@@ -239,35 +239,10 @@
 
     .text-aboutus {
       font-size: 18px;
-      h3,
-      h4 {
-      }
     }
 
     .text-usaha {
       font-size: 18px;
-      h3,
-      h4 {
-      }
-    }
-    .detail-usaha {
-    }
-
-    .team {
-      h3 {
-      }
-
-      .team-child {
-        .nama {
-        }
-      }
-
-      img {
-      }
-    }
-    .maps {
-      .maps-konten {
-      }
     }
   }
 }
@@ -546,16 +521,28 @@
     }
 
     .team {
+      width: 100%;
+      // display: grid;
+      // place-items: center;
       h3 {
         font-size: 15px;
       }
 
       .team-child {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        // display: grid;
+        // grid-template-columns: repeat(2, 50%);
+
+        .bagus {
+          max-width: 150px;
+        }
         .nama {
-          font-size: 10px;
+          font-size: 13px;
         }
         .jabatan {
-          font-size: 9px;
+          font-size: 11px;
         }
       }
 
@@ -569,7 +556,7 @@
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 385px) {
   .aboutus-parent {
     h2 {
       font-size: 20px;
@@ -628,8 +615,11 @@
       }
 
       .team-child {
+        .bagus {
+          max-width: 90px;
+        }
         .nama {
-          font-size: 8px;
+          font-size: 9px;
         }
         .jabatan {
           font-size: 7px;
@@ -637,6 +627,7 @@
       }
 
       img {
+        width: 60%;
       }
     }
     .maps {

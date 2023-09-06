@@ -3,6 +3,7 @@ import "./phototalk.scss";
 import API from "../../../api/API";
 import "trix/dist/trix.js";
 import "trix/dist/trix.css";
+import SweatAlert from "../../../sweetaleet/SweetAlert";
 
 const Phototalk = () => {
   const [judul, setJudul] = React.useState("");
@@ -24,17 +25,17 @@ const Phototalk = () => {
       },
     })
       .then((response) => {
-        console.log(response);
+        console.log(response.data);
+        SweatAlert("Berhasil menambahkan data", "success");
       })
       .catch((error) => {
-        // console.log("error->" + error);
         const message =
           (error.response &&
             error.response.data &&
             error.response.data.message) ||
           error.message ||
           error.toString();
-        alert(message);
+        SweatAlert(message, "warning");
       });
   };
   return (

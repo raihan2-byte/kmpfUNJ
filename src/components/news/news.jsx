@@ -3,6 +3,12 @@ import "./news.scss";
 // import Image from "../../components/assets/Headline1.jpg";
 
 const News = ({ berita }) => {
+  function formatTanggal(dateString) {
+    const createdAt = new Date(dateString);
+    return `${createdAt.getFullYear()}-${
+      createdAt.getMonth() + 1
+    }-${createdAt.getDate()}`;
+  }
   console.log(berita);
   return (
     <div className="news-parent">
@@ -19,8 +25,10 @@ const News = ({ berita }) => {
             </div>
             <div className="tags">
               <div className="tags-spesifik">
-                <p className="tag">{data.TagsData.nama}</p>
-                <p className="date">10-07-2023</p>
+                <p className="tag" style={{ fontWeight: "900" }}>
+                  {data.KaryaNewsData.name}
+                </p>
+                <p className="date">{formatTanggal(data.created_at)}</p>
               </div>
               <div className="seperator"></div>
             </div>

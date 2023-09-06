@@ -123,18 +123,6 @@ const Product = () => {
               </div>
             </div>
           </div>
-          {/* <div className="button">
-            <div className="book-now">
-              <h3 className="text-1">Graduation Photoshot</h3>
-              <h4 className="text-2">
-                Capture Your Special Graduation Moments
-              </h4>
-              <h1 className="text-3">Start From 150k</h1>
-              <Button onClick="null" className="btn">
-                Book Now
-              </Button>
-            </div>
-          </div> */}
         </div>
 
         <div className="foto-wisuda-parent">

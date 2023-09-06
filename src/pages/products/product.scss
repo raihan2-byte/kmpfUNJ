@@ -45,14 +45,14 @@
                   }
                   .text-1 {
                     padding-bottom: 5px;
-                    font-size: 25px;
+                    font-size: 22px;
                     font-weight: 900;
                     text-align: left;
                   }
                   .text-2 {
                     padding-bottom: 10px;
                     // width: 80%;
-                    font-size: 17px;
+                    font-size: 15px;
                     // width: 50%;
                     text-align: left;
 
@@ -60,7 +60,7 @@
                   }
                   .text-3 {
                     color: gold;
-                    font-size: 34px;
+                    font-size: 30px;
                     text-align: left;
                   }
                 }
@@ -246,7 +246,8 @@
       background-color: gray;
       padding: 20px;
       width: 40vh;
-      height: 30vh;
+      min-height: 30vh;
+      max-height: 40vh;
       border-radius: 20%;
       text-align: center;
       justify-content: space-evenly;
@@ -254,7 +255,7 @@
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1100px) {
   .parent {
     .foto-wisuda-parent {
       .foto-wisuda-left {
@@ -281,43 +282,10 @@
                       font-size: 17px;
                     }
                     .text-2 {
-                      font-size: 14px;
+                      font-size: 16px;
                     }
                     .text-3 {
                       font-size: 22px;
-                    }
-                  }
-
-                  .button-1 {
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
-                    }
-                  }
-
-                  .button-2 {
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
-                    }
-                  }
-
-                  .button-3 {
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
                     }
                   }
                 }
@@ -328,41 +296,17 @@
       }
     }
 
-    .jasa-foto-parent {
-      img {
-      }
-
-      .jasa-foto-left {
-      }
-
-      .jasa-foto-middle {
-        h3 {
-        }
-
-        .button {
-        }
-      }
-
-      .jasa-foto-right {
-      }
-    }
-
     .why-us {
-      h2 {
-      }
-      .point-why-us {
-        h3 {
-        }
-      }
       .cheap,
       .medal,
       .hand {
+        min-height: 25vh;
       }
     }
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 950px) {
   .parent {
     .foto-wisuda-parent {
       .foto-wisuda-left {
@@ -382,52 +326,17 @@
                   .button-2,
                   .button-3 {
                     .btn {
-                      padding: 0 8px 0 8px;
-
-                      font-size: 10px;
+                      padding: 0 10px 0 10px;
+                      font-size: 12px;
                     }
                     .text-1 {
-                      font-size: 13px;
-                      padding-bottom: 2px;
+                      font-size: 14px;
                     }
                     .text-2 {
                       font-size: 12px;
                     }
                     .text-3 {
-                      font-size: 19px;
-                    }
-                  }
-
-                  .button-1 {
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
-                    }
-                  }
-
-                  .button-2 {
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
-                    }
-                  }
-
-                  .button-3 {
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
+                      font-size: 18px;
                     }
                   }
                 }
@@ -437,36 +346,50 @@
         }
       }
     }
+  }
+}
 
-    .jasa-foto-parent {
-      img {
-      }
-
-      .jasa-foto-left {
-      }
-
-      .jasa-foto-middle {
+@media only screen and (max-width: 768px) {
+  .parent {
+    .foto-wisuda-parent {
+      .foto-wisuda-left {
         h3 {
         }
 
-        .button {
-        }
-      }
+        .carousel-atas {
+          .card {
+            .card-content {
+              .mySwiper {
+                .wisuda-parent {
+                  .wisuda1 img {
+                    height: 30vh;
+                  }
 
-      .jasa-foto-right {
-      }
-    }
+                  .button,
+                  .button-1,
+                  .button-2,
+                  .button-3 {
+                    .btn {
+                      padding: 0 8px 0 8px;
 
-    .why-us {
-      h2 {
-      }
-      .point-why-us {
-        h3 {
+                      font-size: 10px;
+                    }
+                    .text-1 {
+                      font-size: 12px;
+                      padding-bottom: 2px;
+                    }
+                    .text-2 {
+                      font-size: 10px;
+                    }
+                    .text-3 {
+                      font-size: 15px;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
-      }
-      .cheap,
-      .medal,
-      .hand {
       }
     }
   }
@@ -517,61 +440,12 @@
 
                   .button-1 {
                     width: 25%;
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
-                    }
-                  }
-
-                  .button-2 {
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
-                    }
-                  }
-
-                  .button-3 {
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
-                    }
                   }
                 }
               }
             }
           }
         }
-      }
-    }
-
-    .jasa-foto-parent {
-      img {
-      }
-
-      .jasa-foto-left {
-      }
-
-      .jasa-foto-middle {
-        h3 {
-        }
-
-        .button {
-        }
-      }
-
-      .jasa-foto-right {
       }
     }
 
@@ -597,7 +471,7 @@
   }
 }
 
-@media only screen and (max-width: 475px) {
+@media only screen and (max-width: 500px) {
   .parent {
     .foto-wisuda-parent {
       .foto-wisuda-left {
@@ -626,17 +500,17 @@
                       margin-top: 2px;
                     }
                     .text-1 {
-                      font-size: 12px;
+                      font-size: 9.5px;
                       padding-bottom: 2px;
                     }
                     .text-2 {
                       padding-bottom: 2px;
 
-                      font-size: 10px;
+                      font-size: 9px;
                     }
                     .text-3 {
                       padding-bottom: 2px;
-                      font-size: 14px;
+                      font-size: 13px;
                     }
                   }
 
@@ -717,7 +591,7 @@
   }
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 400px) {
   .parent {
     .foto-wisuda-parent {
       .foto-wisuda-left {
@@ -729,7 +603,7 @@
             .card-content {
               .mySwiper {
                 .wisuda-parent {
-                  max-height: 33vh;
+                  max-height: 38vh;
 
                   .wisuda1 img {
                     height: 100%;
@@ -740,6 +614,9 @@
                   .button-1,
                   .button-2,
                   .button-3 {
+                    width: 40%;
+                    left: 55%;
+
                     .btn {
                       padding: 0 8px 0 8px;
                       font-size: 10px;
@@ -824,14 +701,18 @@
       h2 {
       }
       .point-why-us {
+        flex-direction: column;
         h3 {
         }
+      }
+      .icon {
+        font-size: 30px;
       }
       .cheap,
       .medal,
       .hand {
-        width: 90px;
-        max-height: 120px;
+        width: 100%;
+        max-height: 100px;
       }
     }
   }

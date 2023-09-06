@@ -7,7 +7,6 @@ import Product from "../pages/products/product";
 import Berita from "../pages/berita/berita";
 import Rent from "../pages/Renting/Rent";
 // import UploadFoto from "../pages/upload-foto/uploadfoto";
-import Spesifik from "../components/spesifikbarang/spesifikbarang";
 import Dashboard from "../pages/admin/dashboard/dashboard";
 import BeritaAdmin from "../pages/admin/beritaAdmin/berita";
 import BarangAdmin from "../pages/admin/barangAdmin/barang";
@@ -53,7 +52,6 @@ const Routes = () => {
         <Route path="/create-merch" element={<CreateMerch />} />
       </Route>
       <Route path="/login" element={<Login />} />
-      <Route path="/spesifik" element={<Spesifik />} />
       <Route path="/aboutus" element={<Aboutus />} />
       {/* <Route path="/productservice" element={<Producservice />} /> */}
       <Route path="/berita/:id" element={<Newskonten />} />

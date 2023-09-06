@@ -131,28 +131,6 @@ const Rent = () => {
               pengembalian barang.
             </div>
 
-            {/* <div
-              className="text"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                padding: "30px !important",
-              }}
-            >
-              <span
-                style={{
-                  fontSize: "45px",
-                  marginRight: "5px",
-                  // border: "2px solid #505050",
-                  // borderRadius: "20%",
-                }}
-              >
-                <TbHandFinger style={{ padding: "8px " }} />
-              </span>
-              Menetapkan barang peminjaman dan tanggal pengambilan/pengembalian
-              barang
-            </div> */}
-
             <div
               style={{ display: "flex", alignItems: "center" }}
               className="text"

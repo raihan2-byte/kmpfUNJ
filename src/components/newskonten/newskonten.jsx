@@ -1,55 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./newskonten.scss";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
-import Headline from "../assets/Headline1.jpg";
 import { useParams } from "react-router-dom";
 import API from "../../api/API";
 import { MdPeopleAlt } from "react-icons/md";
-import News from "../news/news";
 
 // import News from "../news/news";
 const Newskonten = () => {
   const params = useParams();
-  const [berita, setBerita] = React.useState({});
-  const [rekomendasiBerita, setRekomendasiBerita] = useState([]); // State untuk rekomendasi berita
-  const [excludeBeritaID, setExcludeBeritaID] = useState(null);
-  // const beritaIterable = Array.from(berita);
-  console.log(berita);
+  const [berita, setBerita] = useState({});
+  const [rekomendasiBerita, setRekomendasiBerita] = useState([]);
+
   const getBeritaID = async (id) => {
-    await API.get(`berita/${id}`)
-      .then((response) => {
-        setBerita(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    try {
+      const response = await API.get(`berita/${id}`);
+      setBerita(response.data.data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
-  const getRekomendasiBerita = async (excludeID) => {
-    await API.get(`/berita`)
-      .then((response) => {
-        // Filter berita berdasarkan ID yang harus dikecualikan
-        const filteredBerita = response.data.data.filter(
-          (item) => item.id !== excludeID
-        );
-        console.log(response);
-        // Set daftar rekomendasi berita
-        setRekomendasiBerita(filteredBerita);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  const getRekomendasiBerita = async () => {
+    try {
+      const response = await API.get("berita/");
+      const filteredBerita = response.data.data.filter(
+        (item) => item.id !== params.id
+      );
+      setRekomendasiBerita(filteredBerita);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     getBeritaID(params.id);
   }, [params.id]);
 
-  React.useEffect(() => {
-    // Ketika berita diambil, perbarui daftar rekomendasi berita
+  useEffect(() => {
     if (berita.id) {
-      getRekomendasiBerita(berita.id);
+      getRekomendasiBerita();
     }
   }, [berita.id]);
 
@@ -59,6 +49,9 @@ const Newskonten = () => {
       createdAt.getMonth() + 1
     }-${createdAt.getDate()}`;
   }
+
+  const maxBeritaChild = window.innerWidth <= 450 ? 2 : 3;
+
   return (
     <>
       <Navbar />
@@ -101,25 +94,8 @@ const Newskonten = () => {
                 <div className="konten-recomendation">
                   <h4>Recomendation</h4>
                   <div className="titit">
-                    {/* <div className="konten-recomendation-child">
-                      <div className="photo-news">
-                        <img src={Headline} alt="news" />
-                      </div>
-                      <div className="text-news">
-                        <div className="judul-news">
-                          <h3>Judul dan headline berita blablbabla</h3>
-                        </div>
-                        <div className="tags">
-                          <div className="tags-spesifik">
-                            <p className="tag">karya</p>
-                            <p className="date">10-07-2023</p>
-                          </div>
-                          <div className="seperator"></div>
-                        </div>
-                      </div>
-                    </div> */}
-                    {/* {rekomendasiBerita.map((item) => (
-                      <div className="konten-recomendation-child" key={item.id}>
+                    {rekomendasiBerita.slice(0, maxBeritaChild).map((item) => (
+                      <div className="konten-recomendation-child">
                         <a href={`/berita/${item.id}`}>
                           <div className="photo-news">
                             <img src={item.file_name} alt="news" />
@@ -131,29 +107,10 @@ const Newskonten = () => {
                           </div>
                           <div className="tags">
                             <div className="tags-spesifik">
-                              <p className="tag">berita</p>
-                              <p className="date">10-07-2023</p>
-                            </div>
-                            <div className="seperator"></div>
-                          </div>
-                        </div>
-                      </div>
-                    ))} */}
-                    {rekomendasiBerita.map((item) => (
-                      <div className="konten-recomendation-child">
-                        <a href={`/berita/${item.id}`} key={item.id}>
-                          <div className="photo-news">
-                            <img src={item.file_name} alt="news" />
-                          </div>
-                        </a>
-                        <div className="text-news">
-                          <div className="judul-news">
-                            <h3>Judul dan headline berita blablbabla</h3>
-                          </div>
-                          <div className="tags">
-                            <div className="tags-spesifik">
-                              <p className="tag">karya</p>
-                              <p className="date">10-07-2023</p>
+                              <p className="tag">{item.KaryaNewsData.name}</p>
+                              <p className="date">
+                                {formatTanggal(item.created_at)}
+                              </p>
                             </div>
                             <div className="seperator"></div>
                           </div>

@@ -3,6 +3,8 @@ import Button from "../../../components/button/Button";
 import Sidebar from "../../../components/sidebar/Sidebar";
 import SweatAlert from "../../../sweetaleet/SweetAlert";
 import API from "../../../api/API";
+import { MdDelete } from "react-icons/md";
+import { AiFillEye } from "react-icons/ai";
 
 const Merch = () => {
   const [merch, setMerch] = React.useState([]);
@@ -28,38 +30,26 @@ const Merch = () => {
   return (
     <div>
       <Sidebar />
-
-      <section id="content">
-        <main>
-          <div class="head-title">
-            <div class="left">
-              <h1>Admin</h1>
-              <ul class="breadcrumb">
-                <li>Merch</li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                </li>
-                <li>
-                  <a class="active" href="/">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <Button
-                    onClick={() => (window.location.href = "/create-merch")}
-                  >
-                    Create
-                  </Button>
-                </li>
-              </ul>
-            </div>
+      <div className="parent">
+        <div className="top-parent">
+          <div className="parent-kontent">
+            {" "}
+            <h2>Merch</h2>
           </div>
-          <div class="table-data">
-            <div class="order">
-              <div class="head">
-                <h3>List Merch</h3>
-                <i class="bx bx-search"></i>
-                <i class="bx bx-filter"></i>
+        </div>
+        <div className="kontent">
+          <div className="list">
+            <h4>List Merch</h4>
+            <a href="/create-berita">
+              <Button className="btn-create">Create Merch</Button>
+            </a>
+          </div>
+          <div className="table-data">
+            <div className="order">
+              <div className="head">
+                {/* <h3>List User</h3> */}
+                <i className="bx bx-search"></i>
+                <i className="bx bx-filter"></i>
               </div>
               <table>
                 <thead>
@@ -83,9 +73,16 @@ const Merch = () => {
                         <img src={item.FileName} alt="text" />
                       </td>
                       <td>
-                        <Button>Create</Button>
-                        <Button>Delete</Button>
-                        <Button>Get</Button>
+                        <a href={`/merch/delete/${item.id}`}>
+                          <Button className="btn">
+                            <MdDelete />
+                          </Button>
+                        </a>
+                        <a href={`/merch/#merch-produk`}>
+                          <Button className="btn">
+                            <AiFillEye />
+                          </Button>
+                        </a>
                       </td>
                     </tr>
                   ))}
@@ -93,8 +90,8 @@ const Merch = () => {
               </table>
             </div>
           </div>
-        </main>
-      </section>
+        </div>
+      </div>
     </div>
   );
 };

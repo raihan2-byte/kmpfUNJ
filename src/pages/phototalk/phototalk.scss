@@ -30,17 +30,23 @@
       }
 
       .mySwiper {
-        width: 100%;
+        width: 90%;
         .konten {
           .kontoru {
             // position: relative;
             margin: auto;
-            width: 100%;
+            display: flex;
+            justify-content: center;
+            width: 80%;
             padding: 30px;
-            height: 110vh;
+            height: 50%;
+            object-fit: cover;
             border-radius: 10%;
           }
           .overlay {
+            @media screen and (max-width: 768px) {
+              font-size: 30px;
+            }
             position: absolute;
             top: 4rem;
             left: 25%;
@@ -161,11 +167,14 @@
     }
     .phototalk-konten {
       .section {
-        .konten {
-          .kontoru {
-          }
-          .overlay {
-            font-size: 22px;
+        .mySwiper {
+          width: 100%;
+          .konten {
+            .kontoru {
+            }
+            .overlay {
+              font-size: 22px;
+            }
           }
         }
       }
@@ -184,13 +193,18 @@
     }
     .phototalk-konten {
       .section {
-        .konten {
-          width: 70%;
-          .kontoru {
-            width: 100%;
-          }
-          .overlay {
-            font-size: 18px;
+        .mySwiper {
+          width: 100%;
+          .konten {
+            width: 90%;
+            margin: auto;
+
+            .kontoru {
+              width: 100%;
+            }
+            .overlay {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -209,9 +223,10 @@
     .phototalk-konten {
       .section {
         .konten {
-          width: 70%;
+          width: 100%;
+          margin: auto;
           .kontoru {
-            width: 100%;
+            width: 90%;
           }
           .overlay {
             font-size: 14px;

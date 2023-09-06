@@ -5,6 +5,7 @@ import Sidebar from "../../../components/sidebar/Sidebar";
 import API from "../../../api/API";
 import SweatAlert from "../../../sweetaleet/SweetAlert";
 import { MdDelete } from "react-icons/md";
+import { AiFillFileAdd } from "react-icons/ai";
 
 const Admin = () => {
   const [admin, setAdmin] = useState([]);
@@ -31,31 +32,22 @@ const Admin = () => {
   return (
     <div>
       <Sidebar />
-      <section id="content">
-        <main>
-          <div className="head-title">
-            <div className="left">
-              <h1>Admin</h1>
-              <ul className="breadcrumb">
-                <li>User</li>
-                <li>
-                  <i className="bx bx-chevron-right"></i>
-                </li>
-                <li>
-                  <a className="active" href="/">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <Button onClick={getAllUsers}>Get All User</Button>
-                </li>
-              </ul>
-            </div>
+      <div className="parent">
+        <div className="top-parent">
+          <div className="parent-kontent">
+            {" "}
+            <h2>Users</h2>
+          </div>
+          <div className="parent-kontent"> </div>
+        </div>
+        <div className="kontent">
+          <div className="list">
+            <h4>List User</h4>
           </div>
           <div className="table-data">
             <div className="order">
               <div className="head">
-                <h3>List User</h3>
+                {/* <h3>List User</h3> */}
                 <i className="bx bx-search"></i>
                 <i className="bx bx-filter"></i>
               </div>
@@ -76,6 +68,9 @@ const Admin = () => {
                         <Button className="btn">
                           <MdDelete />
                         </Button>
+                        <Button className="btn">
+                          <AiFillFileAdd />
+                        </Button>
                       </td>
                     </tr>
                   ))}
@@ -83,8 +78,8 @@ const Admin = () => {
               </table>
             </div>
           </div>
-        </main>
-      </section>
+        </div>
+      </div>
     </div>
   );
 };

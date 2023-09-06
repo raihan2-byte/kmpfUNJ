@@ -1,46 +1,55 @@
 import React from "react";
 import Button from "../../../components/button/Button";
-import Berita from "../../../components/assets/Headline1.jpg";
 import Sidebar from "../../../components/sidebar/Sidebar";
+import { MdDelete } from "react-icons/md";
+import { AiFillEye } from "react-icons/ai";
+import API from "../../../api/API";
+import SweatAlert from "../../../sweetaleet/SweetAlert";
 
-const kmpf = () => {
+const Kmpf = () => {
+  const [shortvideo, setShortVideo] = React.useState([]);
+  console.log(shortvideo);
+  const getAllShortvideo = async () => {
+    await API.get("/short-video/")
+      .then((response) => {
+        setShortVideo(response.data.data);
+      })
+      .catch((error) => {
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+        SweatAlert(message, "warning");
+      });
+  };
+  React.useEffect(() => {
+    getAllShortvideo();
+  }, []);
   return (
     <div>
       <Sidebar />
-
-      <section id="content">
-        <main>
-          <div class="head-title">
-            <div class="left">
-              <h1>Admin</h1>
-              <ul class="breadcrumb">
-                <li>KMPF</li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                </li>
-                <li>
-                  <a class="active" href="/">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <Button
-                    onClick={() =>
-                      (window.location.href = "/create-short-video  ")
-                    }
-                  >
-                    Create
-                  </Button>
-                </li>
-              </ul>
-            </div>
+      <div className="parent">
+        <div className="top-parent">
+          <div className="parent-kontent">
+            {" "}
+            <h2>Short Video</h2>
           </div>
-          <div class="table-data">
-            <div class="order">
-              <div class="head">
-                <h3>List Short Video</h3>
-                <i class="bx bx-search"></i>
-                <i class="bx bx-filter"></i>
+        </div>
+        <div className="kontent">
+          <div className="list">
+            <h4>List Short Video</h4>
+            <a href="/create-berita">
+              <Button className="btn-create">Create Short Video</Button>
+            </a>
+          </div>
+          <div className="table-data">
+            <div className="order">
+              <div className="head">
+                {/* <h3>List User</h3> */}
+                <i className="bx bx-search"></i>
+                <i className="bx bx-filter"></i>
               </div>
               <table>
                 <thead>
@@ -52,59 +61,39 @@ const kmpf = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <p>Mahasiswa UNJ MPLS</p>
-                    </td>
-                    <td>
-                      <p>Photo Mahasiswa UNJ </p>
-                    </td>
-                    <td>
-                      <img src={Berita} alt="text" />
-                    </td>
-                    <td>
-                      <Button>Delete</Button>
-                      <Button>Get</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>Mahasiswa UNJ MPLS</p>
-                    </td>
-                    <td>
-                      <p>Photo Mahasiswa UNJ </p>
-                    </td>
-                    <td>
-                      <img src={Berita} alt="text" />
-                    </td>
-                    <td>
-                      <Button>Delete</Button>
-                      <Button>Get</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>Mahasiswa UNJ MPLS</p>
-                    </td>
-                    <td>
-                      <p>Photo Mahasiswa UNJ </p>
-                    </td>
-                    <td>
-                      <img src={Berita} alt="text" />
-                    </td>
-                    <td>
-                      <Button>Delete</Button>
-                      <Button>Get</Button>
-                    </td>
-                  </tr>
+                  {shortvideo?.map((item) => (
+                    <tr>
+                      <td>
+                        <p>{item.Judul}</p>
+                      </td>
+                      <td>
+                        <p>{item.Deskripsi}</p>
+                      </td>
+                      <td>
+                        <img src={item.FileName} alt="text" />
+                      </td>
+                      <td>
+                        <a href={`/short-video/delete/${item.id}`}>
+                          <Button className="btn">
+                            <MdDelete />
+                          </Button>
+                        </a>
+                        <a href={`/kelas/#video-reels`}>
+                          <Button className="btn">
+                            <AiFillEye />
+                          </Button>
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
           </div>
-        </main>
-      </section>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default kmpf;
+export default Kmpf;

@@ -93,6 +93,7 @@ const Barang = () => {
               autocomplete="new-deskripsi"
             />
           </div>
+
           <div class="input-field">
             <input
               type="file"
@@ -105,9 +106,9 @@ const Barang = () => {
             <label for="category">Category:</label>
             <select id="category" onChange={(e) => setCategory(e.target.value)}>
               <option value="">Pilih Category</option>
-              <option value="1">Category 1</option>
-              <option value="2">Category 2</option>
-              <option value="3">Category 3</option>
+              <option value="1">Promo</option>
+              <option value="2">Camera & Lens</option>
+              <option value="3">Equipment & Accesories</option>
             </select>
           </div>
         </div>

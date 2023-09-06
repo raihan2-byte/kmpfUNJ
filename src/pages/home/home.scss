@@ -3,16 +3,17 @@
 .rental-foto {
   background-color: white;
   color: $whiteColor;
-  padding: 2rem 0;
-  margin-top: 1.3rem;
+  // padding: 2rem 0;
+  // margin-top: 1.3rem;
 
   // font-size: 20rem;
 
   .fotografi-parent {
+    margin-top: 1rem;
     background-color: #ffc918;
     color: $whiteColor;
     height: 650px;
-    margin-top: 2rem;
+    // margin-top: 2rem;
     display: flex;
     align-items: center;
     cursor: default;
@@ -34,11 +35,14 @@
         position: absolute;
         color: white;
         max-width: 800px;
-        font-size: 3rem;
         margin: 0;
         padding-top: 1rem;
         padding-left: 5rem;
         font-size: 5rem;
+        @media only screen and (max-width: 420px) {
+          padding-left: 2rem;
+          font-size: 3.5rem;
+        }
       }
 
       .book-now {
@@ -77,6 +81,10 @@
         padding-top: 0.2rem;
         padding-left: 5rem;
         font-size: 5rem;
+        @media only screen and (max-width: 420px) {
+          padding-left: 2rem;
+          font-size: 3.5rem;
+        }
       }
 
       .book-now {
@@ -110,6 +118,10 @@
       right: 5rem;
       font-size: 5rem;
       color: white;
+      @media only screen and (max-width: 420px) {
+        // padding-left: 2rem;
+        font-size: 3.5rem;
+      }
     }
   }
 }
@@ -125,6 +137,10 @@
     color: $whiteColor;
     text-align: center;
     font-size: 5rem;
+    @media only screen and (max-width: 420px) {
+      // padding-left: 2rem;
+      font-size: 3.5rem;
+    }
   }
 
   .mySwiper {
@@ -135,10 +151,10 @@
       @media only screen and (max-width: 910px) {
         font-size: 20px;
       }
-
       @media only screen and (max-width: 801px) {
         font-size: 18px;
       }
+
       @media only screen and (max-width: 400px) {
         font-size: 14px;
       }
@@ -150,11 +166,6 @@
     }
 
     .photo {
-      @media only screen and (max-width: 400px) {
-        width: 15vh;
-        height: 17vh;
-      }
-
       @media only screen and (max-width: 910px) {
         width: 20vh;
         height: 17vh;
@@ -162,6 +173,10 @@
 
       @media only screen and (max-width: 801px) {
         width: 16vh;
+        height: 17vh;
+      }
+      @media only screen and (max-width: 400px) {
+        width: 14vh;
         height: 17vh;
       }
       background-size: fill;

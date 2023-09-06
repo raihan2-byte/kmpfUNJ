@@ -7,8 +7,31 @@ import Merch2 from "../../components/assets/black.png";
 import LogoHeader from "../../components/assets/Frame.png";
 import Logo from "../../components/assets/logo.png";
 import Button from "../../components/button/Button";
+import API from "../../api/API";
+import { Link } from "react-router-dom";
 
-const merch = () => {
+const Merch = () => {
+  const [merch, setMerch] = React.useState([]);
+  console.log(merch);
+  const getAllMerch = async () => {
+    await API.get("merch/")
+      .then((response) => {
+        setMerch(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  React.useEffect(() => {
+    getAllMerch();
+  }, []);
+
+  function formatRupiah(number) {
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+    }).format(number);
+  }
   return (
     <>
       <Navbar />
@@ -19,42 +42,20 @@ const merch = () => {
             <img src={Logo} alt="" />
           </div>
           <div className="merch-produk">
-            <div className="merch1">
-              <img src={Merch1} alt="merch" />
-              <div className="tulisan">
-                <div className="nama-merch">ToteBag 'Kumpul Gan'</div>
+            {merch?.map((item) => (
+              <div className="merch1">
+                <img src={item.FileName} alt="merch" />
+                <div className="tulisan">
+                  <div className="nama-merch">{item.Name}</div>
 
-                <div className="price">IDR 50.000</div>
-                <Button className="btn">Purchase Now</Button>
-              </div>
-            </div>
-            <div className="merch2">
-              <img src={Merch2} alt="merch" />
-              <div className="tulisan">
-                <div className="nama-merch">ToteBag 'Kumpul Gan'</div>
+                  <div className="price">{formatRupiah(item.Price)}</div>
 
-                <div className="price">IDR 50.000</div>
-                <Button className="btn">Purchase Now</Button>
+                  <Link to={item.Link}>
+                    <Button className="btn">Purchase Now</Button>
+                  </Link>
+                </div>
               </div>
-            </div>
-            <div className="merch1">
-              <img src={Merch1} alt="merch" />
-              <div className="tulisan">
-                <div className="nama-merch">ToteBag 'Kumpul Gan'</div>
-
-                <div className="price">IDR 50.000</div>
-                <Button className="btn">Purchase Now</Button>
-              </div>
-            </div>
-            <div className="merch1">
-              <img src={Merch1} alt="merch" />
-              <div className="tulisan">
-                <div className="nama-merch">ToteBag 'Kumpul Gan'</div>
-
-                <div className="price">IDR 50.000</div>
-                <Button className="btn">Purchase Now</Button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -63,4 +64,4 @@ const merch = () => {
   );
 };
 
-export default merch;
+export default Merch;

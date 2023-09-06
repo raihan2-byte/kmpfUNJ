@@ -1,17 +1,11 @@
 .merch-parent {
   margin: 6rem 0.7rem;
   background-color: white;
-  justify-content: center;
-  position: relative;
-  align-items: center;
-  display: flex;
 
   .merch {
     background-color: white;
     width: 100%;
-    max-width: 400vw;
-    // border-radius: 7%;
-    position: relative;
+
     text-align: center;
 
     .logoheader {
@@ -21,39 +15,132 @@
 
     .logo img {
       width: 15vh;
-      //   display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
     .merch-produk {
-      display: grid;
-      grid-template-columns: repeat(2, 50%);
-      place-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: 20px;
+      max-width: 95%;
+      margin: auto;
 
-      img {
-        padding-top: 10px;
-        width: 50vh;
-        height: 40vh;
-      }
+      .merch1 {
+        margin-bottom: 60px;
+        img {
+          padding-top: 10px;
+          width: 45vh;
+          margin: 0 80px 0 80px;
+          height: 40vh;
+        }
 
-      .tulisan {
-        .price {
-          text-align: center;
-        }
-        .nama-merch {
-          font-size: 20px;
-          font-weight: 600;
-        }
-        .btn {
-          background-color: #15498e;
-          color: #ffc918;
+        .tulisan {
+          // font-size: 20px;
+
+          .price {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: center;
+            // width: 50%;
+            // margin: auto;
+          }
+          .nama-merch {
+            font-size: 20px;
+            font-weight: 600;
+            width: 60%;
+            margin: auto;
+            margin-bottom: 10px;
+          }
+          .btn {
+            background-color: #15498e;
+            color: #ffc918;
+            width: 60%;
+            padding: 0px;
+
+            // margin: 10px;
+          }
         }
       }
     }
   }
 }
 
-//tulisan idr rata kiri
-//purchase now direct ke toped
+@media screen and (max-width: 1110px) {
+  .merch-parent {
+    .merch {
+      .logoheader {
+      }
+
+      .logo img {
+      }
+
+      .merch-produk {
+        .merch1 {
+          img {
+            width: 40vh;
+            margin: 0 50px 0 50px;
+            height: 40vh;
+          }
+
+          .tulisan {
+            // font-size: 20px;
+            .price {
+            }
+            .nama-merch {
+            }
+            .btn {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .merch-parent {
+    .merch {
+      .logoheader {
+      }
+
+      .logo img {
+      }
+
+      .merch-produk {
+        .merch1 {
+          img {
+            max-width: 25vh;
+            margin: 0 70px 0 70px;
+            height: 23vh;
+
+            @media screen and (max-width: 768px) {
+              width: 25vh;
+              margin: 0 30px 0 30px;
+              height: 25vh;
+            }
+            @media screen and (max-width: 560px) {
+              width: 20vh;
+              margin: 0 20px 0 20px;
+              height: 20vh;
+            }
+            @media screen and (max-width: 420px) {
+              width: 15vh;
+              margin: 0px 10px 0 10px;
+              height: 15vh;
+            }
+          }
+
+          .tulisan {
+            // font-size: 20px;
+            .price {
+            }
+            .nama-merch {
+            }
+            .btn {
+            }
+          }
+        }
+      }
+    }
+  }
+}

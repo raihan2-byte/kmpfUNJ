@@ -141,10 +141,22 @@
       .karya {
         display: flex;
         flex-direction: column;
+        // height: 100vh;
+
+        .btn {
+          display: flex;
+          justify-content: center;
+        }
       }
       .proker {
         display: flex;
         flex-direction: column;
+        // background-color: red;
+        // height: 100vh;
+        .btn {
+          display: flex;
+          justify-content: center;
+        }
       }
       // .garis {
       //   border-color: black;
@@ -427,7 +439,7 @@
             font-size: 16px;
             &::after {
               // max-width: 800px;
-              width: 70%;
+              width: 65%;
             }
           }
         }
@@ -489,7 +501,7 @@
             font-size: 15px;
             &::after {
               // max-width: 800px;
-              width: 68%;
+              width: 50%;
             }
           }
         }

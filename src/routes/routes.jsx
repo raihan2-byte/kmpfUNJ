@@ -50,6 +50,7 @@ const Routes = () => {
         <Route path="/create-berita" element={<CreateBerita />} />
         <Route path="/create-artikel" element={<CreateArtikel />} />
         <Route path="/create-merch" element={<CreateMerch />} />
+        <Route path="/berita/delete/:id" component={Newskonten} />
       </Route>
       <Route path="/login" element={<Login />} />
       <Route path="/aboutus" element={<Aboutus />} />

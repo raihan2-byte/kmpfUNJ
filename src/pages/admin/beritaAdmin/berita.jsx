@@ -6,6 +6,7 @@ import API from "../../../api/API";
 import SweatAlert from "../../../sweetaleet/SweetAlert";
 import { MdDelete } from "react-icons/md";
 import { AiFillEye } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Berita = () => {
   const [berita, setBerita] = React.useState([]);
@@ -28,6 +29,24 @@ const Berita = () => {
   React.useEffect(() => {
     getAllNews();
   }, []);
+
+  const handleDeleteBerita = async (beritaId) => {
+    try {
+      // Panggil endpoint API untuk menghapus berita berdasarkan beritaId
+      await API.delete(`/berita/delete/${beritaId}`);
+      // Setelah penghapusan berhasil, perbarui daftar berita
+      getAllNews();
+    } catch (error) {
+      console.error(error);
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      SweatAlert(message, "warning");
+    }
+  };
 
   return (
     <div>
@@ -71,10 +90,13 @@ const Berita = () => {
                         <img src={item.file_name} alt="text" />
                       </td>
                       <td>
-                        <Button className="btn">
-                          <a href={`/berita/delete/${item.id}`}>
+                        <Button
+                          className="btn"
+                          onClick={() => handleDeleteBerita(item.id)}
+                        >
+                          <Link to={`/berita/delete/${item.id}`}>
                             <MdDelete />
-                          </a>
+                          </Link>
                         </Button>
                         <Button className="btn">
                           <a href={`/berita/${item.id}`}>

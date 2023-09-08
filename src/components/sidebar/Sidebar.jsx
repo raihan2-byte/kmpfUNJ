@@ -1,5 +1,3 @@
-// export default Sidebar;
-
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./sidebar.scss";
@@ -49,15 +47,15 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="navbar">
-      <div className="navbar__wrap container">
+    <div className="sidebar">
+      <div className="sidebar__wrap container">
         <div className="logo">
           {/* <img src={Logo} alt="kamera" /> */}
           <a href="/">
             <h3 style={{ color: "black" }}>Dashboard Admin</h3>
           </a>
         </div>
-        <ul className={`navbar__wrap__display ${addClass}`}>
+        <ul className={`sidebar__wrap__display ${addClass}`}>
           {navbarContent.map((e, i) => (
             <li key={i} className={`${i === active ? "active" : ""}`}>
               <Link className="text" to={e.path}>

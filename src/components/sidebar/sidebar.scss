@@ -1,5 +1,133 @@
 @use "../../scss/index" as *;
 
+.sidebar {
+  height: $header-height;
+  position: fixed;
+  // padding: 10px;
+  // overflow-y: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: $whiteColor;
+
+  .logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    cursor: pointer;
+
+    img {
+      width: 7vh;
+    }
+
+    p {
+      margin: auto;
+    }
+
+    // &__text {
+    //   margin-left: 1rem;
+    //   color: $blackColor;
+    // }
+  }
+
+  &__wrap {
+    @include flex(center, space-between);
+    padding: 0 2rem;
+    height: 100%;
+    position: relative;
+
+    &__display {
+      @include flex(center, unset);
+      gap: 30px;
+      position: relative;
+
+      li {
+        padding: 5px 0;
+        font-weight: 500;
+        position: relative;
+        font-size: 1.3rem;
+        width: max-content;
+
+        .text {
+          color: $blackColor;
+          transition: ease-out 0.3s;
+
+          &:hover {
+            color: #c69c6d;
+          }
+        }
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+
+        .text-content {
+          padding: 10px;
+          font-size: 16px;
+          color: #3c3c3c;
+          border: 1px solid #000000;
+          transition: 0.3s ease-in-out;
+          white-space: nowrap;
+
+          &:hover {
+            color: #c69c6d;
+          }
+        }
+      }
+
+      li:hover .dropdown-content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include tablet {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        // display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 6rem 15px;
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        transform: translate(-150%);
+        transition: ease-in-out 300ms;
+        background-color: $whiteColor;
+        z-index: 20;
+
+        &.isActive {
+          transform: translateX(0);
+        }
+
+        li {
+          font-size: 1.8rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .buttonDisplay {
+      display: none;
+      z-index: 21;
+    }
+
+    @include tablet {
+      .buttonDisplay {
+        display: block;
+      }
+    }
+  }
+}
+
 .logout {
   background-color: transparent;
   color: red;

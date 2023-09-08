@@ -27,6 +27,32 @@ const Merch = () => {
   React.useEffect(() => {
     getAllMerch();
   }, []);
+
+  const handleDeleteShortVideo = async (id) => {
+    try {
+      // Panggil endpoint API untuk menghapus berita berdasarkan id
+      await API.delete(`/merch/delete/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "multipart/form-data",
+        },
+      }).then((response) => {
+        console.log(response.data);
+        SweatAlert("Berhasil Menghapus data", "success");
+      });
+      // Setelah penghapusan berhasil, perbarui daftar berita
+      getAllMerch();
+    } catch (error) {
+      console.error(error);
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      SweatAlert(message, "warning");
+    }
+  };
   return (
     <div>
       <Sidebar />
@@ -74,7 +100,10 @@ const Merch = () => {
                       </td>
                       <td>
                         <a href={`/merch/delete/${item.id}`}>
-                          <Button className="btn">
+                          <Button
+                            className="btn"
+                            onClick={() => handleDeleteShortVideo(item.id)}
+                          >
                             <MdDelete />
                           </Button>
                         </a>

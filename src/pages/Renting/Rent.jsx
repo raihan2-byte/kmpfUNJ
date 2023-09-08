@@ -7,7 +7,7 @@ import API from "../../api/API";
 
 import { CiGlobe } from "react-icons/ci";
 import { FiPhoneCall } from "react-icons/fi";
-import { MdOutlineTouchApp } from "react-icons/md";
+import { MdOutlineTouchApp, MdOutlineNavigateNext } from "react-icons/md";
 import { FaPeopleCarry, FaMoneyCheckAlt } from "react-icons/fa";
 import { TfiPencilAlt } from "react-icons/tfi";
 
@@ -70,10 +70,7 @@ const Rent = () => {
         <div className="how-to-rent">
           <h3>How To Rent</h3>
           <div className="how-to">
-            <div
-              style={{ display: "flex", alignItems: "center" }}
-              className="text"
-            >
+            <div style={{ display: "flex" }} className="text">
               <span
                 style={{
                   fontSize: "45px",
@@ -84,14 +81,15 @@ const Rent = () => {
               >
                 <CiGlobe style={{ padding: "5px" }} className="icon" />
               </span>
-              Mengunjungi situs web kami dan cari alat yang ingin di sewa
+              <span className="nomor">1</span>
+              Silahkan kunjungi situs web kami untuk menemukan alat-alat yang
+              kami tawarkan.
             </div>
 
             <div
               className="text"
               style={{
                 display: "flex",
-                alignItems: "center",
               }}
             >
               <span
@@ -104,14 +102,14 @@ const Rent = () => {
               >
                 <FiPhoneCall style={{ padding: "5px" }} className="icon" />
               </span>
+              <span className="nomor">2</span>
               Setelah menemukan alat yang diinginkan, klik tombol "Book Now".
-              Anda akan diarahkan ke WhatsApp kami secara otomatis.
+              Anda akan diarahkan ke WhatsApp kami.
             </div>
             <div
               className="text"
               style={{
                 display: "flex",
-                alignItems: "center",
               }}
             >
               <span
@@ -127,14 +125,12 @@ const Rent = () => {
                   className="icon"
                 />
               </span>
+              <span className="nomor">3</span>
               Menetapkan barang peminjaman dan tanggal pengambilan atau
               pengembalian barang.
             </div>
 
-            <div
-              style={{ display: "flex", alignItems: "center" }}
-              className="text"
-            >
+            <div style={{ display: "flex" }} className="text">
               <span
                 style={{
                   fontSize: "45px",
@@ -146,13 +142,11 @@ const Rent = () => {
                 <FaPeopleCarry style={{ padding: "5px" }} className="icon" />
                 {/* <LiaPeopleCarrySolid style={{ padding: "5px" }} /> */}
               </span>
+              <span className="nomor">4</span>
               Pengembalian barang dan penyerahan jaminan berupa kartu identitas
               diri (KTP, SIM, atau KTA)
             </div>
-            <div
-              style={{ display: "flex", alignItems: "center" }}
-              className="text"
-            >
+            <div style={{ display: "flex" }} className="text">
               <span
                 style={{
                   fontSize: "45px",
@@ -164,12 +158,10 @@ const Rent = () => {
                 <FaMoneyCheckAlt style={{ padding: "5px" }} className="icon" />
                 {/* <LiaPeopleCarrySolid style={{ padding: "5px" }} /> */}
               </span>
+              <span className="nomor">5</span>
               Melakukan pembayaran melalui dompet digital yang tersedia
             </div>
-            <div
-              style={{ display: "flex", alignItems: "center" }}
-              className="text"
-            >
+            <div style={{ display: "flex" }} className="text">
               <span
                 style={{
                   fontSize: "45px",
@@ -181,6 +173,7 @@ const Rent = () => {
                 <TfiPencilAlt style={{ padding: "5px" }} className="icon" />
                 {/* <LiaPeopleCarrySolid style={{ padding: "5px" }} /> */}
               </span>
+              <span className="nomor">6</span>
               Pihak peminjaman membuat invoice kepada peminjam
             </div>
           </div>
@@ -204,7 +197,18 @@ const Rent = () => {
                     <div className="price-asli">{formatRupiah(item.harga)}</div>
                   </div>
                   <a href="https://wa.link/luxtrv">
-                    <Button className="btn">Book Now</Button>
+                    <Button className="btn" style={{}}>
+                      {" "}
+                      Book Now
+                      <MdOutlineNavigateNext
+                        style={{
+                          fontSize: "15px",
+                          backgroundColor: "#EAEAEA",
+                          borderRadius: "50%",
+                          marginLeft: "5px",
+                        }}
+                      />
+                    </Button>
                   </a>
                 </a>
               </div>
@@ -213,6 +217,7 @@ const Rent = () => {
         </div>
         <div className="exhibition">
           <h3>Camera & Lens</h3>
+          <h4 style={{ color: "red" }}>*For Internal Only</h4>
           <div className="promotion-child">
             {rent
               .filter((item) => item.category_id === 2)
@@ -230,7 +235,18 @@ const Rent = () => {
                       </div>
                     </div>
                     <a href="https://wa.link/d0j6az">
-                      <Button className="btn">Book Now</Button>
+                      <Button className="btn" style={{}}>
+                        {" "}
+                        Book Now
+                        <MdOutlineNavigateNext
+                          style={{
+                            fontSize: "15px",
+                            backgroundColor: "#EAEAEA",
+                            borderRadius: "50%",
+                            marginLeft: "5px",
+                          }}
+                        />
+                      </Button>
                     </a>
                   </a>
                 </div>
@@ -255,7 +271,18 @@ const Rent = () => {
                       </div>
                     </div>
                     <a href="https://wa.link/luxtrv">
-                      <Button className="btn">Book Now</Button>
+                      <Button className="btn" style={{}}>
+                        {" "}
+                        Book Now
+                        <MdOutlineNavigateNext
+                          style={{
+                            fontSize: "15px",
+                            backgroundColor: "#EAEAEA",
+                            borderRadius: "50%",
+                            marginLeft: "5px",
+                          }}
+                        />
+                      </Button>
                     </a>
                   </a>
                 </div>

@@ -172,6 +172,7 @@
         width: 100%;
 
         .kontoru {
+          height: 400px;
         }
 
         .overlay {
@@ -236,6 +237,7 @@
     .header {
       &__left {
         .kontoru {
+          height: 300px;
         }
 
         .overlay {
@@ -258,7 +260,7 @@
         padding: 0;
 
         img {
-          height: 60vh;
+          height: 50vh;
           width: 100%;
         }
 

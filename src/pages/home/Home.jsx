@@ -33,6 +33,20 @@ const Home = () => {
     getAllNews();
   }, []);
 
+  const [phototalk, setPhototalk] = React.useState([]);
+  console.log(phototalk);
+  const getAllPhototalk = async () => {
+    await API.get("phototalk/")
+      .then((response) => {
+        setPhototalk(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  React.useEffect(() => {
+    getAllPhototalk();
+  }, []);
   return (
     <>
       <Navbar />
@@ -99,7 +113,14 @@ const Home = () => {
             modules={[Pagination]}
             className="mySwiper"
           >
-            <SwiperSlide>
+            {phototalk?.map((item) => (
+              <SwiperSlide>
+                <img src={item.FileName} alt="" className="photo" />
+                <h5>item.Judul</h5>
+                {/* <p>deskripsi</p> */}
+              </SwiperSlide>
+            ))}
+            {/* <SwiperSlide>
               <img src={PhotoTalk} alt="" className="photo" />
               <h5>Judul</h5>
               <p>deskripsi</p>
@@ -123,12 +144,7 @@ const Home = () => {
               <img src={PhotoTalk} alt="" className="photo" />
               <h5>Judul</h5>
               <p>deskripsi</p>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={PhotoTalk} alt="" className="photo" />
-              <h5>Judul</h5>
-              <p>deskripsi</p>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
         </div>
       </a>

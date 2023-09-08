@@ -28,6 +28,7 @@ import CreateArtikel from "../pages/post/artikel/artikel";
 import CreateMerch from "../pages/post/merch/merch";
 import ProtectRouter from "../pages/protectRoute/ProtectRouter";
 import Merch from "../pages/merch/merch";
+import Barang from "../pages/admin/barangAdmin/barang";
 const Routes = () => {
   return (
     <Switch>
@@ -50,8 +51,11 @@ const Routes = () => {
         <Route path="/create-berita" element={<CreateBerita />} />
         <Route path="/create-artikel" element={<CreateArtikel />} />
         <Route path="/create-merch" element={<CreateMerch />} />
-        <Route path="/berita/delete/:id" component={Newskonten} />
+        {/* <Route path="/berita/delete/:id" component={Newskonten} /> */}
       </Route>
+      {/* <Route path="/short-video/delete/:id" component={ShortVideo} />
+      <Route path="/merch/delete/:id" component={Merch} /> */}
+
       <Route path="/login" element={<Login />} />
       <Route path="/aboutus" element={<Aboutus />} />
       {/* <Route path="/productservice" element={<Producservice />} /> */}

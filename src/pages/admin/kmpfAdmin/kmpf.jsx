@@ -5,6 +5,8 @@ import { MdDelete } from "react-icons/md";
 import { AiFillEye } from "react-icons/ai";
 import API from "../../../api/API";
 import SweatAlert from "../../../sweetaleet/SweetAlert";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Kmpf = () => {
   const [shortvideo, setShortVideo] = React.useState([]);
@@ -27,6 +29,47 @@ const Kmpf = () => {
   React.useEffect(() => {
     getAllShortvideo();
   }, []);
+
+  // const handleDeleteShortVideo = async (id) => {
+  //   await API.delete(`/short-video/delete/${id}`, {
+  //     headers: {
+  //       Authorization: `Bearer ${localStorage.getItem("token")}`,
+  //       "Content-Type": "multipart/form-data",
+  //     },
+  //   }).then((response) => {
+  //     console.log(response.data);
+  //     SweatAlert("Berhasil Menghapus data", "success");
+  //   });
+  //   // Setelah penghapusan berhasil, perbarui daftar berita
+  //   getAllShortvideo();
+  // };
+
+  const handleDeleteShortVideo = async (id) => {
+    try {
+      // Panggil endpoint API untuk menghapus berita berdasarkan id
+      await API.delete(`/short-video/delete/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "multipart/form-data",
+        },
+      }).then((response) => {
+        console.log(response.data);
+        SweatAlert("Berhasil Menghapus data", "success");
+      });
+      // Setelah penghapusan berhasil, perbarui daftar berita
+      getAllShortvideo();
+    } catch (error) {
+      console.error(error);
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      SweatAlert(message, "warning");
+    }
+  };
+
   return (
     <div>
       <Sidebar />
@@ -73,11 +116,14 @@ const Kmpf = () => {
                         <img src={item.FileName} alt="text" />
                       </td>
                       <td>
-                        <a href={`/short-video/delete/${item.id}`}>
-                          <Button className="btn">
-                            <MdDelete />
-                          </Button>
-                        </a>
+                        {/* <Link to={`/short-video/delete/${item.ID}`}> */}
+                        <Button
+                          className="btn"
+                          onClick={() => handleDeleteShortVideo(item.ID)}
+                        >
+                          <MdDelete />
+                        </Button>
+                        {/* </Link> */}
                         <a href={`/kelas/#video-reels`}>
                           <Button className="btn">
                             <AiFillEye />

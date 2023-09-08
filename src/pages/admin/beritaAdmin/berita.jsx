@@ -33,7 +33,15 @@ const Berita = () => {
   const handleDeleteBerita = async (beritaId) => {
     try {
       // Panggil endpoint API untuk menghapus berita berdasarkan beritaId
-      await API.delete(`/berita/delete/${beritaId}`);
+      await API.delete(`/berita/delete/${beritaId}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "multipart/form-data",
+        },
+      }).then((response) => {
+        console.log(response.data);
+        SweatAlert("Berhasil Menghapus data", "success");
+      });
       // Setelah penghapusan berhasil, perbarui daftar berita
       getAllNews();
     } catch (error) {

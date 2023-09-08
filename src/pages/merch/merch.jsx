@@ -37,9 +37,11 @@ const Merch = () => {
       <Navbar />
       <div className="merch-parent">
         <div className="merch">
-          <img src={LogoHeader} alt="" className="logoheader" />
-          <div className="logo">
-            <img src={Logo} alt="" />
+          <div className="gambar">
+            <img src={LogoHeader} alt="" className="logoheader" />
+            <div className="logo">
+              <img src={Logo} alt="" />
+            </div>
           </div>
           <div className="merch-produk">
             {merch?.map((item) => (

@@ -38,7 +38,26 @@ const Merch = () => {
       <div className="merch-parent">
         <div className="merch">
           <div className="gambar">
-            <img src={LogoHeader} alt="" className="logoheader" />
+            <div className="logoheader">
+              <svg width={260} height={130}>
+                <path id="curve" d="M 0 120 C 0 120, 130 0, 260 120"></path>
+                <text className="text" textAnchor="middle">
+                  <textPath className="__path" href="#curve" startOffset="50%">
+                    KMPF STORE
+                  </textPath>
+                </text>
+              </svg>
+              {/* <span class="G1">K</span>
+              <span class="e1">M</span>
+              <span class="e2">P</span>
+              <span class="k1">F</span>
+              <span class="s1">S</span>
+              <span class="f">T</span>
+              <span class="o">O</span>
+              <span class="r">R</span>
+              <span class="G2">E</span> */}
+              {/* <img src={LogoHeader} alt="" className="logoheader" /> */}
+            </div>
             <div className="logo">
               <img src={Logo} alt="" />
             </div>

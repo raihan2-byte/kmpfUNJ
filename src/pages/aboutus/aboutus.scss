@@ -95,7 +95,7 @@
 
   .team {
     padding: 40px;
-    border-radius: 5%;
+    border-radius: 20px;
     background-color: #ffc918;
     margin: 0.7rem 10px;
 
@@ -112,6 +112,10 @@
         margin: 10px;
         font-size: 20px;
         font-weight: 600;
+      }
+      .jabatan {
+        font-size: 15px;
+        padding: 10px;
       }
     }
 
@@ -163,6 +167,19 @@
         }
       }
     }
+    .team {
+      h3 {
+      }
+
+      .team-child {
+        .nama {
+        }
+      }
+
+      img {
+        width: 80%;
+      }
+    }
 
     .text-aboutus {
       font-size: 20px;
@@ -190,7 +207,7 @@
           font-size: 15px;
         }
         .jabatan {
-          font-size: 12px;
+          font-size: 15px;
         }
       }
 
@@ -243,6 +260,20 @@
 
     .text-usaha {
       font-size: 18px;
+    }
+    .team {
+      h3 {
+      }
+
+      .team-child {
+        .nama {
+          font-size: 18px;
+        }
+      }
+
+      img {
+        width: 80%;
+      }
     }
   }
 }
@@ -306,6 +337,7 @@
       }
 
       img {
+        width: 80%;
       }
     }
     .maps {
@@ -333,7 +365,7 @@
               h3 {
               }
               p {
-                font-size: 9.5px;
+                font-size: 11px;
               }
             }
           }
@@ -379,6 +411,7 @@
       }
 
       img {
+        width: 90%;
       }
     }
     .maps {
@@ -406,7 +439,7 @@
               h3 {
               }
               p {
-                font-size: 7.5px;
+                font-size: 9px;
               }
             }
           }
@@ -447,6 +480,7 @@
       }
 
       img {
+        width: 90%;
       }
     }
     .maps {
@@ -489,7 +523,7 @@
                 margin-left: 10px;
               }
               p {
-                font-size: 9px;
+                font-size: 11px;
               }
             }
           }
@@ -505,14 +539,14 @@
     }
 
     .text-aboutus {
-      font-size: 9px;
+      font-size: 11px;
       h3,
       h4 {
       }
     }
 
     .text-usaha {
-      font-size: 9px;
+      font-size: 11px;
       h3,
       h4 {
       }
@@ -547,6 +581,7 @@
       }
 
       img {
+        width: 90%;
       }
     }
     .maps {
@@ -556,7 +591,7 @@
   }
 }
 
-@media only screen and (max-width: 385px) {
+@media only screen and (max-width: 425px) {
   .aboutus-parent {
     h2 {
       font-size: 20px;
@@ -616,18 +651,18 @@
 
       .team-child {
         .bagus {
-          max-width: 90px;
+          max-width: 155px;
         }
         .nama {
-          font-size: 9px;
+          font-size: 12px;
         }
         .jabatan {
-          font-size: 7px;
+          font-size: 10 px;
         }
       }
 
       img {
-        width: 60%;
+        width: 100%;
       }
     }
     .maps {

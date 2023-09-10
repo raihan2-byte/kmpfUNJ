@@ -1,5 +1,5 @@
 .merch-parent {
-  margin: 6rem 0.7rem;
+  margin: 10rem 0.7rem;
   background-color: white;
 
   .merch {
@@ -10,11 +10,16 @@
 
     .gambar {
       .logoheader {
-        margin-bottom: -70px;
-        width: 40vh;
+        text {
+          font-size: 40px;
+        }
+        #curve {
+          fill: transparent;
+        }
       }
 
       .logo img {
+        margin-top: -50px;
         width: 30vh;
       }
     }

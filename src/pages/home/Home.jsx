@@ -49,78 +49,93 @@ const Home = () => {
   }, []);
   return (
     <>
-      <Navbar />
-      <Header news={news} />
-      <div className="rental-foto">
-        <a href="/berita">
-          <div className="fotografi-parent">
-            <div className="fotografi">
-              <h1>Menyediakan Jasa Fotografi</h1>
-              <div className="book-now">
-                <Button onClick="null">Book Now</Button>
+      <div
+        className="parent-home"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          maxWidth: "100rem",
+          margin: "0 auto",
+          // alignItems: "center",
+        }}
+      >
+        <Navbar />
+        <Header news={news} />
+        <div className="rental-foto">
+          <a href="/berita">
+            <div className="fotografi-parent">
+              <div className="fotografi">
+                <h1>Menyediakan Jasa Fotografi</h1>
+                <div className="book-now">
+                  <Button onClick="null" className="btn">
+                    Book Now
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
-        <a href="/rent">
-          <div className="rental-parent">
-            <div className="rental">
-              <h1>Meminjamkan dan Menyewakan Alat Fotografi</h1>
-              <div className="book-now">
-                <Button onClick="null">Book Now</Button>
+          </a>
+          <a href="/rent">
+            <div className="rental-parent">
+              <div className="rental">
+                <h1>Meminjamkan dan Menyewakan Alat Fotografi</h1>
+                <div className="book-now">
+                  <Button onClick="null" className="btn">
+                    Book Now
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
-        {/* <div className="galery">
+          </a>
+          {/* <div className="galery">
           <h1>Gallery</h1>
         </div> */}
-        <a href="/kelas">
-          <div className="galery">
-            <div className="background">
-              <h1>Gallery</h1>
+          <a href="/kelas">
+            <div className="galery">
+              <div className="background">
+                <h1>Gallery</h1>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      <a href="/phototalk">
-        <div className="phototalk">
-          <h1>PhotoTalk</h1>
-          <Swiper
-            slidesPerView={2}
-            spaceBetween={10}
-            pagination={{
-              clickable: true,
-            }}
-            breakpoints={{
-              390: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              640: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 5,
-                spaceBetween: 20,
-              },
-            }}
-            modules={[Pagination]}
-            className="mySwiper"
-          >
-            {phototalk?.map((item) => (
-              <SwiperSlide>
-                <img src={item.FileName} alt="" className="photo" />
-                <h5>{item.Judul}</h5>
-                {/* <p>deskripsi</p> */}
-              </SwiperSlide>
-            ))}
-            {/* <SwiperSlide>
+          </a>
+        </div>
+        <a href="/phototalk">
+          <div className="phototalk">
+            <h1>PhotoTalk</h1>
+            <Swiper
+              slidesPerView={2}
+              spaceBetween={10}
+              pagination={{
+                clickable: true,
+              }}
+              breakpoints={{
+                390: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                640: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 5,
+                  spaceBetween: 20,
+                },
+              }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              {phototalk?.map((item) => (
+                <SwiperSlide>
+                  <img src={item.FileName} alt="" className="photo" />
+                  <h5>{item.Judul}</h5>
+                  {/* <p>deskripsi</p> */}
+                </SwiperSlide>
+              ))}
+              {/* <SwiperSlide>
               <img src={PhotoTalk} alt="" className="photo" />
               <h5>Judul</h5>
               <p>deskripsi</p>
@@ -145,10 +160,11 @@ const Home = () => {
               <h5>Judul</h5>
               <p>deskripsi</p>
             </SwiperSlide> */}
-          </Swiper>
-        </div>
-      </a>
-      <Footer />
+            </Swiper>
+          </div>
+        </a>
+        <Footer />
+      </div>
     </>
   );
 };

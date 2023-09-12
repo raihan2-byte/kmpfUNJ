@@ -107,7 +107,7 @@
 // }
 
 @media only screen and (max-width: 1110px) {
-  .parent {
+  .parent-header {
     .header {
       // margin-top: 7rem;
       // display: flex;
@@ -170,7 +170,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .parent {
+  .parent-header {
     .header {
       flex-direction: column;
 
@@ -239,7 +239,7 @@
 }
 
 @media screen and (max-width: 570px) {
-  .parent {
+  .parent-header {
     .header {
       &__left {
         .kontoru {

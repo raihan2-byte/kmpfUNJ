@@ -55,8 +55,8 @@ const Home = () => {
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
-          maxWidth: "100rem",
-          margin: "0 auto",
+          maxWidth: "1350px",
+          margin: "6.5rem auto",
           // alignItems: "center",
         }}
       >
@@ -163,8 +163,8 @@ const Home = () => {
             </Swiper>
           </div>
         </a>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

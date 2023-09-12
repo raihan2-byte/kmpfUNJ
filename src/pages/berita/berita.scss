@@ -1,8 +1,9 @@
 @use "../../scss/index" as *;
 
 .berita-parent {
-  margin: 7rem 0;
+  margin: 7rem auto;
   // padding-top: 2rem;
+  max-width: 1450px;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -11,7 +12,7 @@
   .space {
     display: flex;
     flex-direction: column;
-    margin: auto 3rem;
+    margin: auto 1rem;
     .text {
       display: flex;
       flex-direction: column;
@@ -19,7 +20,7 @@
       align-items: center;
 
       img {
-        width: 30%;
+        max-width: 30%;
       }
       h3,
       p {

@@ -51,8 +51,9 @@ const Kelas = () => {
   // };
   return (
     <>
-      <Navbar />
-      <div className="parent">
+      <div className="parent-kelas">
+        <Navbar />
+
         <div className="parent-child">
           <div className="kelas-fotografi">
             <Swiper

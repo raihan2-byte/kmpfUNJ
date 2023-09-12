@@ -65,8 +65,8 @@ const Rent = () => {
 
   return (
     <>
-      <Navbar />
       <div className="rent-parent">
+        <Navbar />
         <div className="how-to-rent">
           <h3>How To Rent</h3>
           <div className="how-to">

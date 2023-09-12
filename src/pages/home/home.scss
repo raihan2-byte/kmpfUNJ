@@ -134,7 +134,7 @@
 }
 
 .phototalk {
-  max-width: 100rem;
+  // max-width: 100rem;
   background-color: #ffc918;
   margin: 1rem 2rem;
   border-radius: $border-radius;
@@ -188,7 +188,7 @@
         height: 17vh;
       }
       background-size: fill;
-      width: 25vh;
+      max-width: 25vh;
       height: 30vh;
       border-radius: 10%;
     }

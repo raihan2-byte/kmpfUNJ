@@ -2,11 +2,15 @@
 
 .rent-parent {
   // padding-top: 7rem;
-  margin-top: 7rem;
+  margin: 7rem auto;
   text-align: center;
   background-color: white;
   padding-top: 2px;
   padding-bottom: 3rem;
+  max-width: 1450px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
   .how-to-rent {
     text-align: center;
@@ -29,7 +33,7 @@
         // max-height: 25vh;
         min-height: 30vh;
         text-align: left;
-        max-width: 245px;
+        max-width: 265px;
         // width: 80%;
         // margin: 10px auto;
         border: 2px solid #505050;
@@ -268,7 +272,7 @@
           background-color: white;
 
           @media screen and (max-width: 475px) {
-            width: 70px;
+            width: 90px;
             height: 20px;
             margin-bottom: 15px;
           }

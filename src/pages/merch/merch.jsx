@@ -47,16 +47,6 @@ const Merch = () => {
                   </textPath>
                 </text>
               </svg>
-              {/* <span class="G1">K</span>
-              <span class="e1">M</span>
-              <span class="e2">P</span>
-              <span class="k1">F</span>
-              <span class="s1">S</span>
-              <span class="f">T</span>
-              <span class="o">O</span>
-              <span class="r">R</span>
-              <span class="G2">E</span> */}
-              {/* <img src={LogoHeader} alt="" className="logoheader" /> */}
             </div>
             <div className="logo">
               <img src={Logo} alt="" />

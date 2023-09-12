@@ -24,7 +24,7 @@ const Header = ({ news }) => {
   // Ambil satu berita pertama dari beritaArchieve
 
   return (
-    <div className="parent">
+    <div className="parent-header">
       <div className="header">
         <div className="header__left">
           <Swiper

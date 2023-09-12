@@ -31,7 +31,7 @@ const Product = () => {
   return (
     <>
       <Navbar />
-      <div className="parent">
+      <div className="parent-product">
         <div className="foto-wisuda-parent">
           <div className="foto-wisuda-left">
             <div className="carousel-atas">
@@ -223,15 +223,7 @@ const Product = () => {
                         </div>
                       </div>
                     </SwiperSlide>
-                    {/* <SwiperSlide>
-                      <img src="https://picsum.photos/600/400" alt="text" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src="https://picsum.photos/600/400" alt="text" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src="https://picsum.photos/800/400" alt="text" />
-                    </SwiperSlide> */}
+
                     <div
                       className="swiper-button-next"
                       style={{ color: "white" }}
@@ -245,16 +237,6 @@ const Product = () => {
               </div>
             </div>
           </div>
-          {/* <div className="button-1">
-            <div className="book-now">
-              <h3 className="text-1">Mulai dari 250K</h3>
-              <h4 className="text-2">Unlimited shoots | Soft file | Cetak</h4>
-              <h1 className="text-3">Yuk studio-an dengan jasa kami!</h1>
-              <Button onClick="null" className="btn">
-                Book Now
-              </Button>
-            </div>
-          </div> */}
         </div>
         <div className="foto-wisuda-parent">
           <div className="foto-wisuda-left">

@@ -1,7 +1,11 @@
 @use "../../scss/index" as *;
 
-.parent {
-  margin-top: 8rem;
+.parent-kelas {
+  margin: 7rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1350px;
   .parent-child {
     display: flex;
     flex-wrap: wrap;

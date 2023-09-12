@@ -1,8 +1,8 @@
-.parent {
+.parent-product {
   margin-top: 7rem;
 
   .foto-wisuda-parent {
-    margin: 0.7rem;
+    // margin: 0.7rem;
 
     color: black;
 
@@ -248,7 +248,7 @@
       width: 40vh;
       min-height: 30vh;
       max-height: 40vh;
-      border-radius: 20%;
+      border-radius: 20px;
       text-align: center;
       justify-content: space-evenly;
     }
@@ -256,7 +256,7 @@
 }
 
 @media only screen and (max-width: 1100px) {
-  .parent {
+  .parent-product {
     .foto-wisuda-parent {
       .foto-wisuda-left {
         h3 {
@@ -301,13 +301,14 @@
       .medal,
       .hand {
         min-height: 25vh;
+        max-height: 35vh;
       }
     }
   }
 }
 
 @media only screen and (max-width: 950px) {
-  .parent {
+  .parent-product {
     .foto-wisuda-parent {
       .foto-wisuda-left {
         h3 {
@@ -350,7 +351,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .parent {
+  .parent-product {
     .foto-wisuda-parent {
       .foto-wisuda-left {
         h3 {
@@ -362,7 +363,7 @@
               .mySwiper {
                 .wisuda-parent {
                   .wisuda1 img {
-                    height: 30vh;
+                    height: 50vh;
                   }
 
                   .button,
@@ -396,7 +397,7 @@
 }
 
 @media only screen and (max-width: 575px) {
-  .parent {
+  .parent-product {
     .foto-wisuda-parent {
       .foto-wisuda-left {
         h3 {
@@ -407,11 +408,12 @@
             .card-content {
               .mySwiper {
                 .wisuda-parent {
-                  height: 35vh;
+                  height: 45vh;
 
                   .wisuda1 img {
                     height: 100%;
                     background-size: contain;
+                    margin-top: 10px;
                   }
 
                   .button,
@@ -464,7 +466,8 @@
 
         .icon {
           width: 80px;
-          max-height: 70px;
+          min-height: 75px;
+          // max-height: 70px;
         }
       }
     }
@@ -472,7 +475,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .parent {
+  .parent-product {
     .foto-wisuda-parent {
       .foto-wisuda-left {
         h3 {
@@ -483,7 +486,7 @@
             .card-content {
               .mySwiper {
                 .wisuda-parent {
-                  max-height: 35vh;
+                  max-height: 45vh;
 
                   .wisuda1 img {
                     height: 100%;
@@ -584,15 +587,16 @@
       .cheap,
       .medal,
       .hand {
-        width: 90px;
-        max-height: 120px;
+        max-width: 120px;
+        min-height: 120px;
+        max-height: 140px;
       }
     }
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .parent {
+  .parent-product {
     .foto-wisuda-parent {
       .foto-wisuda-left {
         h3 {
@@ -603,7 +607,7 @@
             .card-content {
               .mySwiper {
                 .wisuda-parent {
-                  max-height: 38vh;
+                  max-height: 55vh;
 
                   .wisuda1 img {
                     height: 100%;
@@ -618,7 +622,7 @@
                     left: 55%;
 
                     .btn {
-                      padding: 0 8px 0 8px;
+                      padding: 0 0px 0 0px;
                       font-size: 10px;
                       margin-top: 2px;
                     }
@@ -633,7 +637,7 @@
                     }
                     .text-3 {
                       padding-bottom: 2px;
-                      font-size: 12px;
+                      font-size: 11px;
                     }
                   }
 
@@ -701,18 +705,19 @@
       h2 {
       }
       .point-why-us {
-        flex-direction: column;
+        // flex-direction: column;
         h3 {
         }
       }
       .icon {
-        font-size: 30px;
+        // font-size: 30px;
+        padding: 10px;
       }
       .cheap,
       .medal,
       .hand {
-        width: 100%;
-        max-height: 100px;
+        width: 80px;
+        max-height: 160px;
       }
     }
   }

@@ -20,7 +20,7 @@
       align-items: center;
 
       img {
-        max-width: 30%;
+        max-width: 40%;
       }
       h3,
       p {
@@ -359,6 +359,11 @@
 @media screen and (max-width: 580px) {
   .berita-parent {
     .space {
+      .text {
+        img {
+          width: 40%;
+        }
+      }
       .berita-child {
         .card {
           img {

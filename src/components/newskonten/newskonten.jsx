@@ -78,7 +78,12 @@ const Newskonten = () => {
                     <MdPeopleAlt style={{ marginRight: "5px" }} /> admin
                   </p>
                   <p className="date">{formatTanggal(berita.created_at)}</p>
-                  <p className="tags-news">{berita.KaryaNewsData?.name}</p>
+                  <p
+                    className="tags-news"
+                    style={{ color: "black", fontWeight: "900" }}
+                  >
+                    {berita.KaryaNewsData?.name}
+                  </p>
                 </div>
                 <div className="text-konten">
                   <br />

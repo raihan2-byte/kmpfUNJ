@@ -53,7 +53,9 @@ const Kelas = () => {
     <>
       <div className="parent-kelas">
         <Navbar />
-
+        <div className="kmpf-mencari">
+          <div className="text-kmpf">#KMPFMENCARIKARYA</div>
+        </div>
         <div className="parent-child">
           <div className="kelas-fotografi">
             <Swiper

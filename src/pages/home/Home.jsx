@@ -66,7 +66,10 @@ const Home = () => {
           <a href="/berita">
             <div className="fotografi-parent">
               <div className="fotografi">
-                <h1>Menyediakan Jasa Fotografi</h1>
+                <div className="text">
+                  <h1>Menyediakan Jasa Fotografi</h1>
+                  <h4>"We are the best choice for your photo needs."</h4>
+                </div>
                 <div className="book-now">
                   <Button onClick="null" className="btn">
                     Book Now
@@ -78,7 +81,12 @@ const Home = () => {
           <a href="/rent">
             <div className="rental-parent">
               <div className="rental">
-                <h1>Meminjamkan dan Menyewakan Alat Fotografi</h1>
+                <div className="text">
+                  <h1>Meminjamkan dan Menyewakan Alat Fotografi</h1>
+                  <h4>
+                    "We have everything you need for your photography needs".
+                  </h4>
+                </div>
                 <div className="book-now">
                   <Button onClick="null" className="btn">
                     Book Now
@@ -135,31 +143,6 @@ const Home = () => {
                   {/* <p>deskripsi</p> */}
                 </SwiperSlide>
               ))}
-              {/* <SwiperSlide>
-              <img src={PhotoTalk} alt="" className="photo" />
-              <h5>Judul</h5>
-              <p>deskripsi</p>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={PhotoTalk} alt="" className="photo" />
-              <h5>Judul</h5>
-              <p>deskripsi</p>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={PhotoTalk} alt="" className="photo" />
-              <h5>Judul</h5>
-              <p>deskripsi</p>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={PhotoTalk} alt="" className="photo" />
-              <h5>Judul</h5>
-              <p>deskripsi</p>
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={PhotoTalk} alt="" className="photo" />
-              <h5>Judul</h5>
-              <p>deskripsi</p>
-            </SwiperSlide> */}
             </Swiper>
           </div>
         </a>

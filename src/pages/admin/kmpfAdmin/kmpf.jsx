@@ -5,8 +5,6 @@ import { MdDelete } from "react-icons/md";
 import { AiFillEye } from "react-icons/ai";
 import API from "../../../api/API";
 import SweatAlert from "../../../sweetaleet/SweetAlert";
-import axios from "axios";
-import { Link } from "react-router-dom";
 
 const Kmpf = () => {
   const [shortvideo, setShortVideo] = React.useState([]);
@@ -29,20 +27,6 @@ const Kmpf = () => {
   React.useEffect(() => {
     getAllShortvideo();
   }, []);
-
-  // const handleDeleteShortVideo = async (id) => {
-  //   await API.delete(`/short-video/delete/${id}`, {
-  //     headers: {
-  //       Authorization: `Bearer ${localStorage.getItem("token")}`,
-  //       "Content-Type": "multipart/form-data",
-  //     },
-  //   }).then((response) => {
-  //     console.log(response.data);
-  //     SweatAlert("Berhasil Menghapus data", "success");
-  //   });
-  //   // Setelah penghapusan berhasil, perbarui daftar berita
-  //   getAllShortvideo();
-  // };
 
   const handleDeleteShortVideo = async (id) => {
     try {

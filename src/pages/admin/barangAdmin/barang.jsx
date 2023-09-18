@@ -6,11 +6,12 @@ import API from "../../../api/API";
 import SweatAlert from "../../../sweetaleet/SweetAlert";
 import { MdDelete } from "react-icons/md";
 import { AiFillEye } from "react-icons/ai";
+import { GrUpdate } from "react-icons/gr";
 
 const Barang = () => {
   const [barang, setBarang] = React.useState([]);
   console.log(barang);
-  const getAllNews = async () => {
+  const getAllBarang = async () => {
     await API.get("/barang/")
       .then((response) => {
         setBarang(response.data.data);
@@ -26,8 +27,60 @@ const Barang = () => {
       });
   };
   React.useEffect(() => {
-    getAllNews();
+    getAllBarang();
   }, []);
+
+  const handleDeleteBarang = async (barangID) => {
+    try {
+      // Panggil endpoint API untuk menghapus berita berdasarkan barangID
+      await API.delete(`/barang/delete/${barangID}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "multipart/form-data",
+        },
+      }).then((response) => {
+        console.log(response.data);
+        SweatAlert("Berhasil Menghapus data", "success");
+      });
+      // Setelah penghapusan berhasil, perbarui daftar berita
+      getAllBarang();
+    } catch (error) {
+      console.error(error);
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      SweatAlert(message, "warning");
+    }
+  };
+
+  const handleUpdateBarang = async (barangID) => {
+    try {
+      // Panggil endpoint API untuk menghapus berita berdasarkan barangID
+      await API.delete(`/barang/update/${barangID}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "multipart/form-data",
+        },
+      }).then((response) => {
+        console.log(response.data);
+        SweatAlert("Berhasil Update data", "success");
+      });
+      // Setelah penghapusan berhasil, perbarui daftar berita
+      getAllBarang();
+    } catch (error) {
+      console.error(error);
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      SweatAlert(message, "warning");
+    }
+  };
   return (
     <div>
       <Sidebar />
@@ -41,7 +94,7 @@ const Barang = () => {
         <div className="kontent">
           <div className="list">
             <h4>List Barang</h4>
-            <a href="/create-berita">
+            <a href="/create-barang">
               <Button className="btn-create">Create Barang</Button>
             </a>
           </div>
@@ -74,10 +127,17 @@ const Barang = () => {
                         <img src={item.file_name} alt="text" />
                       </td>
                       <td>
-                        <Button className="btn">
-                          <a href={`/barang/delete/${item.id}`}>
-                            <MdDelete />
-                          </a>
+                        <Button
+                          className="btn"
+                          onClick={() => handleDeleteBarang(item.id)}
+                        >
+                          <MdDelete />
+                        </Button>
+                        <Button
+                          className="btn"
+                          onClick={() => handleUpdateBarang(item.id)}
+                        >
+                          <GrUpdate />
                         </Button>
                         <Button className="btn">
                           <a href={`/barang/${item.id}`}>

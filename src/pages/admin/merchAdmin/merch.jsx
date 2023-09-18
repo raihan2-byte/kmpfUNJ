@@ -28,7 +28,7 @@ const Merch = () => {
     getAllMerch();
   }, []);
 
-  const handleDeleteShortVideo = async (id) => {
+  const handleDeleteMerch = async (id) => {
     try {
       // Panggil endpoint API untuk menghapus berita berdasarkan id
       await API.delete(`/merch/delete/${id}`, {
@@ -99,14 +99,12 @@ const Merch = () => {
                         <img src={item.FileName} alt="text" />
                       </td>
                       <td>
-                        <a href={`/merch/delete/${item.id}`}>
-                          <Button
-                            className="btn"
-                            onClick={() => handleDeleteShortVideo(item.id)}
-                          >
-                            <MdDelete />
-                          </Button>
-                        </a>
+                        <Button
+                          className="btn"
+                          onClick={() => handleDeleteMerch(item.ID)}
+                        >
+                          <MdDelete />
+                        </Button>
                         <a href={`/merch/#merch-produk`}>
                           <Button className="btn">
                             <AiFillEye />

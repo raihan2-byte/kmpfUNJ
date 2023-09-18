@@ -74,7 +74,7 @@
               margin-top: 10px;
               .photo-news {
                 img {
-                  width: 100%;
+                  width: 10vh;
                   height: 13vh;
                   border-radius: 10px;
                 }
@@ -150,9 +150,10 @@
         .foto-konten {
           display: flex;
           justify-content: space-between;
-          flex-direction: column;
+          // flex-direction: column;
           .kiri {
-            width: 100%;
+            width: 70%;
+            // width: 100%;
           }
           .foto {
             img {
@@ -161,7 +162,8 @@
             }
           }
           .news-recomendation {
-            width: 100%;
+            width: 30%;
+            // width: 100%;
             .konten-recomendation {
               h4 {
                 font-size: 2.5vh;
@@ -169,14 +171,14 @@
               }
 
               .titit {
-                display: flex;
-                justify-content: space-between;
+                // display: flex;
+                // justify-content: space-between;
               }
 
               .konten-recomendation-child {
                 .photo-news {
                   img {
-                    width: 90%;
+                    // width: 10%;
                     height: 10vh;
                   }
                 }
@@ -227,12 +229,16 @@
         }
 
         .foto-konten {
+          .kiri {
+            width: 65%;
+          }
           .foto {
             img {
               width: 100%;
             }
           }
           .news-recomendation {
+            width: 35%;
             .konten-recomendation {
               h4 {
                 font-size: 2.5vh;
@@ -241,7 +247,7 @@
               .konten-recomendation-child {
                 .photo-news {
                   img {
-                    width: 90%;
+                    // width: 90%;
                     height: 10vh;
                   }
                 }
@@ -278,7 +284,7 @@
     .news-konten-img {
       .foto-parent {
         .judul-konten {
-          font-size: 20px;
+          font-size: 30px;
         }
         .text-konten {
           .text {
@@ -287,29 +293,44 @@
         }
 
         .foto-konten {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          .kiri {
+            // width: 70%;
+            width: 100%;
+          }
           .foto {
             img {
               width: 100%;
+              // height: 70vh;
             }
           }
           .news-recomendation {
+            width: 100%;
             .konten-recomendation {
               h4 {
-                font-size: 4vh;
+                font-size: 2.5vh;
+                margin-left: 0px;
+              }
+
+              .titit {
+                display: flex;
+                justify-content: space-between;
               }
 
               .konten-recomendation-child {
                 .photo-news {
                   img {
-                    width: 90%;
-                    height: 13vh;
+                    width: 8vh;
+                    height: 10vh;
                   }
                 }
 
                 .text-news {
                   .judul-news {
                     h3 {
-                      font-size: 9px;
+                      font-size: 10px;
                     }
                   }
 
@@ -318,7 +339,7 @@
                     }
 
                     .tags-spesifik {
-                      font-size: 8px;
+                      font-size: 10px;
                       .date {
                       }
                     }
@@ -462,7 +483,7 @@
 
                 .photo-news {
                   img {
-                    width: 100%;
+                    width: 10vh;
                     height: 12vh;
                   }
                 }

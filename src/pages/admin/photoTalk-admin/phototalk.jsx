@@ -29,6 +29,32 @@ const Phototalk = () => {
   React.useEffect(() => {
     getAllPhototalk();
   }, []);
+
+  const handleDeletePhototalk = async (id) => {
+    try {
+      // Panggil endpoint API untuk menghapus berita berdasarkan id
+      await API.delete(`/phototalk/delete/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "multipart/form-data",
+        },
+      }).then((response) => {
+        console.log(response.data);
+        SweatAlert("Berhasil Menghapus data", "success");
+      });
+      // Setelah penghapusan berhasil, perbarui daftar berita
+      getAllPhototalk();
+    } catch (error) {
+      console.error(error);
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      SweatAlert(message, "warning");
+    }
+  };
   return (
     <div>
       <Sidebar />
@@ -75,11 +101,12 @@ const Phototalk = () => {
                         <img src={item.FileName} alt="text" />
                       </td>
                       <td>
-                        <a href={`/phototalk/delete/${item.id}`}>
-                          <Button className="btn">
-                            <MdDelete />
-                          </Button>
-                        </a>
+                        <Button
+                          className="btn"
+                          onClick={() => handleDeletePhototalk(item.ID)}
+                        >
+                          <MdDelete />
+                        </Button>
                         <a href={`/phototalk/`}>
                           <Button className="btn">
                             <AiFillEye />

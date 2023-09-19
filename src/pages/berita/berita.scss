@@ -52,7 +52,7 @@
         img {
           border-radius: 10%;
           width: 100%;
-          height: 450px;
+          height: 350px;
           filter: brightness(65%);
           // border: 1px solid #ccc;
           // border-radius: 10%;
@@ -104,17 +104,17 @@
   .tambahan {
     .tambahan-child {
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
 
       .karya,
       .proker {
-        width: 50%;
+        width: 30%;
         margin: 40px;
         position: relative;
 
         img {
           width: 100%;
-          height: 100vh;
+          height: 50vh;
         }
         Button {
           width: 100px;

@@ -94,7 +94,7 @@ const Berita = () => {
                         <p>{item.judul}</p>
                       </td>
                       <td>
-                        <img src={item.file_name} alt="text" />
+                        <img src={item.file_names[0]} alt="text" />
                       </td>
                       <td>
                         <Button

@@ -181,7 +181,7 @@ const Rent = () => {
         <div className="promotion">
           <h3>Promo!</h3>
           <div className="promotion-child">
-            {rentFiltered.slice(0, itemsToDisplay).map((item) => (
+            {rentFiltered.slice(0, 3).map((item) => (
               <div className="Kamera-2">
                 <div className="diskon">{item.discount}%</div>
                 <a href={`/barang/${item.id}`}>

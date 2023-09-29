@@ -38,7 +38,11 @@ const Header = ({ news }) => {
             {news?.map((data) => (
               <SwiperSlide key={data.id}>
                 <a href={`/berita/${data.id}`}>
-                  <img src={data.file_name} alt="text" className="kontoru" />
+                  <img
+                    src={data.file_names[0]}
+                    alt="text"
+                    className="kontoru"
+                  />
                 </a>
                 <div className="overlay">
                   <h2>{data.judul}</h2>

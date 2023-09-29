@@ -7,13 +7,13 @@ import SweatAlert from "../../../sweetaleet/SweetAlert";
 const Berita = () => {
   const [judul, setJudul] = React.useState("");
   const [message, setMessage] = React.useState("");
-  const [file, setFile] = React.useState("");
+  const [files, setFiles] = React.useState([]);
   const [tags, setTags] = React.useState("");
   const [karya, setKarya] = React.useState("");
 
   const changeHandler = (e) => {
-    const file = e.target.files[0];
-    setFile(file);
+    const newFiles = [...e.target.files];
+    setFiles([...files, ...newFiles]);
   };
 
   const handleEditorReady = (editor) => {
@@ -29,32 +29,41 @@ const Berita = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const beritaa = {
-      judul: judul,
-      message: message,
-      file: file,
-      tags_id: parseInt(tags),
-      karya_id: karya,
-    };
-    await API.post("/berita/", beritaa, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
-        "Content-Type": "multipart/form-data",
-      },
-    })
-      .then((response) => {
-        console.log(response.data);
-        SweatAlert("Berhasil menambahkan data", "success");
-      })
-      .catch((error) => {
-        const message =
-          (error.response &&
-            error.response.data &&
-            error.response.data.message) ||
-          error.message ||
-          error.toString();
-        alert(message);
+
+    // Create a FormData object to store your form data, including files
+    const formData = new FormData();
+
+    // Append each file to the FormData with keys like 'file1', 'file2', etc.
+    files.forEach((file, index) => {
+      formData.append(`file${index + 1}`, file);
+    });
+
+    // Append other form data fields
+    formData.append("judul", judul);
+    formData.append("message", message);
+    formData.append("tags_id", tags);
+    formData.append("karya_id", karya);
+
+    // Make an Axios POST request
+    try {
+      const response = await API.post("/berita/", formData, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "multipart/form-data",
+        },
       });
+
+      console.log(response.data);
+      SweatAlert("Berhasil menambahkan data", "success");
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      alert(message);
+    }
   };
 
   return (
@@ -69,6 +78,18 @@ const Berita = () => {
               placeholder="judul"
               autoComplete="off"
             />
+          </div>
+          <div className="input-field">
+            <input type="file" onChange={changeHandler} />
+          </div>
+          <div className="input-field">
+            <input type="file" onChange={changeHandler} />
+          </div>
+          <div className="input-field">
+            <input type="file" onChange={changeHandler} />
+          </div>
+          <div className="input-field">
+            <input type="file" onChange={changeHandler} />
           </div>
           <div className="input-field">
             <input type="file" onChange={changeHandler} />

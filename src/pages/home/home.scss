@@ -308,6 +308,10 @@
   align-items: center;
   cursor: default;
 
+  @media only screen and (max-width: 500px) {
+    height: 400px;
+  }
+
   .background {
     position: relative;
     width: 100%;
@@ -315,12 +319,21 @@
     background-image: url("../../components/assets/gallert.jpg");
     background-size: cover;
     background-position: center;
+    @media only screen and (max-width: 500px) {
+      height: 370px;
+      background-image: url("../../components/assets/Picsart_23-09-20_00-12-59-816.jpg");
+    }
 
     h1 {
       position: absolute;
       right: 5rem;
       font-size: 5rem;
       color: white;
+      @media only screen and (max-width: 500px) {
+        // padding-left: 2rem;
+        padding-top: 40px;
+        font-size: 3.5rem;
+      }
       @media only screen and (max-width: 420px) {
         // padding-left: 2rem;
         font-size: 3.5rem;

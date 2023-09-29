@@ -16,7 +16,7 @@ const News = ({ berita }) => {
         <div className="tes">
           <a href={`/berita/${data.id}`} key={data.id}>
             <div className="photo-news">
-              <img src={data.file_name} alt="news" />
+              <img src={data.file_names[0]} alt="news" />
             </div>
           </a>
           <div className="text-news">

@@ -5,6 +5,13 @@ import Footer from "../footer/Footer";
 import { useParams } from "react-router-dom";
 import API from "../../api/API";
 import { MdPeopleAlt } from "react-icons/md";
+import { Pagination, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // import News from "../news/news";
 const Newskonten = () => {
@@ -62,7 +69,43 @@ const Newskonten = () => {
             <div className="foto-konten">
               <div className="kiri">
                 <div className="foto">
-                  <img src={berita.file_name} alt="img" />
+                  <Swiper
+                    // style={{ width: "40%" }}
+                    navigation={{
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
+                    }}
+                    modules={[Pagination, Navigation]}
+                    className="mySwiper"
+                  >
+                    {/* <SwiperSlide key={berita.id}>
+                      <img
+                        style={{ width: "60vh" }}
+                        src={berita.file_names[0]}
+                        alt="text"
+                        className="kontoru"
+                      />
+                    </SwiperSlide> */}
+                    {berita?.file_names?.map((item, key) => (
+                      <SwiperSlide key={key}>
+                        <img
+                          // style={{ width: "60vh" }}
+                          src={item}
+                          alt="text"
+                          className="kontoru"
+                        />
+                      </SwiperSlide>
+                    ))}
+
+                    <div
+                      className="swiper-button-next"
+                      style={{ color: "white" }}
+                    ></div>
+                    <div
+                      className="swiper-button-prev"
+                      style={{ color: "white" }}
+                    ></div>
+                  </Swiper>
                 </div>
                 <br />
                 <div className="pembuat">
@@ -99,29 +142,31 @@ const Newskonten = () => {
                 <div className="konten-recomendation">
                   <h4>Recomendation</h4>
                   <div className="titit">
-                    {rekomendasiBerita.slice(0, maxBeritaChild).map((item) => (
-                      <div className="konten-recomendation-child">
-                        <a href={`/berita/${item.id}`}>
-                          <div className="photo-news">
-                            <img src={item.file_name} alt="news" />
-                          </div>
-                        </a>
-                        <div className="text-news">
-                          <div className="judul-news">
-                            <h3>{item.judul}</h3>
-                          </div>
-                          <div className="tags">
-                            <div className="tags-spesifik">
-                              <p className="tag">{item.KaryaNewsData.name}</p>
-                              <p className="date">
-                                {formatTanggal(item.created_at)}
-                              </p>
+                    {rekomendasiBerita
+                      .slice(0, maxBeritaChild)
+                      .map((item, key) => (
+                        <div className="konten-recomendation-child" key={key}>
+                          <a href={`/berita/${item.id}`}>
+                            <div className="photo-news">
+                              <img src={item.file_names[0]} alt="news" />
                             </div>
-                            <div className="seperator"></div>
+                          </a>
+                          <div className="text-news">
+                            <div className="judul-news">
+                              <h3>{item.judul}</h3>
+                            </div>
+                            <div className="tags">
+                              <div className="tags-spesifik">
+                                <p className="tag">{item.KaryaNewsData.name}</p>
+                                <p className="date">
+                                  {formatTanggal(item.created_at)}
+                                </p>
+                              </div>
+                              <div className="seperator"></div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
                   </div>
                 </div>
               </div>

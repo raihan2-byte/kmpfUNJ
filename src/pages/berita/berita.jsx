@@ -47,7 +47,7 @@ const Berita = () => {
           {spaceBerita.slice(0, 1).map((item) => (
             <a href={`/berita/${item.id}`} key={item.id}>
               <div className="text">
-                <img src={item.file_name} alt="text" className="kontoru" />
+                <img src={item.file_names[0]} alt="text" className="kontoru" />
                 <h3>{item.judul}</h3>
                 <p>{formatTanggal(item.created_at)}</p>
               </div>
@@ -62,7 +62,11 @@ const Berita = () => {
               .map((item) => (
                 <a href={`/berita/${item.id}`}>
                   <div class="card">
-                    <img src={item.file_name} alt="text" className="kontoru" />
+                    <img
+                      src={item.file_names[0]}
+                      alt="text"
+                      className="kontoru"
+                    />
 
                     <div class="card-content">
                       <h3 class="card-title-left">{item.judul}</h3>
@@ -86,7 +90,12 @@ const Berita = () => {
                 <a href={`/berita/${item.id}`} key={item.id}>
                   <div className="image">
                     <h5>{item.judul}</h5>
-                    <img src={item.file_name} alt="img" />
+
+                    <img
+                      src={item.file_names[0]}
+                      style={{ filter: "brightness(20%)" }}
+                      alt="img"
+                    />
                   </div>
                 </a>
                 <Link smooth to="/artikel#our-proker">
@@ -101,7 +110,7 @@ const Berita = () => {
                 <a href={`/berita/${item.id}`} key={item.id}>
                   <div className="image">
                     <h5>{item.judul}</h5>
-                    <img src={item.file_name} alt="img" />
+                    <img src={item.file_names[0]} alt="img" />
                   </div>
                 </a>
                 <Link smooth to="/artikel#our-proker">

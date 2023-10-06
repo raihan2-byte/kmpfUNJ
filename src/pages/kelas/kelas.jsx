@@ -18,6 +18,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 import API from "../../api/API";
+import { Link } from "react-router-dom";
 
 const Kelas = () => {
   const [shortvideo, setShortVideo] = React.useState([]);
@@ -35,19 +36,6 @@ const Kelas = () => {
     getAllShortVideo();
   }, []);
 
-  // const swiperRef = useRef(null);
-
-  // const handleSlideChange = () => {
-  //   if (swiperRef.current) {
-  //     const isLastSlide = swiperRef.current.isEnd; // Ganti dengan indeks slide yang sesuai dengan "tes-1"
-  //     const nextButton = document.querySelector(".swiper-button-next");
-
-  //     // Mengatur opacity panah "next" berdasarkan slide "tes-1"
-  //     if (nextButton) {
-  //       nextButton.style.opacity = isLastSlide ? "0" : "1"; // Ganti opacity sesuai kebutuhan
-  //     }
-  //   }
-  // };
   return (
     <>
       <div className="parent-kelas">
@@ -118,16 +106,18 @@ const Kelas = () => {
                       Fotografi jurnalistik memainkan peran yang penting dalam
                       jurnalisme, memberikan visualisasi dan rasa yang lebih
                       dalam terhadap berita-berita yang disampaikan.
-                      <MdMoreHoriz
-                        className="icon"
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          fontSize: "30px",
-                          marginLeft: "-5px",
-                          opacity: "0.7",
-                        }}
-                      />
+                      <Link smooth to="/artikel#konten-jurnalistik">
+                        <MdMoreHoriz
+                          className="icon"
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            fontSize: "30px",
+                            marginLeft: "-5px",
+                            opacity: "0.7",
+                          }}
+                        />
+                      </Link>
                     </p>
                   </div>
                 </div>
@@ -204,16 +194,18 @@ const Kelas = () => {
                       kreatif dalam fotografi komersil, sehingga mahasiswa dapat
                       mengembangkan kemampuan mereka dalam industri yang
                       berkaitan dengan iklan, mode, dan bidang lainnya.
-                      <MdMoreHoriz
-                        className="icon"
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          fontSize: "30px",
-                          opacity: "0.7",
-                          marginLeft: "-5px",
-                        }}
-                      />
+                      <Link smooth to="/artikel#konten-salon">
+                        <MdMoreHoriz
+                          className="icon"
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            fontSize: "30px",
+                            marginLeft: "-5px",
+                            opacity: "0.7",
+                          }}
+                        />
+                      </Link>
                     </p>
                   </div>
                 </div>
@@ -286,16 +278,18 @@ const Kelas = () => {
                       kesempatan bagi para mahasiswa untuk melampaui batas-batas
                       tradisional dan merangkul kebebasan berekspresi dalam
                       menciptakan karya fotografi yang unik.
-                      <MdMoreHoriz
-                        className="icon"
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          fontSize: "30px",
-                          marginLeft: "-5px",
-                          opacity: "0.7",
-                        }}
-                      />
+                      <Link to="/artikel#konten-alternatif">
+                        <MdMoreHoriz
+                          className="icon"
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            fontSize: "30px",
+                            marginLeft: "-5px",
+                            opacity: "0.7",
+                          }}
+                        />
+                      </Link>
                     </p>
                   </div>
                 </div>

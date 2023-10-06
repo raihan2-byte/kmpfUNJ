@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Rent.scss";
 import Button from "../../components/button/Button";
 import Navbar from "../../components/navbar/Navbar";
@@ -36,32 +36,7 @@ const Rent = () => {
     }).format(number);
   }
 
-  const calculateItemsToDisplay = () => {
-    if (window.innerWidth >= 600) {
-      // Lebar layar lebih besar atau sama dengan 600px, tampilkan 3 item
-      return 3;
-    } else {
-      // Lebar layar kurang dari 600px, tampilkan 2 item
-      return 2;
-    }
-  };
-
-  const [itemsToDisplay, setItemsToDisplay] = useState(
-    calculateItemsToDisplay()
-  );
-
   // Membuat event listener untuk mengubah jumlah item saat ukuran layar berubah
-  useEffect(() => {
-    const handleResize = () => {
-      setItemsToDisplay(calculateItemsToDisplay());
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <>

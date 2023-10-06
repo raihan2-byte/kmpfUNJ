@@ -57,9 +57,11 @@ const Product = () => {
                               Capture Your Special Graduation Moments
                             </h4>
                             <h1 className="text-3">Start From 150k</h1>
-                            <Button onClick="null" className="btn">
-                              Book Now
-                            </Button>
+                            <a href="https://wa.link/f95ddn">
+                              <Button onClick="null" className="btn">
+                                Book Now
+                              </Button>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -80,9 +82,11 @@ const Product = () => {
                               eternal in every camera shot
                             </h4>
                             <h1 className="text-3">Start From 400k</h1>
-                            <Button onClick="null" className="btn">
-                              Book Now
-                            </Button>
+                            <a href="https://wa.link/f95ddn">
+                              <Button onClick="null" className="btn">
+                                Book Now
+                              </Button>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -103,9 +107,11 @@ const Product = () => {
                               the house.
                             </h4>
                             <h1 className="text-3">Start From 600k</h1>
-                            <Button onClick="null" className="btn">
-                              Book Now
-                            </Button>
+                            <a href="https://wa.link/f95ddn">
+                              <Button onClick="null" className="btn">
+                                Book Now
+                              </Button>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -153,9 +159,11 @@ const Product = () => {
                             </h4>
 
                             <h1 className="text-3">Start From 25k</h1>
-                            <Button onClick="null" className="btn">
-                              Book Now
-                            </Button>
+                            <a href="https://wa.link/f95ddn">
+                              <Button onClick="null" className="btn">
+                                Book Now
+                              </Button>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -174,9 +182,11 @@ const Product = () => {
                             </h4>
 
                             <h1 className="text-3">Start From 250k</h1>
-                            <Button onClick="null" className="btn">
-                              Book Now
-                            </Button>
+                            <a href="https://wa.link/f95ddn">
+                              <Button onClick="null" className="btn">
+                                Book Now
+                              </Button>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -196,9 +206,11 @@ const Product = () => {
                             </h4>
 
                             <h1 className="text-3">Start From 400k</h1>
-                            <Button onClick="null" className="btn">
-                              Book Now
-                            </Button>
+                            <a href="https://wa.link/f95ddn">
+                              <Button onClick="null" className="btn">
+                                Book Now
+                              </Button>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -216,9 +228,11 @@ const Product = () => {
                             </h4>
 
                             <h1 className="text-3">Start From 20k</h1>
-                            <Button onClick="null" className="btn">
-                              Book Now
-                            </Button>
+                            <a href="https://wa.link/f95ddn">
+                              <Button onClick="null" className="btn">
+                                Book Now
+                              </Button>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -264,9 +278,11 @@ const Product = () => {
                             </h4>
 
                             <h1 className="text-3">Start From 500k</h1>
-                            <Button onClick="null" className="btn">
-                              Book Now
-                            </Button>
+                            <a href="https://wa.link/f95ddn">
+                              <Button onClick="null" className="btn">
+                                Book Now
+                              </Button>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -313,9 +329,11 @@ const Product = () => {
                             </h4>
 
                             <h1 className="text-3">Start From 2.000k</h1>
-                            <Button onClick="null" className="btn">
-                              Book Now
-                            </Button>
+                            <a href="https://wa.link/f95ddn">
+                              <Button onClick="null" className="btn">
+                                Book Now
+                              </Button>
+                            </a>
                           </div>
                         </div>
                       </div>

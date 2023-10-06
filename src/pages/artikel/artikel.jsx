@@ -101,7 +101,7 @@ const Artikel = () => {
               {/* End of duplicate slides */}
             </Swiper>
           </div>
-          <div className="konten-jurnalistik">
+          <div className="konten-Salon">
             <div className="sub-artikel">
               <h4>Salon</h4>
             </div>
@@ -159,7 +159,7 @@ const Artikel = () => {
               ))}
             </Swiper>
           </div>
-          <div className="konten-jurnalistik">
+          <div className="konten-Alternatif">
             <div className="sub-artikel">
               <h4>Alternatif</h4>
             </div>

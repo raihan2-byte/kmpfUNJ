@@ -259,17 +259,11 @@
   .parent-product {
     .foto-wisuda-parent {
       .foto-wisuda-left {
-        h3 {
-        }
-
         .carousel-atas {
           .card {
             .card-content {
               .mySwiper {
                 .wisuda-parent {
-                  .wisuda1 img {
-                  }
-
                   .button,
                   .button-1,
                   .button-2,
@@ -311,17 +305,11 @@
   .parent-product {
     .foto-wisuda-parent {
       .foto-wisuda-left {
-        h3 {
-        }
-
         .carousel-atas {
           .card {
             .card-content {
               .mySwiper {
                 .wisuda-parent {
-                  .wisuda1 img {
-                  }
-
                   .button,
                   .button-1,
                   .button-2,
@@ -354,9 +342,6 @@
   .parent-product {
     .foto-wisuda-parent {
       .foto-wisuda-left {
-        h3 {
-        }
-
         .carousel-atas {
           .card {
             .card-content {
@@ -400,9 +385,6 @@
   .parent-product {
     .foto-wisuda-parent {
       .foto-wisuda-left {
-        h3 {
-        }
-
         .carousel-atas {
           .card {
             .card-content {
@@ -455,10 +437,7 @@
       h2 {
         font-size: 25px;
       }
-      .point-why-us {
-        h3 {
-        }
-      }
+
       .cheap,
       .medal,
       .hand {
@@ -478,9 +457,6 @@
   .parent-product {
     .foto-wisuda-parent {
       .foto-wisuda-left {
-        h3 {
-        }
-
         .carousel-atas {
           .card {
             .card-content {
@@ -491,6 +467,67 @@
                   .wisuda1 img {
                     height: 100%;
                     background-size: contain;
+                    // object-fit: cover; /* Ini untuk mengisi kontainer tetapi menjaga aspek rasio */
+                    object-position: 20% center; /* Mengatur gambar 20% dari tepi kiri kontainer dan tetap di tengah vertikal */
+                    // object-position: left;
+                  }
+                  .button {
+                    position: absolute;
+                    height: 100%;
+                    left: 65%;
+                    font-size: 20px;
+                    text-align: center;
+                    color: white;
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                  }
+
+                  .button-1 {
+                    position: absolute;
+                    height: 100%;
+                    left: 65%;
+                    margin: auto;
+                    font-size: 20px;
+                    text-align: center;
+                    color: white;
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                  }
+
+                  .button-2 {
+                    position: absolute;
+                    height: 100%;
+                    left: 65%;
+                    margin: auto;
+                    font-size: 20px;
+                    text-align: center;
+                    color: white;
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                  }
+
+                  .button-3 {
+                    position: absolute;
+                    height: 100%;
+                    left: 65%;
+                    margin: auto;
+                    font-size: 20px;
+                    text-align: center;
+                    color: white;
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
                   }
 
                   .button,
@@ -519,36 +556,6 @@
 
                   .button-1 {
                     width: 25%;
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
-                    }
-                  }
-
-                  .button-2 {
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
-                    }
-                  }
-
-                  .button-3 {
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
-                    }
                   }
                 }
               }
@@ -558,32 +565,7 @@
       }
     }
 
-    .jasa-foto-parent {
-      img {
-      }
-
-      .jasa-foto-left {
-      }
-
-      .jasa-foto-middle {
-        h3 {
-        }
-
-        .button {
-        }
-      }
-
-      .jasa-foto-right {
-      }
-    }
-
     .why-us {
-      h2 {
-      }
-      .point-why-us {
-        h3 {
-        }
-      }
       .cheap,
       .medal,
       .hand {
@@ -599,9 +581,6 @@
   .parent-product {
     .foto-wisuda-parent {
       .foto-wisuda-left {
-        h3 {
-        }
-
         .carousel-atas {
           .card {
             .card-content {
@@ -643,36 +622,6 @@
 
                   .button-1 {
                     width: 25%;
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
-                    }
-                  }
-
-                  .button-2 {
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
-                    }
-                  }
-
-                  .button-3 {
-                    .btn {
-                    }
-                    .text-1 {
-                    }
-                    .text-2 {
-                    }
-                    .text-3 {
-                    }
                   }
                 }
               }
@@ -682,33 +631,7 @@
       }
     }
 
-    .jasa-foto-parent {
-      img {
-      }
-
-      .jasa-foto-left {
-      }
-
-      .jasa-foto-middle {
-        h3 {
-        }
-
-        .button {
-        }
-      }
-
-      .jasa-foto-right {
-      }
-    }
-
     .why-us {
-      h2 {
-      }
-      .point-why-us {
-        // flex-direction: column;
-        h3 {
-        }
-      }
       .icon {
         // font-size: 30px;
         padding: 10px;

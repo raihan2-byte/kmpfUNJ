@@ -203,11 +203,6 @@
             // width: 48vh;
             height: 400px;
           }
-
-          .card-content {
-            .card-title-left {
-            }
-          }
         }
       }
       .archieve {
@@ -256,6 +251,7 @@
         .card {
           img {
             // width: 43vh;
+
             height: 350px;
           }
 
@@ -307,8 +303,6 @@
 @media screen and (max-width: 670px) {
   .berita-parent {
     .space {
-      .text {
-      }
       .berita-child {
         .card {
           img {
@@ -363,7 +357,7 @@
     .space {
       .text {
         img {
-          width: 40%;
+          width: 50%;
         }
       }
       .berita-child {
@@ -406,7 +400,7 @@
           }
 
           .image h5 {
-            font-size: 15px;
+            font-size: 12px;
             height: 45vh;
             // text-align: center;
           }
@@ -463,13 +457,13 @@
 
           img {
             // filter: brightness(50%);
-            height: 23vh;
+            height: 25vh;
           }
 
           .image h5 {
-            font-size: 13px;
+            font-size: 10px;
 
-            height: 38vh;
+            height: 40vh;
             // text-align: center;
           }
         }
@@ -525,16 +519,16 @@
           }
 
           img {
-            height: 22vh;
+            height: 26vh;
           }
 
           .image h5 {
             @media screen and (max-width: 325px) {
-              height: 33vh;
-              font-size: 10px;
+              height: 40vh;
+              font-size: 8px;
             }
-            font-size: 12px;
-            height: 35vh;
+            font-size: 8px;
+            height: 40vh;
           }
         }
       }

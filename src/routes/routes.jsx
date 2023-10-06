@@ -28,7 +28,7 @@ import CreateArtikel from "../pages/post/artikel/artikel";
 import CreateMerch from "../pages/post/merch/merch";
 import ProtectRouter from "../pages/protectRoute/ProtectRouter";
 import Merch from "../pages/merch/merch";
-import Barang from "../pages/admin/barangAdmin/barang";
+// import Barang from "../pages/admin/barangAdmin/barang";
 const Routes = () => {
   return (
     <Switch>

@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Jurnalistik from "../../components/assets/jurnalistik.jpeg";
 import Alternatif from "../../components/assets/alternatif.jpeg";
 import Salon from "../../components/assets/salon.jpeg";
-import { MdOutlineNavigateNext, MdMoreHoriz } from "react-icons/md";
+import { MdMoreHoriz } from "react-icons/md";
 // import { CgMoreR } from "react-icons/cg";
 
 // Import Swiper styles
@@ -18,7 +18,6 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 import API from "../../api/API";
-import { useRef } from "react";
 
 const Kelas = () => {
   const [shortvideo, setShortVideo] = React.useState([]);
@@ -344,7 +343,7 @@ const Kelas = () => {
           >
             {shortvideo?.map((item) => (
               <SwiperSlide>
-                <a href={`/short-video/${item.ID}`}>
+                <a href={`/short-video/${item.ID}`} key={item.id}>
                   <img src={item.FileName} alt="" className="photo" />
                 </a>
               </SwiperSlide>

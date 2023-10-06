@@ -9,7 +9,6 @@ import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Headline from "../../components/assets/Headline1.jpg";
 import Proker from "../../components/proker/proker";
 import API from "../../api/API";
 
@@ -88,7 +87,11 @@ const Artikel = () => {
               {beritaJurnalistik?.map((item) => (
                 <SwiperSlide key={item.id}>
                   <a href={`/berita/${item.id}`}>
-                    <img src={item.file_name} alt="text" className="kontoru" />
+                    <img
+                      src={item.file_names[0]}
+                      alt="text"
+                      className="kontoru"
+                    />
                   </a>
                   <div className="overlay">
                     <h2>{item.judul}</h2>
@@ -143,7 +146,11 @@ const Artikel = () => {
               {beritaSalon?.map((item) => (
                 <SwiperSlide key={item.id}>
                   <a href={`/berita/${item.id}`}>
-                    <img src={item.file_name} alt="text" className="kontoru" />
+                    <img
+                      src={item.file_names[0]}
+                      alt="text"
+                      className="kontoru"
+                    />
                   </a>
                   <div className="overlay">
                     <h2>{item.judul}</h2>
@@ -197,7 +204,11 @@ const Artikel = () => {
               {beritaAlternatif?.map((item) => (
                 <SwiperSlide key={item.id}>
                   <a href={`/berita/${item.id}`}>
-                    <img src={item.file_name} alt="text" className="kontoru" />
+                    <img
+                      src={item.file_names[0]}
+                      alt="text"
+                      className="kontoru"
+                    />
                   </a>
                   <div className="overlay">
                     <h2>{item.judul}</h2>

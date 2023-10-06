@@ -68,7 +68,7 @@ const Phototalk = () => {
         <div className="kontent">
           <div className="list">
             <h4>List Phototalk</h4>
-            <a href="/create-berita">
+            <a href="/create-phototalk">
               <Button className="btn-create">Create Phototalk</Button>
             </a>
           </div>

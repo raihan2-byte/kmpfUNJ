@@ -42,7 +42,7 @@
             width: 100%;
             .kontoru {
               width: 100%;
-              height: 90vh;
+              max-height: 90vh;
               background-size: cover;
               // object-position: 0px 10px 10px 10px;
               object-fit: cover;
@@ -54,14 +54,6 @@
           flex-direction: column;
           align-items: center; /* Untuk mengatur konten secara vertikal ke tengah */
           justify-content: center;
-          // img {
-          //   width: 100%;
-          //   height: 90vh;
-          //   background-size: cover;
-          //   // object-position: 0px 10px 10px 10px;
-          //   object-fit: cover;
-          //   border-radius: 10%;
-          // }
         }
         .news-recomendation {
           width: 30%;
@@ -76,10 +68,7 @@
               font-size: 4vh;
             }
 
-            .titit {
-              // display: flex;
-              // justify-content: space-between;
-            }
+            
             .konten-recomendation-child {
               display: flex;
               margin-top: 10px;
@@ -105,7 +94,7 @@
                 .judul-news {
                   // width: 100%;
                   h3 {
-                    font-size: 15px;
+                    font-size: 12px;
                   }
                 }
 
@@ -152,24 +141,20 @@
         .judul-konten {
           font-size: 30px;
         }
-        .text-konten {
-          .text {
-            // width: 100%;
-          }
-        }
+        
 
         .foto-konten {
           display: flex;
           justify-content: space-between;
           // flex-direction: column;
           .kiri {
-            width: 70%;
+            width: 65%;
             // width: 100%;
           }
           .foto {
             img {
               // width: 100%;
-              height: 70vh;
+              max-height: 70vh;
             }
           }
           .news-recomendation {
@@ -181,33 +166,30 @@
                 margin-left: 0px;
               }
 
-              .titit {
-                // display: flex;
-                // justify-content: space-between;
-              }
+              
 
               .konten-recomendation-child {
                 .photo-news {
                   img {
                     // width: 10%;
-                    height: 10vh;
+                    height: 12vh;
+                    object-fit: cover;
                   }
                 }
 
                 .text-news {
                   .judul-news {
                     h3 {
-                      font-size: 12px;
+                      font-size: 10px;
                     }
                   }
 
                   .tags {
-                    .seperator {
-                    }
+                    
 
                     .tags-spesifik {
-                      .date {
-                      }
+                      font-size: 10px;
+
                     }
                   }
                 }
@@ -215,13 +197,7 @@
             }
           }
         }
-        .pembuat {
-          .date,
-          .tags-news {
-          }
-          .tags-news {
-          }
-        }
+        
       }
     }
   }
@@ -231,8 +207,7 @@
   .news-konten-parent {
     .news-konten-img {
       .foto-parent {
-        .judul-konten {
-        }
+        
         .text-konten {
           .text {
             width: 100%;
@@ -259,25 +234,23 @@
                 .photo-news {
                   img {
                     // width: 90%;
-                    height: 10vh;
+                    height: 12vh;
                   }
                 }
 
                 .text-news {
                   .judul-news {
                     h3 {
-                      font-size: 11px;
+                      font-size: 10px;
                     }
                   }
 
                   .tags {
-                    .seperator {
-                    }
+                    
 
                     .tags-spesifik {
-                      font-size: 12px;
-                      .date {
-                      }
+                      font-size: 9px;
+                      
                     }
                   }
                 }
@@ -290,7 +263,7 @@
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 700px) {
   .news-konten-parent {
     .news-konten-img {
       .foto-parent {
@@ -346,13 +319,11 @@
                   }
 
                   .tags {
-                    .seperator {
-                    }
+                    
 
                     .tags-spesifik {
                       font-size: 10px;
-                      .date {
-                      }
+                      
                     }
                   }
                 }
@@ -360,13 +331,7 @@
             }
           }
         }
-        .pembuat {
-          .date,
-          .tags-news {
-          }
-          .tags-news {
-          }
-        }
+        
       }
     }
   }
@@ -442,8 +407,7 @@
   .news-konten-parent {
     .news-konten-img {
       .foto-parent {
-        .judul-konten {
-        }
+       
         .text-konten {
           .text {
             width: 100%;

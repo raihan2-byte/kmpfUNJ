@@ -63,7 +63,7 @@ const proker = ({ news }) => {
                 <div className="konten-proker">
                   <a href={`/berita/${pair[0].id}`}>
                     <img
-                      src={pair[0].file_name}
+                      src={pair[0].file_names[0]}
                       alt="text"
                       className="kontoru"
                     />
@@ -77,7 +77,7 @@ const proker = ({ news }) => {
                 <div className="konten-proker">
                   <a href={`/berita/${pair[1].id}`}>
                     <img
-                      src={pair[1].file_name}
+                      src={pair[1].file_names[0]}
                       alt="text"
                       className="kontoru"
                     />

@@ -55,25 +55,21 @@ const Berita = () => {
           ))}
 
           <div className="berita-child">
-            {beritaChildTampilan
-              // .slice(1)
-              // .slice(0, window.innerWidth <= 575 ? 2 : 3)
-              // .reverse()
-              .map((item) => (
-                <a href={`/berita/${item.id}`}>
-                  <div class="card">
-                    <img
-                      src={item.file_names[0]}
-                      alt="text"
-                      className="kontoru"
-                    />
+            {beritaChildTampilan.map((item) => (
+              <a href={`/berita/${item.id}`} key={item.id}>
+                <div class="card">
+                  <img
+                    src={item.file_names[0]}
+                    alt="text"
+                    className="kontoru"
+                  />
 
-                    <div class="card-content">
-                      <h3 class="card-title-left">{item.judul}</h3>
-                    </div>
+                  <div class="card-content">
+                    <h3 class="card-title-left">{item.judul}</h3>
                   </div>
-                </a>
-              ))}
+                </div>
+              </a>
+            ))}
           </div>
           <div className="archieve">
             <div className="news-archieve">
@@ -103,7 +99,6 @@ const Berita = () => {
                 </Link>
               </div>
             ))}
-            {/* <hr className="garis" /> */}
             {prokerFiltered.slice(0, 1).map((item) => (
               <div className="proker">
                 <h3 className="teks-tambahan">Proker Archieve</h3>

@@ -3,6 +3,7 @@ import "./berita.scss";
 import { TrixEditor } from "react-trix";
 import API from "../../../api/API";
 import SweatAlert from "../../../sweetaleet/SweetAlert";
+import { useNavigate } from "react-router-dom";
 
 const Berita = () => {
   const [judul, setJudul] = React.useState("");
@@ -10,6 +11,7 @@ const Berita = () => {
   const [files, setFiles] = React.useState([]);
   const [tags, setTags] = React.useState("");
   const [karya, setKarya] = React.useState("");
+  const navigate = useNavigate();
 
   const changeHandler = (e) => {
     const newFiles = [...e.target.files];
@@ -55,6 +57,7 @@ const Berita = () => {
 
       console.log(response.data);
       SweatAlert("Berhasil menambahkan data", "success");
+      navigate(`/berita-admin`);
     } catch (error) {
       const message =
         (error.response &&
@@ -80,19 +83,7 @@ const Berita = () => {
             />
           </div>
           <div className="input-field">
-            <input type="file" onChange={changeHandler} />
-          </div>
-          <div className="input-field">
-            <input type="file" onChange={changeHandler} />
-          </div>
-          <div className="input-field">
-            <input type="file" onChange={changeHandler} />
-          </div>
-          <div className="input-field">
-            <input type="file" onChange={changeHandler} />
-          </div>
-          <div className="input-field">
-            <input type="file" onChange={changeHandler} />
+            <input type="file" multiple onChange={changeHandler} />
           </div>
           <div className="input-field">
             <label for="tags">Tags:</label>

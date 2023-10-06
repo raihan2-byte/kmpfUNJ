@@ -59,7 +59,7 @@ const Navbar = () => {
               <Link className="text" to={e.path}>
                 {e.display}
               </Link>
-              <div class="dropdown-content">
+              <div className="dropdown-content">
                 {e.content.map((e, i) => (
                   <Link key={i} to={e.path} className="text-content">
                     {e.name}

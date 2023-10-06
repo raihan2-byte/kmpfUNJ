@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../../components/header/Header";
 import Button from "../../components/button/Button";
 import "./home.scss";
-import PhotoTalk from "../../components/assets/phototalk.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -15,7 +14,6 @@ import { Pagination } from "swiper";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import API from "../../api/API";
-import { useParams } from "react-router-dom";
 
 const Home = () => {
   const [news, setNews] = React.useState([]);
@@ -137,7 +135,7 @@ const Home = () => {
               className="mySwiper"
             >
               {phototalk?.map((item) => (
-                <SwiperSlide>
+                <SwiperSlide key={item.id}>
                   <img src={item.FileName} alt="" className="photo" />
                   <h5>{item.Judul}</h5>
                   {/* <p>deskripsi</p> */}

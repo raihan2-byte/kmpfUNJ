@@ -1,5 +1,7 @@
 .news-konten-parent {
-  margin-top: 7rem;
+  max-width: 1350px;
+  margin: 7rem auto;
+  // margin-top: 7rem;
 
   .news-konten-img {
     margin-top: 30px;
@@ -68,13 +70,12 @@
               font-size: 4vh;
             }
 
-            
             .konten-recomendation-child {
               display: flex;
               margin-top: 10px;
               .photo-news {
                 img {
-                  width: 10vh;
+                  width: 11vh;
                   height: 13vh;
                   border-radius: 10px;
                 }
@@ -100,6 +101,7 @@
 
                 .tags {
                   width: 100%;
+                  font-size: 12px;
 
                   .seperator {
                     border-top: 1px solid black;
@@ -141,7 +143,6 @@
         .judul-konten {
           font-size: 30px;
         }
-        
 
         .foto-konten {
           display: flex;
@@ -166,8 +167,6 @@
                 margin-left: 0px;
               }
 
-              
-
               .konten-recomendation-child {
                 .photo-news {
                   img {
@@ -185,11 +184,8 @@
                   }
 
                   .tags {
-                    
-
                     .tags-spesifik {
                       font-size: 10px;
-
                     }
                   }
                 }
@@ -197,7 +193,6 @@
             }
           }
         }
-        
       }
     }
   }
@@ -207,7 +202,6 @@
   .news-konten-parent {
     .news-konten-img {
       .foto-parent {
-        
         .text-konten {
           .text {
             width: 100%;
@@ -246,11 +240,8 @@
                   }
 
                   .tags {
-                    
-
                     .tags-spesifik {
                       font-size: 9px;
-                      
                     }
                   }
                 }
@@ -299,8 +290,9 @@
               }
 
               .titit {
-                display: flex;
-                justify-content: space-between;
+                display: grid;
+                grid-template-columns: repeat(2, 50%);
+                // justify-content: space-between;
               }
 
               .konten-recomendation-child {
@@ -319,11 +311,8 @@
                   }
 
                   .tags {
-                    
-
                     .tags-spesifik {
                       font-size: 10px;
-                      
                     }
                   }
                 }
@@ -331,83 +320,15 @@
             }
           }
         }
-        
       }
     }
   }
 }
 
-// @media screen and (max-width: 575px) {
-//   .news-konten-parent {
-//     .news-konten-img {
-//       .foto-parent {
-//         .judul-konten {
-//         }
-//         .text-konten {
-//           .text {
-//             width: 60vh;
-//           }
-//         }
-
-//         .foto-konten {
-//           .foto {
-//             img {
-//               width: 60vh;
-//             }
-//           }
-//           .news-recomendation {
-//             .konten-recomendation {
-//               h4 {
-//                 font-size: 3vh;
-//               }
-
-//               .konten-recomendation-child {
-//                 .photo-news {
-//                   img {
-//                     width: 13vh;
-//                     height: 12vh;
-//                   }
-//                 }
-
-//                 .text-news {
-//                   .judul-news {
-//                     h3 {
-//                       font-size: 9px;
-//                     }
-//                   }
-
-//                   .tags {
-//                     .seperator {
-//                     }
-
-//                     .tags-spesifik {
-//                       font-size: 9px;
-//                       .date {
-//                       }
-//                     }
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         }
-//         .pembuat {
-//           .date,
-//           .tags-news {
-//           }
-//           .tags-news {
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
 @media screen and (max-width: 575px) {
   .news-konten-parent {
     .news-konten-img {
       .foto-parent {
-       
         .text-konten {
           .text {
             width: 100%;
@@ -425,13 +346,14 @@
           flex-direction: column;
           .foto {
             // width: 100%;
-            img {
-              width: 80%;
-              height: 30vh;
+            .kontoru {
+              height: 65vh;
+              max-height: 70vh;
               margin: auto;
               display: flex;
               justify-content: center;
               align-items: center;
+              object-position: center;
             }
           }
           .news-recomendation {
@@ -450,8 +372,9 @@
               }
 
               .titit {
-                display: flex;
-                justify-content: space-evenly;
+                // display: flex;
+                // justify-content: space-between;
+                grid-template-columns: repeat(2, 50%);
               }
               .konten-recomendation-child {
                 display: flex;
@@ -460,6 +383,10 @@
                   img {
                     width: 10vh;
                     height: 12vh;
+                    @media screen and (max-width: 400px) {
+                      width: 8vh;
+                      height: 12vh;
+                    }
                   }
                 }
 

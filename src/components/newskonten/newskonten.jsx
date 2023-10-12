@@ -57,7 +57,7 @@ const Newskonten = () => {
     }-${createdAt.getDate()}`;
   }
 
-  const maxBeritaChild = window.innerWidth <= 450 ? 2 : 3;
+  const maxBeritaChild = window.innerWidth <= 700 ? 2 : 3;
 
   return (
     <>

@@ -61,7 +61,7 @@ const Home = () => {
         <Navbar />
         <Header news={news} />
         <div className="rental-foto">
-          <a href="/berita">
+          <a href="/productservice">
             <div className="fotografi-parent">
               <div className="fotografi">
                 <div className="text">

@@ -49,9 +49,15 @@ const Phototalk = () => {
                 <SwiperSlide>
                   <div className="konten">
                     <img src={item.FileName} alt="text" className="kontoru" />
-                    <div className="overlay">
-                      <h2>{item.Judul}</h2>
-                    </div>
+                    <div
+                      className="overlay"
+                      dangerouslySetInnerHTML={{
+                        __html: item.Deskripsi,
+                      }}
+                    ></div>
+                    {/* <div className="overlay">
+                      <h2>{item.Deskripsi}</h2>
+                    </div> */}
                   </div>
                 </SwiperSlide>
               ))}

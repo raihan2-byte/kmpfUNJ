@@ -141,7 +141,7 @@ const Home = () => {
             >
               {phototalk?.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <Link to={item.link}>
+                  <Link to={item.Link}>
                     <img src={item.FileName} alt="" className="photo" />
                     <h5>{item.Judul}</h5>
                   </Link>

@@ -7,7 +7,6 @@ import SweatAlert from "../../../sweetaleet/SweetAlert";
 
 const Phototalk = () => {
   const [judul, setJudul] = React.useState("");
-  const [short_deskripsi, setShortDeskripsi] = React.useState("");
   const [deskripsi, setDeskripsi] = React.useState("");
   const [link, setLink] = React.useState("");
   const [file, setFile] = React.useState(null);
@@ -18,7 +17,7 @@ const Phototalk = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const phototalk = { judul, short_deskripsi, deskripsi, link, file };
+    const phototalk = { judul, deskripsi, link, file };
     await API.post("phototalk/", phototalk, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -53,14 +52,7 @@ const Phototalk = () => {
               autocomplete="nope"
             />
           </div>
-          <div class="input-field">
-            <input
-              type="ShortDeskripsi"
-              onChange={(e) => setShortDeskripsi(e.target.value)}
-              placeholder="ShortDeskripsi"
-              autocomplete="new-ShortDeskripsi"
-            />
-          </div>
+
           <div class="input-field">
             <input
               type="deskripsi"

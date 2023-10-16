@@ -127,6 +127,10 @@ const Home = () => {
                   slidesPerView: 4,
                   spaceBetween: 20,
                 },
+                870: {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                },
                 1024: {
                   slidesPerView: 5,
                   spaceBetween: 20,

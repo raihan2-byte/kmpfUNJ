@@ -3,6 +3,7 @@ import "./phototalk.scss";
 import API from "../../../api/API";
 import "trix/dist/trix.js";
 import "trix/dist/trix.css";
+import { TrixEditor } from "react-trix";
 import SweatAlert from "../../../sweetaleet/SweetAlert";
 
 const Phototalk = () => {
@@ -15,6 +16,18 @@ const Phototalk = () => {
     const file = e.target.files[0];
     setFile(file);
   };
+
+  const handleEditorReady = (editor) => {
+    // this is a reference back to the editor if you want to
+    // do editing programatically
+  };
+
+  const handleChange = (html, text) => {
+    // html is the new html content
+    // text is the new text content
+    setDeskripsi(html);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const phototalk = { judul, deskripsi, link, file };
@@ -53,12 +66,12 @@ const Phototalk = () => {
             />
           </div>
 
-          <div class="input-field">
-            <input
-              type="deskripsi"
-              onChange={(e) => setDeskripsi(e.target.value)}
+          <div className="input-field">
+            <TrixEditor
+              className="custom-css-class"
               placeholder="deskripsi"
-              autocomplete="new-deskripsi"
+              onChange={handleChange}
+              onEditorReady={handleEditorReady}
             />
           </div>
           <div class="input-field">

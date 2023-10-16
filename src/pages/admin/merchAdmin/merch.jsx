@@ -66,7 +66,7 @@ const Merch = () => {
         <div className="kontent">
           <div className="list">
             <h4>List Merch</h4>
-            <a href="/create-berita">
+            <a href="/create-merch">
               <Button className="btn-create">Create Merch</Button>
             </a>
           </div>

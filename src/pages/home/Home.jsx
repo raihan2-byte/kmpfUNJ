@@ -14,6 +14,7 @@ import { Pagination } from "swiper";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import API from "../../api/API";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [news, setNews] = React.useState([]);
@@ -123,7 +124,7 @@ const Home = () => {
                   spaceBetween: 20,
                 },
                 768: {
-                  slidesPerView: 3,
+                  slidesPerView: 4,
                   spaceBetween: 20,
                 },
                 1024: {
@@ -136,8 +137,10 @@ const Home = () => {
             >
               {phototalk?.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <img src={item.FileName} alt="" className="photo" />
-                  <h5>{item.Judul}</h5>
+                  <Link to={item.link}>
+                    <img src={item.FileName} alt="" className="photo" />
+                    <h5>{item.Judul}</h5>
+                  </Link>
                   {/* <p>deskripsi</p> */}
                 </SwiperSlide>
               ))}

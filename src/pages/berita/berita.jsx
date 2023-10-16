@@ -36,7 +36,9 @@ const Berita = () => {
   const archieveBerita = berita.slice(4).slice(0, 4);
   const maxBeritaChild = window.innerWidth <= 475 ? 2 : 3;
   const beritaChildTampilan = beritaChildBerita.slice(0, maxBeritaChild);
-  const artikelFiltered = berita.filter((item) => item.tags_id === 5);
+  const artikelFiltered = berita.filter((item) =>
+    [1, 2, 3].includes(item.tags_id)
+  );
   const prokerFiltered = berita.filter((item) => item.tags_id === 4);
 
   return (

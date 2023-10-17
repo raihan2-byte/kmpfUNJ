@@ -93,7 +93,7 @@ const aboutus = () => {
                       <img src={AboutUs3} alt="text" />
                     </div>
                     <div className="teks-about">
-                      <h3>Photography Developement</h3>
+                      <h3>Photography Development</h3>
                       <p>
                         Biro ini bertanggung jawab untuk pengembangan skill
                         fotografi anggota kmpf, dan juga bertanggung jawab untuk

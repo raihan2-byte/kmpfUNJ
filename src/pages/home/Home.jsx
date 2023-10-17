@@ -117,7 +117,7 @@ const Home = () => {
               breakpoints={{
                 390: {
                   slidesPerView: 2,
-                  spaceBetween: 20,
+                  spaceBetween: 10,
                 },
                 640: {
                   slidesPerView: 3,

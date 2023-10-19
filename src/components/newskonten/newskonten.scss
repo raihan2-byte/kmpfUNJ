@@ -347,8 +347,8 @@
           .foto {
             // width: 100%;
             .kontoru {
-              // height: 50vh;
-              min-height: 50vh;
+              height: 50vh;
+              max-height: 70vh;
               margin: auto;
               display: flex;
               background-size: cover;

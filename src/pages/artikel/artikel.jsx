@@ -45,7 +45,7 @@ const Artikel = () => {
           <div className="sub-artikel">
             <h4>Jurnalistik</h4>
           </div>
-          <div className="konten-jurnalistik">
+          <div className="konten-jurnalistik" id="jurnalistik">
             <Swiper
               navigation={true}
               modules={[Pagination, Navigation]}
@@ -101,7 +101,7 @@ const Artikel = () => {
               {/* End of duplicate slides */}
             </Swiper>
           </div>
-          <div className="konten-jurnalistik">
+          <div className="konten-jurnalistik" id="salon">
             <div className="sub-artikel">
               <h4>Salon</h4>
             </div>
@@ -159,7 +159,7 @@ const Artikel = () => {
               ))}
             </Swiper>
           </div>
-          <div className="konten-jurnalistik">
+          <div className="konten-jurnalistik" id="alternatif">
             <div className="sub-artikel">
               <h4>Alternatif</h4>
             </div>
@@ -217,12 +217,12 @@ const Artikel = () => {
               ))}
             </Swiper>
           </div>
-          <div className="our-proker">
+          <div className="our-proker" id="proker">
             <h3>Proker Archieve</h3>
             <Proker news={beritaArchieve} />
           </div>
 
-          <div className="our-proker">
+          <div className="our-proker" id="salon">
             <h3>Our Article</h3>
             <Proker news={beritaArtikel} />
           </div>

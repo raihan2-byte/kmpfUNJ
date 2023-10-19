@@ -75,7 +75,7 @@
               margin-top: 10px;
               .photo-news {
                 img {
-                  width: 11vh;
+                  width: 100%;
                   height: 13vh;
                   border-radius: 10px;
                 }
@@ -298,7 +298,7 @@
               .konten-recomendation-child {
                 .photo-news {
                   img {
-                    width: 8vh;
+                    width: 100%;
                     height: 10vh;
                   }
                 }
@@ -347,8 +347,8 @@
           .foto {
             // width: 100%;
             .kontoru {
-              height: 40vh;
-              max-height: 50vh;
+              // height: 50vh;
+              min-height: 50vh;
               margin: auto;
               display: flex;
               background-size: cover;

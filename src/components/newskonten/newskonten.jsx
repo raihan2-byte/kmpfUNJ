@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./newskonten.scss";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import API from "../../api/API";
 import { MdPeopleAlt } from "react-icons/md";
 import { Pagination, Navigation } from "swiper";
@@ -12,9 +12,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Link } from "react-scroll";
 
 // import News from "../news/news";
 const Newskonten = () => {
+  const navigate = useNavigate();
+  const scrollToTarget = (id) => {
+    navigate("/artikel");
+    setTimeout(() => {
+      const target = document.getElementById(id);
+      console.log(target);
+      target?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 500);
+  };
+
   const params = useParams();
   const [berita, setBerita] = useState({});
   const [rekomendasiBerita, setRekomendasiBerita] = useState([]);
@@ -78,14 +92,6 @@ const Newskonten = () => {
                     modules={[Pagination, Navigation]}
                     className="mySwiper"
                   >
-                    {/* <SwiperSlide key={berita.id}>
-                      <img
-                        style={{ width: "60vh" }}
-                        src={berita.file_names[0]}
-                        alt="text"
-                        className="kontoru"
-                      />
-                    </SwiperSlide> */}
                     {berita?.file_names?.map((item, key) => (
                       <SwiperSlide key={key}>
                         <img
@@ -121,12 +127,26 @@ const Newskonten = () => {
                     <MdPeopleAlt style={{ marginRight: "5px" }} /> admin
                   </p>
                   <p className="date">{formatTanggal(berita.created_at)}</p>
-                  <p
-                    className="tags-news"
-                    style={{ color: "black", fontWeight: "900" }}
+                  {/* <div
+                    activeClass="active"
+                    to="jurnalistikss"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  > */}
+                  <div
+                    onClick={() => scrollToTarget(berita.KaryaNewsData?.name)}
                   >
-                    {berita.KaryaNewsData?.name}
-                  </p>
+                    <p
+                      className="tags-news"
+                      style={{ color: "black", fontWeight: "900" }}
+                    >
+                      {berita.KaryaNewsData?.name}
+                    </p>
+                  </div>
+
+                  {/* </div> */}
                 </div>
                 <div className="text-konten">
                   <br />

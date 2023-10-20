@@ -20,7 +20,7 @@ const Footer = () => {
           <div>
             <label htmlFor="contact">Contact Us:</label>
             <label htmlFor="email">Email:</label>
-            <label htmlFor="address">Addres:</label>
+            <label htmlFor="address">Addrees:</label>
           </div>
           <div>
             <p id="contact">Telp:0896-0415-9029</p>

@@ -77,7 +77,7 @@ const aboutus = () => {
                       <img src={AboutUs2} alt="text" />
                     </div>
                     <div className="teks-about">
-                      <h3>Personnel Developement</h3>
+                      <h3>Personnel Development</h3>
                       <p>
                         Biro ini adalah biro yang mengatur hubungan antar
                         anggota KMPF dan juga biro yang mengeratkan anggota,

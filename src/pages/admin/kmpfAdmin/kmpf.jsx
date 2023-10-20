@@ -67,7 +67,7 @@ const Kmpf = () => {
         <div className="kontent">
           <div className="list">
             <h4>List Short Video</h4>
-            <a href="/create-berita">
+            <a href="/create-short-video">
               <Button className="btn-create">Create Short Video</Button>
             </a>
           </div>

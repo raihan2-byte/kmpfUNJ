@@ -32,9 +32,12 @@ const Shortvideo = () => {
           <div className="judul-video-short">
             <h3>{shortvideo.Judul}</h3>
           </div>
-          <div className="teks-video-short-child">
-            <p>{shortvideo.Deskripsi}</p>
-          </div>
+          <div
+            className="teks-video-short-child"
+            dangerouslySetInnerHTML={{
+              __html: shortvideo.Deskripsi,
+            }}
+          ></div>
           <div className="link-barang">
             <p>Source : </p>
             <Link to={shortvideo.Source}>{shortvideo.Source}</Link>

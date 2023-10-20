@@ -2,12 +2,24 @@ import React from "react";
 import "./shortvideo.scss";
 import API from "../../../api/API";
 import SweatAlert from "../../../sweetaleet/SweetAlert";
+import { TrixEditor } from "react-trix";
 
 const Shortvideo = () => {
   const [judul, setJudul] = React.useState("");
   const [deskripsi, setDeskripsi] = React.useState("");
   const [file, setFile] = React.useState(null);
   const [source_link, setLink] = React.useState("");
+
+  const handleEditorReady = (editor) => {
+    // this is a reference back to the editor if you want to
+    // do editing programatically
+  };
+
+  const handleChange = (html, text) => {
+    // html is the new html content
+    // text is the new text content
+    setDeskripsi(html);
+  };
 
   const changeHandler = (e) => {
     const file = e.target.files[0];
@@ -54,12 +66,12 @@ const Shortvideo = () => {
               autocomplete="nope"
             />
           </div>
-          <div class="input-field">
-            <input
-              type="deskripsi"
-              onChange={(e) => setDeskripsi(e.target.value)}
+          <div className="input-field">
+            <TrixEditor
+              className="custom-css-class"
               placeholder="deskripsi"
-              autocomplete="new-deskripsi"
+              onChange={handleChange}
+              onEditorReady={handleEditorReady}
             />
           </div>
           <div class="input-field">

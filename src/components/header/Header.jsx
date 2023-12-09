@@ -16,8 +16,14 @@ import { Pagination, Navigation } from "swiper";
 
 import "./header.scss";
 
-const Header = ({ news }) => {
+const Header = ({ news, tagLine }) => {
   console.log(news);
+  console.log(tagLine);
+
+  const sortedTagLine = tagLine.slice().sort((a, b) => b.ID - a.ID);
+
+  // Mengambil data dengan ID tertinggi (paling baru)
+  const latestTagLine = sortedTagLine.length > 0 ? sortedTagLine[0] : null;
 
   // Ambil satu berita pertama dari beritaArtikel
 
@@ -61,22 +67,21 @@ const Header = ({ news }) => {
         </div>
 
         <div className="header__right">
-          <div className="judul">
-            <h2>Kelompok Mahasiswa Peminat Fotografi (KMPF) UNJ </h2>
-          </div>
+          {latestTagLine && (
+            <div className="judul">
+              <h2>{latestTagLine.Heading}</h2>
+            </div>
+          )}
           <div className="text">
             <p>
-              Organisasi yang bergerak pada bidang fotografi dan beranggotakan
-              mahasiswa Universitas Negeri Jakarta. Organisasi ini berdiri sejak
-              tahun 1980 dan memiliki visi, misi, dan tujuan yang jelas.
-              Organisasi ini juga menyediakan berbagai fasilitas dan kegiatan
-              yang menarik dan bermanfaat bagi anggotanya, serta telah meraih
-              banyak prestasi dan penghargaan. Di website resmi organisasi ini,
-              Anda dapat melihat karya-karya fotografi anggota KMPF UNJ, menyewa
-              atau meminjam alat fotografi, membaca blog dan artikel tentang
-              fotografi, dan melihat profil organisasi. Anda juga dapat
-              menghubungi atau mengikuti organisasi ini melalui media sosial,
-              email, atau nomor telepon yang tersedia di website.
+              {latestTagLine && (
+                <div
+                  className="text"
+                  dangerouslySetInnerHTML={{
+                    __html: latestTagLine.Text,
+                  }}
+                ></div>
+              )}
             </p>
           </div>
         </div>

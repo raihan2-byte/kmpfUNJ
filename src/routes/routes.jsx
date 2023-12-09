@@ -18,6 +18,7 @@ import Aboutus from "../pages/aboutus/aboutus";
 // import Producservice from "../pages/productservice/producservice";
 import Newskonten from "../components/newskonten/newskonten";
 import Artikel from "../pages/artikel/artikel";
+import NotFound from "../pages/notFound";
 import Phototalk from "../pages/phototalk/phototalk";
 import ShortVideo from "../components/shortvideo/shortvideo";
 import CreatePhotoTalk from "../pages/post/phototalk/phototalk";
@@ -26,6 +27,8 @@ import CreateBarang from "../pages/post/barang/barang";
 import CreateBerita from "../pages/post/berita/berita";
 import CreateArtikel from "../pages/post/artikel/artikel";
 import CreateMerch from "../pages/post/merch/merch";
+import CreateTaglineHome from "../pages/post/taglinehome/taglinehome";
+import TagLineHome from "../pages/admin/taglinehome/taglinehome";
 import ProtectRouter from "../pages/protectRoute/ProtectRouter";
 import Merch from "../pages/merch/merch";
 // import Barang from "../pages/admin/barangAdmin/barang";
@@ -45,12 +48,15 @@ const Routes = () => {
         <Route path="/phototalk-admin" element={<PhotoTalkAdmin />} />
         <Route path="/kmpf-admin" element={<KmpfAdmin />} />
         <Route path="/merch-admin" element={<MerchAdmin />} />
+        <Route path="/tag-home-admin" element={<TagLineHome />} />
         <Route path="/create-phototalk" element={<CreatePhotoTalk />} />
         <Route path="/create-short-video" element={<CreateShortVideo />} />
         <Route path="/create-barang" element={<CreateBarang />} />
         <Route path="/create-berita" element={<CreateBerita />} />
         <Route path="/create-artikel" element={<CreateArtikel />} />
         <Route path="/create-merch" element={<CreateMerch />} />
+        <Route path="/create-tag-home" element={<CreateTaglineHome />} />
+
         {/* <Route path="/berita/delete/:id" component={Newskonten} /> */}
       </Route>
       {/* <Route path="/short-video/delete/:id" component={ShortVideo} />
@@ -65,6 +71,7 @@ const Routes = () => {
       <Route path="/merch" element={<Merch />} />
 
       <Route path="/short-video/:id" element={<ShortVideo />} />
+      <Route path="*" element={<NotFound />} />
     </Switch>
   );
 };

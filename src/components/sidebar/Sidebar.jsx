@@ -35,6 +35,11 @@ const navbarContent = [
     path: "/merch-admin",
     content: [],
   },
+  {
+    display: "Tag Home",
+    path: "/tag-home-admin",
+    content: [],
+  },
 ];
 
 const Sidebar = () => {

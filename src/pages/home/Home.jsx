@@ -18,6 +18,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const [news, setNews] = React.useState([]);
+  const [tagLineHome, setTagLineHome] = React.useState([]);
 
   const getAllNews = async () => {
     await API.get("berita/")
@@ -30,6 +31,19 @@ const Home = () => {
   };
   React.useEffect(() => {
     getAllNews();
+  }, []);
+
+  const getAllTagLineHome = async () => {
+    await API.get("tagLine/")
+      .then((response) => {
+        setTagLineHome(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  React.useEffect(() => {
+    getAllTagLineHome();
   }, []);
 
   const [phototalk, setPhototalk] = React.useState([]);
@@ -60,7 +74,7 @@ const Home = () => {
         }}
       >
         <Navbar />
-        <Header news={news} />
+        <Header news={news} tagLine={tagLineHome} />
         <div className="rental-foto">
           <a href="/productservice">
             <div className="fotografi-parent">

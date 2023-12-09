@@ -15,7 +15,7 @@ const Phototalk = () => {
   const [phototalk, setPhototalk] = React.useState([]);
   console.log(phototalk);
   const getAllPhototalk = async () => {
-    await API.get("phototalk/")
+    await API.get("artikel/")
       .then((response) => {
         setPhototalk(response.data.data);
       })

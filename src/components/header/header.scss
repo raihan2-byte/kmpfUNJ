@@ -51,11 +51,14 @@
       padding: 0px 20px 0 20px;
 
       .judul {
-        font-size: 21px;
+        font-size: 45px;
+        line-height: 1.1;
+        // letter-spacing: 0;
       }
       .text {
-        font-size: 16px;
+        font-size: 20px;
         text-align: justify;
+        line-height: 1.1;
         margin-top: 5px;
       }
     }
@@ -143,16 +146,16 @@
 
       &__right {
         .judul {
-          font-size: 20px;
+          font-size: 40px;
           @media only screen and (max-width: 910px) {
-            font-size: 16px;
+            font-size: 38px;
           }
         }
         .text {
           @media only screen and (max-width: 910px) {
-            font-size: 13px;
+            font-size: 16px;
           }
-          font-size: 14px;
+          font-size: 18px;
         }
       }
     }
@@ -201,12 +204,14 @@
         padding: 10px;
 
         .judul {
+          text-align: center;
           font-size: 24px;
           @media only screen and (max-width: 475px) {
             font-size: 22px;
           }
         }
         .text {
+          text-align: center;
           @media only screen and (max-width: 475px) {
             font-size: 17px;
           }

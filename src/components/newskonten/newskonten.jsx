@@ -127,14 +127,7 @@ const Newskonten = () => {
                     <MdPeopleAlt style={{ marginRight: "5px" }} /> admin
                   </p>
                   <p className="date">{formatTanggal(berita.created_at)}</p>
-                  {/* <div
-                    activeClass="active"
-                    to="jurnalistikss"
-                    spy={true}
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                  > */}
+
                   <div
                     onClick={() => scrollToTarget(berita.KaryaNewsData?.name)}
                   >

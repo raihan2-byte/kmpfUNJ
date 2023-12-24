@@ -47,7 +47,7 @@ const Berita = () => {
       <div className="berita-parent">
         <div className="space">
           {spaceBerita.slice(0, 1).map((item) => (
-            <a href={`/berita/${item.id}`} key={item.id}>
+            <a href={`/berita/${item.slug}`} key={item.id}>
               <div className="text">
                 <img src={item.file_names[0]} alt="text" className="kontoru" />
                 <h3>{item.judul}</h3>
@@ -58,7 +58,7 @@ const Berita = () => {
 
           <div className="berita-child">
             {beritaChildTampilan.map((item) => (
-              <a href={`/berita/${item.id}`} key={item.id}>
+              <a href={`/berita/${item.slug}`} key={item.id}>
                 <div class="card">
                   <img
                     src={item.file_names[0]}
@@ -85,7 +85,7 @@ const Berita = () => {
             {artikelFiltered.slice(0, 1).map((item) => (
               <div className="karya">
                 <h3 className="teks-tambahan">Karya Archieve</h3>
-                <a href={`/berita/${item.id}`} key={item.id}>
+                <a href={`/berita/${item.slug}`} key={item.id}>
                   <div className="image">
                     <h5>{item.judul}</h5>
 
@@ -104,7 +104,7 @@ const Berita = () => {
             {prokerFiltered.slice(0, 1).map((item) => (
               <div className="proker">
                 <h3 className="teks-tambahan">Proker Archieve</h3>
-                <a href={`/berita/${item.id}`} key={item.id}>
+                <a href={`/berita/${item.slug}`} key={item.id}>
                   <div className="image">
                     <h5>{item.judul}</h5>
                     <img src={item.file_names[0]} alt="img" />

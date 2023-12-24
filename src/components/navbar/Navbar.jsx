@@ -17,7 +17,7 @@ const navbarContent = [
   },
   {
     display: "Product & Services",
-    path: "/productservice",
+    path: "",
     content: [
       { name: "Product & Services", path: "/productservice" },
       { name: "Rent & Price", path: "/rent" },
@@ -26,7 +26,7 @@ const navbarContent = [
   },
   {
     display: "Blog",
-    path: "/berita",
+    path: "",
     content: [
       { name: "News", path: "/berita" },
       { name: "Artikel KMPF", path: "/artikel" },

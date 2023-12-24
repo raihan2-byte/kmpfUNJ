@@ -61,7 +61,7 @@ const proker = ({ news }) => {
             <div className="konten-proker-container">
               {pair[0] && (
                 <div className="konten-proker">
-                  <a href={`/berita/${pair[0].id}`}>
+                  <a href={`/berita/${pair[0].slug}`}>
                     <img
                       src={pair[0].file_names[0]}
                       alt="text"
@@ -75,7 +75,7 @@ const proker = ({ news }) => {
               )}
               {pair[1] && (
                 <div className="konten-proker">
-                  <a href={`/berita/${pair[1].id}`}>
+                  <a href={`/berita/${pair[1].slug}`}>
                     <img
                       src={pair[1].file_names[0]}
                       alt="text"

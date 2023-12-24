@@ -86,7 +86,7 @@ const Artikel = () => {
             >
               {beritaJurnalistik?.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <a href={`/berita/${item.id}`}>
+                  <a href={`/berita/${item.slug}`}>
                     <img
                       src={item.file_names[0]}
                       alt="text"
@@ -145,7 +145,7 @@ const Artikel = () => {
             >
               {beritaSalon?.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <a href={`/berita/${item.id}`}>
+                  <a href={`/berita/${item.slug}`}>
                     <img
                       src={item.file_names[0]}
                       alt="text"
@@ -203,7 +203,7 @@ const Artikel = () => {
             >
               {beritaAlternatif?.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <a href={`/berita/${item.id}`}>
+                  <a href={`/berita/${item.slug}`}>
                     <img
                       src={item.file_names[0]}
                       alt="text"

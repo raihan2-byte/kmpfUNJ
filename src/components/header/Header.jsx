@@ -43,7 +43,7 @@ const Header = ({ news, tagLine }) => {
           >
             {news?.map((data) => (
               <SwiperSlide key={data.id}>
-                <a href={`/berita/${data.id}`}>
+                <a href={`/berita/${data.slug}`}>
                   <img
                     src={data.file_names[0]}
                     alt="text"

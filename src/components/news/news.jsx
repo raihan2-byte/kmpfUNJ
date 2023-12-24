@@ -3,16 +3,16 @@ import "./news.scss";
 // import Image from "../../components/assets/Headline1.jpg";
 
 const News = ({ berita }) => {
-  // const truncateText = (text, maxLength) => {
-  //   if (text) {
-  //     const words = text.split(" ");
-  //     if (words.length > maxLength) {
-  //       return words.slice(0, maxLength).join(" ") + "...";
-  //     }
-  //     return text;
-  //   }
-  //   return "";
-  // };
+  const truncateText = (text, maxLength) => {
+    if (text) {
+      const words = text.split(" ");
+      if (words.length > maxLength) {
+        return words.slice(0, maxLength).join(" ") + "...";
+      }
+      return text;
+    }
+    return "";
+  };
 
   function formatTanggal(dateString) {
     const createdAt = new Date(dateString);
@@ -33,12 +33,12 @@ const News = ({ berita }) => {
             <div className="judul-news">
               <h3>{data.judul}</h3>
             </div>
-            {/* <div
+            <div
               className="firt-sentence"
               dangerouslySetInnerHTML={{
                 __html: truncateText(data.berita_message, 20),
               }}
-            ></div> */}
+            ></div>
 
             <div className="tags">
               <div className="tags-spesifik">

@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./news.scss";
+
 // import Image from "../../components/assets/Headline1.jpg";
 
 const News = ({ berita }) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const truncateText = (text, maxLength) => {
     if (text) {
       const words = text.split(" ");
-      if (words.length > maxLength) {
-        return words.slice(0, maxLength).join(" ") + "...";
+      const maxWords = windowWidth <= 610 ? 5 : 20;
+      if (words.length > maxWords) {
+        return words.slice(0, maxWords).join(" ") + "...";
       }
       return text;
     }
@@ -34,6 +50,7 @@ const News = ({ berita }) => {
               <h3>{data.judul}</h3>
             </div>
             <div
+              style={{ maxWidth: "610px" }}
               className="firt-sentence"
               dangerouslySetInnerHTML={{
                 __html: truncateText(data.berita_message, 20),

@@ -159,16 +159,88 @@ const Rent = () => {
             {rentFiltered.slice(0, 3).map((item) => (
               <div className="Kamera-2">
                 <div className="diskon">{item.discount}%</div>
-                <a href={`/barang/${item.id}`}>
+                {/* <a href={`/barang/${item.id}`}> */}
+                <div className="Kamera-2-child">
+                  <img src={item.file_name} alt="kamera2" />
+                </div>
+                <div className="rent-nama-paket">{item.nama_paket}</div>
+                <div className="rent-nama">{item.nama}</div>
+                <div className="harga">
+                  <div className="price-awal">
+                    {formatRupiah(item.harga_awal)}
+                  </div>
+                  <div className="price-asli">{formatRupiah(item.harga)}</div>
+                </div>
+                <a href="https://wa.link/luxtrv">
+                  <Button className="btn" style={{}}>
+                    {" "}
+                    Book Now
+                    <MdOutlineNavigateNext
+                      style={{
+                        fontSize: "15px",
+                        backgroundColor: "#EAEAEA",
+                        borderRadius: "50%",
+                        marginLeft: "5px",
+                      }}
+                    />
+                  </Button>
+                </a>
+                {/* </a> */}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="exhibition">
+          <h3>Camera & Lens</h3>
+          <h4 style={{ color: "red" }}>*For Internal Only</h4>
+          <div className="promotion-child">
+            {rent
+              .filter((item) => item.category_id === 2)
+              .map((item) => (
+                <div className="Kamera-2">
+                  {/* <a href={`/barang/${item.id}`}> */}
                   <div className="Kamera-2-child">
                     <img src={item.file_name} alt="kamera2" />
                   </div>
-                  <div className="rent-nama-paket">{item.nama_paket}</div>
                   <div className="rent-nama">{item.nama}</div>
                   <div className="harga">
-                    <div className="price-awal">
-                      {formatRupiah(item.harga_awal)}
+                    <div className="price-asli">
+                      {" "}
+                      {formatRupiah(item.harga)}
                     </div>
+                  </div>
+                  <a href="https://wa.link/d0j6az">
+                    <Button className="btn" style={{}}>
+                      {" "}
+                      Book Now
+                      <MdOutlineNavigateNext
+                        style={{
+                          fontSize: "15px",
+                          backgroundColor: "#EAEAEA",
+                          borderRadius: "50%",
+                          marginLeft: "5px",
+                        }}
+                      />
+                    </Button>
+                  </a>
+                  {/* </a> */}
+                </div>
+              ))}
+          </div>
+        </div>
+        <div className="equipment-accesories">
+          <h3>Equipment & Accesories</h3>
+          <div className="promotion-child">
+            {rent
+              .filter((item) => item.category_id === 3)
+              .map((item) => (
+                <div className="Kamera-2">
+                  {/* <a href={`/barang/${item.id}`}> */}
+                  <div className="Kamera-2-child">
+                    <img src={item.file_name} alt="kamera2" />
+                  </div>
+                  <div className="rent-nama">{item.nama}</div>
+                  <div className="harga">
                     <div className="price-asli">{formatRupiah(item.harga)}</div>
                   </div>
                   <a href="https://wa.link/luxtrv">
@@ -185,81 +257,7 @@ const Rent = () => {
                       />
                     </Button>
                   </a>
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="exhibition">
-          <h3>Camera & Lens</h3>
-          <h4 style={{ color: "red" }}>*For Internal Only</h4>
-          <div className="promotion-child">
-            {rent
-              .filter((item) => item.category_id === 2)
-              .map((item) => (
-                <div className="Kamera-2">
-                  <a href={`/barang/${item.id}`}>
-                    <div className="Kamera-2-child">
-                      <img src={item.file_name} alt="kamera2" />
-                    </div>
-                    <div className="rent-nama">{item.nama}</div>
-                    <div className="harga">
-                      <div className="price-asli">
-                        {" "}
-                        {formatRupiah(item.harga)}
-                      </div>
-                    </div>
-                    <a href="https://wa.link/d0j6az">
-                      <Button className="btn" style={{}}>
-                        {" "}
-                        Book Now
-                        <MdOutlineNavigateNext
-                          style={{
-                            fontSize: "15px",
-                            backgroundColor: "#EAEAEA",
-                            borderRadius: "50%",
-                            marginLeft: "5px",
-                          }}
-                        />
-                      </Button>
-                    </a>
-                  </a>
-                </div>
-              ))}
-          </div>
-        </div>
-        <div className="equipment-accesories">
-          <h3>Equipment & Accesories</h3>
-          <div className="promotion-child">
-            {rent
-              .filter((item) => item.category_id === 3)
-              .map((item) => (
-                <div className="Kamera-2">
-                  <a href={`/barang/${item.id}`}>
-                    <div className="Kamera-2-child">
-                      <img src={item.file_name} alt="kamera2" />
-                    </div>
-                    <div className="rent-nama">{item.nama}</div>
-                    <div className="harga">
-                      <div className="price-asli">
-                        {formatRupiah(item.harga)}
-                      </div>
-                    </div>
-                    <a href="https://wa.link/luxtrv">
-                      <Button className="btn" style={{}}>
-                        {" "}
-                        Book Now
-                        <MdOutlineNavigateNext
-                          style={{
-                            fontSize: "15px",
-                            backgroundColor: "#EAEAEA",
-                            borderRadius: "50%",
-                            marginLeft: "5px",
-                          }}
-                        />
-                      </Button>
-                    </a>
-                  </a>
+                  {/* </a> */}
                 </div>
               ))}
           </div>

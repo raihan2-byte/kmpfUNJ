@@ -17,9 +17,6 @@ import { Pagination, Navigation } from "swiper";
 import "./header.scss";
 
 const Header = ({ news, tagLine }) => {
-  console.log(news);
-  console.log(tagLine);
-
   const sortedTagLine = tagLine.slice().sort((a, b) => b.ID - a.ID);
 
   // Mengambil data dengan ID tertinggi (paling baru)

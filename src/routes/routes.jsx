@@ -31,6 +31,8 @@ import CreateTaglineHome from "../pages/post/taglinehome/taglinehome";
 import TagLineHome from "../pages/admin/taglinehome/taglinehome";
 import ProtectRouter from "../pages/protectRoute/ProtectRouter";
 import Merch from "../pages/merch/merch";
+// Periksa import default dari file
+import Stastics from "../pages/admin/Statistics/statistics"; // Pastikan file tersebut memiliki ekspor default dengan nama 'Statistics'
 // import Barang from "../pages/admin/barangAdmin/barang";
 const Routes = () => {
   return (
@@ -56,6 +58,7 @@ const Routes = () => {
         <Route path="/create-artikel" element={<CreateArtikel />} />
         <Route path="/create-merch" element={<CreateMerch />} />
         <Route path="/create-tag-home" element={<CreateTaglineHome />} />
+        <Route path="/statistics" element={<Stastics />} />
 
         {/* <Route path="/berita/delete/:id" component={Newskonten} /> */}
       </Route>

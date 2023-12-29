@@ -136,9 +136,19 @@
           bottom: 0;
           left: 0;
           right: 0;
-          height: 60vh;
+          top: 0;
+          // height: 60vh;
           font-size: 30px;
           color: white;
+          @media screen and (max-width: 1100px) {
+            font-size: 25px;
+          }
+          @media screen and (max-width: 910px) {
+            font-size: 20px;
+          }
+          @media screen and (max-width: 772px) {
+            font-size: 17px;
+          }
         }
       }
 
@@ -226,14 +236,14 @@
           }
 
           img {
-            height: 40vh;
+            height: 50vh;
           }
 
           .image h5 {
-            margin: auto;
-            width: 90%;
-            font-size: 27px;
-            height: 33vh;
+            margin: 2px;
+            // width: 90%;
+            // font-size: 27px;
+            // height: 33vh;
           }
         }
       }
@@ -292,8 +302,8 @@
           }
 
           .image h5 {
-            height: 35vh;
-            font-size: 25px;
+            // height: 35vh;
+            // font-size: 25px;
           }
         }
       }
@@ -339,12 +349,12 @@
 
           img {
             // filter: brightness(50%);
-            height: 50vh;
+            height: 40vh;
           }
 
           .image h5 {
             font-size: 15px;
-            height: 52vh;
+            // height: 52vh;
             // text-align: center;
           }
         }
@@ -397,12 +407,12 @@
 
           img {
             // filter: brightness(50%);
-            height: 40vh;
+            height: 35vh;
           }
 
           .image h5 {
             font-size: 12px;
-            height: 45vh;
+            // height: 45vh;
             // text-align: center;
           }
         }
@@ -458,13 +468,14 @@
 
           img {
             // filter: brightness(50%);
-            height: 23vh;
+            height: 25vh;
           }
 
           .image h5 {
             font-size: 10px;
+            top: -2rem;
 
-            height: 40vh;
+            // height: 40vh;
             // text-align: center;
           }
         }

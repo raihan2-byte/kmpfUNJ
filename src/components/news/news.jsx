@@ -21,7 +21,7 @@ const News = ({ berita }) => {
   const truncateText = (text, maxLength) => {
     if (text) {
       const words = text.split(" ");
-      const maxWords = windowWidth <= 610 ? 5 : 20;
+      const maxWords = windowWidth <= 610 ? 5 : 15;
       if (words.length > maxWords) {
         return words.slice(0, maxWords).join(" ") + "...";
       }

@@ -29,15 +29,15 @@ const proker = ({ news }) => {
         slidesPerView={2}
         breakpoints={{
           290: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 2,
           },
           320: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 2,
           },
           350: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 2,
           },
           500: {

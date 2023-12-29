@@ -127,9 +127,10 @@
     .tes {
       .photo-news {
         img {
-          width: 20vh;
-          height: 25vh;
+          width: 22vh;
+          height: 23vh;
           border-radius: 10px;
+          object-fit: cover;
         }
       }
 

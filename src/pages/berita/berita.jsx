@@ -33,7 +33,7 @@ const Berita = () => {
 
   const spaceBerita = lastThreeBerita.slice(0, 1); // Ambil yang terbaru untuk space
   const beritaChildBerita = berita.slice(1).slice(0, 3); // Ambil 3 terbaru untuk berita-child
-  const archieveBerita = berita.slice(4).slice(0, 4);
+  const archieveBerita = berita.slice(6).slice(0, 6);
   const maxBeritaChild = window.innerWidth <= 475 ? 2 : 3;
   const beritaChildTampilan = beritaChildBerita.slice(0, maxBeritaChild);
   const artikelFiltered = berita.filter((item) =>

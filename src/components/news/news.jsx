@@ -47,7 +47,7 @@ const News = ({ berita }) => {
           </a>
           <div className="text-news">
             <div className="judul-news">
-              <h3>{data.judul}</h3>
+              <h3>{truncateText(data.judul)}</h3>
             </div>
             <div
               style={{ maxWidth: "610px" }}

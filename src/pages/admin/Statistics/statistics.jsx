@@ -5,19 +5,22 @@ const statistics = () => {
     <div className="parent">
       <div className="bar">
         <div className="view-berita">
-          <p>Berita</p>
+          <p>View Berita : 50</p>
         </div>
         <div className="view-berita">
-          <p>Phototalk</p>
+          <h3>View Phototalk : 50</h3>
         </div>
-        <div className="view-berita">
-          <p>Short Video</p>
+        <div className="view-short-video">
+          <h3>View Short Video : 50</h3>
         </div>
-        <div className="view-berita">
-          <p>Merchandise</p>
+        <div className="view-merchandise">
+          <h3>View Merchandise : 50</h3>
         </div>
-        <div className="view-berita">
-          <p>Renting</p>
+        <div className="view-rent">
+          <h3>View Rent : 50</h3>
+        </div>
+        <div className="view-artikel">
+          <h3>View Artikel : 50</h3>
         </div>
       </div>
     </div>

@@ -65,7 +65,7 @@ const proker = ({ news }) => {
                     <img
                       src={pair[0].file_names[0]}
                       alt="text"
-                      className="kontoru"
+                      className="image"
                     />
                     <div className="overlay">
                       <h2>{pair[0].judul}</h2>
@@ -79,7 +79,7 @@ const proker = ({ news }) => {
                     <img
                       src={pair[1].file_names[0]}
                       alt="text"
-                      className="kontoru"
+                      className="image"
                     />
                     <div className="overlay">
                       <h2>{pair[1].judul}</h2>

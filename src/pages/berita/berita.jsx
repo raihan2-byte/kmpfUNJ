@@ -85,34 +85,46 @@ const Berita = () => {
             {artikelFiltered.slice(0, 1).map((item) => (
               <div className="karya">
                 <h3 className="teks-tambahan">Karya Archieve</h3>
-                {/* <a href={`/berita/${item.slug}`} key={item.id}> */}
-                <div className="image">
-                  <h5>{item.judul}</h5>
+                <a href={`/berita/${item.slug}`} key={item.id}>
+                  <div className="image">
+                    <h5>{item.judul}</h5>
 
-                  <img
-                    src={item.file_names[0]}
-                    style={{ filter: "brightness(20%)" }}
-                    alt="img"
-                  />
-                </div>
-                {/* </a> */}
-                <Link smooth to="/artikel#our-proker">
-                  <Button className="btn">More</Button>
+                    <img
+                      src={item.file_names[0]}
+                      style={{ filter: "brightness(20%)" }}
+                      alt="img"
+                    />
+                  </div>
+                </a>
+                {/* <Link smooth to="/artikel#our-proker" style={{ zIndex: "999" }}> */}
+                <Link
+                  className="btn"
+                  style={{ zIndex: "999" }}
+                  to="/artikel?scrollTo=karya"
+                >
+                  More
                 </Link>
+                {/* </Link> */}
               </div>
             ))}
             {prokerFiltered.slice(0, 1).map((item) => (
               <div className="proker">
                 <h3 className="teks-tambahan">Proker Archieve</h3>
-                {/* <a href={`/berita/${item.slug}`} key={item.id}> */}
-                <div className="image">
-                  <h5>{item.judul}</h5>
-                  <img src={item.file_names[0]} alt="img" />
-                </div>
-                {/* </a> */}
-                <Link smooth to="/artikel#our-proker">
-                  <Button className="btn">More</Button>
+                <a href={`/berita/${item.slug}`} key={item.id}>
+                  <div className="image">
+                    <h5>{item.judul}</h5>
+                    <img src={item.file_names[0]} alt="img" />
+                  </div>
+                </a>
+                {/* <Link smooth to="/artikel#our-proker" style={{ zIndex: "999" }}> */}
+                <Link
+                  className="btn"
+                  style={{ zIndex: "999" }}
+                  to="/artikel?scrollTo=proker"
+                >
+                  More
                 </Link>
+                {/* </Link> */}
               </div>
             ))}
           </div>

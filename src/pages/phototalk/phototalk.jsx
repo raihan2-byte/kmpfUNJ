@@ -48,7 +48,7 @@ const Phototalk = () => {
               {phototalk?.map((item) => (
                 <SwiperSlide>
                   <div className="konten">
-                    <img src={item.FileName} alt="text" className="kontoru" />
+                    <img src={item.FileName} alt="text" className="image" />
                     <div
                       className="overlay"
                       dangerouslySetInnerHTML={{

@@ -98,7 +98,7 @@ const Newskonten = () => {
                           // style={{ width: "60vh" }}
                           src={item}
                           alt="text"
-                          className="kontoru"
+                          className="image"
                         />
                       </SwiperSlide>
                     ))}
@@ -154,7 +154,7 @@ const Newskonten = () => {
               <div className="news-recomendation">
                 <div className="konten-recomendation">
                   <h4>Recomendation</h4>
-                  <div className="titit">
+                  <div className="recomendation">
                     {rekomendasiBerita
                       .slice(0, maxBeritaChild)
                       .map((item, key) => (

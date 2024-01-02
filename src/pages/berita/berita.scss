@@ -158,8 +158,13 @@
         // height: 100vh;
 
         .btn {
+          @media screen and (max-width: 475px) {
+            width: 80px;
+          }
           display: flex;
+          width: 150px;
           justify-content: center;
+          margin: auto;
         }
       }
       .proker {
@@ -168,8 +173,13 @@
         // background-color: red;
         // height: 100vh;
         .btn {
+          @media screen and (max-width: 475px) {
+            width: 80px;
+          }
           display: flex;
+          width: 150px;
           justify-content: center;
+          margin: auto;
         }
       }
       // .garis {
@@ -468,7 +478,8 @@
 
           img {
             // filter: brightness(50%);
-            height: 25vh;
+            object-fit: cover;
+            height: 22vh;
           }
 
           .image h5 {

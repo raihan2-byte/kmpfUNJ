@@ -61,8 +61,8 @@ const Kelas = () => {
                     <h3>Kelas Jurnalistik</h3>
                   </div>
 
-                  <div className="kontoru">
-                    <img src={Jurnalistik} alt="text" className="kontoru" />
+                  <div className="image">
+                    <img src={Jurnalistik} alt="text" className="image" />
                   </div>
                   <div className="text">
                     <p>
@@ -79,8 +79,8 @@ const Kelas = () => {
                   <div className="judul">
                     <h3>Kelas Jurnalistik</h3>
                   </div>
-                  <div className="kontoru">
-                    <img src={Jurnalistik} alt="text" className="kontoru" />
+                  <div className="image">
+                    <img src={Jurnalistik} alt="text" className="image" />
                   </div>
                   <div className="text">
                     <p>
@@ -98,8 +98,8 @@ const Kelas = () => {
                   <div className="judul">
                     <h3>Kelas Jurnalistik</h3>
                   </div>
-                  <div className="kontoru">
-                    <img src={Jurnalistik} alt="text" className="kontoru" />
+                  <div className="image">
+                    <img src={Jurnalistik} alt="text" className="image" />
                   </div>
                   <div className="text">
                     <p>
@@ -143,13 +143,13 @@ const Kelas = () => {
               className="mySwiper"
             >
               <SwiperSlide className="tes">
-                {/* <img src={PhotoTalk} alt="text" className="kontoru" /> */}
+                {/* <img src={PhotoTalk} alt="text" className="image" /> */}
                 <div className="jurnalis-konten">
                   <div className="judul">
                     <h3>Kelas Salon</h3>
                   </div>
-                  <div className="kontoru">
-                    <img src={Salon} alt="text" className="kontoru" />
+                  <div className="image">
+                    <img src={Salon} alt="text" className="image" />
                   </div>
                   <div className="text">
                     <p>
@@ -166,8 +166,8 @@ const Kelas = () => {
                   <div className="judul">
                     <h3>Kelas Salon</h3>
                   </div>
-                  <div className="kontoru">
-                    <img src={Salon} alt="text" className="kontoru" />
+                  <div className="image">
+                    <img src={Salon} alt="text" className="image" />
                   </div>
                   <div className="text">
                     <p>
@@ -184,8 +184,8 @@ const Kelas = () => {
                   <div className="judul">
                     <h3>Kelas Salon</h3>
                   </div>
-                  <div className="kontoru">
-                    <img src={Salon} alt="text" className="kontoru" />
+                  <div className="image">
+                    <img src={Salon} alt="text" className="image" />
                   </div>
                   <div className="text">
                     <p>
@@ -235,8 +235,8 @@ const Kelas = () => {
                   <div className="judul">
                     <h3>Kelas Alternatif</h3>
                   </div>
-                  <div className="kontoru">
-                    <img src={Alternatif} alt="text" className="kontoru" />
+                  <div className="image">
+                    <img src={Alternatif} alt="text" className="image" />
                   </div>
                   <div className="text">
                     <p>
@@ -251,8 +251,8 @@ const Kelas = () => {
                   <div className="judul">
                     <h3>Kelas Alternatif</h3>
                   </div>
-                  <div className="kontoru">
-                    <img src={Alternatif} alt="text" className="kontoru" />
+                  <div className="image">
+                    <img src={Alternatif} alt="text" className="image" />
                   </div>
                   <div className="text">
                     <p>
@@ -269,8 +269,8 @@ const Kelas = () => {
                   <div className="judul">
                     <h3>Kelas Alternatif</h3>
                   </div>
-                  <div className="kontoru">
-                    <img src={Alternatif} alt="text" className="kontoru" />
+                  <div className="image">
+                    <img src={Alternatif} alt="text" className="image" />
                   </div>
                   <div className="text">
                     <p>

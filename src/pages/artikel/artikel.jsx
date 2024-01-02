@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./artikel.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
@@ -23,9 +23,35 @@ const Artikel = () => {
         console.log(error);
       });
   };
-  React.useEffect(() => {
+  useEffect(() => {
     getAllBeritaa();
   }, []);
+
+  const searchParams = new URLSearchParams(document.location.search);
+  const isScrolls = searchParams.get("scrollTo");
+
+  function scrollToTargetAdjusted(id) {
+    var element = document.getElementById(id);
+    var screenWidth = window.innerWidth; // Mendapatkan lebar layar saat ini
+    var headerOffset = screenWidth <= 475 ? 50 : 100; // Menggunakan nilai headerOffset berdasarkan lebar layar
+
+    var elementPosition = element.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+
+  React.useEffect(() => {
+    if (isScrolls) {
+      console.log(isScrolls);
+      setTimeout(() => {
+        scrollToTargetAdjusted(isScrolls);
+      }, 3000);
+    }
+  }, [isScrolls]);
 
   const beritaJurnalistik = berita.filter((item) => item.tags_id === 1);
   const beritaSalon = berita.filter((item) => item.tags_id === 2);
@@ -90,7 +116,7 @@ const Artikel = () => {
                     <img
                       src={item.file_names[0]}
                       alt="text"
-                      className="kontoru"
+                      className="image"
                     />
                   </a>
                   <div className="overlay">
@@ -149,7 +175,7 @@ const Artikel = () => {
                     <img
                       src={item.file_names[0]}
                       alt="text"
-                      className="kontoru"
+                      className="image"
                     />
                   </a>
                   <div className="overlay">
@@ -207,7 +233,7 @@ const Artikel = () => {
                     <img
                       src={item.file_names[0]}
                       alt="text"
-                      className="kontoru"
+                      className="image"
                     />
                   </a>
                   <div className="overlay">
@@ -222,8 +248,8 @@ const Artikel = () => {
             <Proker news={beritaArchieve} />
           </div>
 
-          <div className="our-proker" id="salon">
-            <h3>Our Article</h3>
+          <div className="our-proker" id="karya">
+            <h3>Karya Article</h3>
             <Proker news={beritaArtikel} />
           </div>
         </div>

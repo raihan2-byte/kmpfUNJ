@@ -10,10 +10,10 @@ import { AiFillFileAdd } from "react-icons/ai";
 const Admin = () => {
   const [admin, setAdmin] = useState([]);
 
-  const getAllUsers = async () => {
+  const getStatistics = async () => {
     try {
-      const response = await API.get("/users/");
-      setAdmin(response.data.data);
+      const response = await API.get("/statistics/View-All-News");
+      setAdmin(response);
     } catch (error) {
       const message =
         (error.response &&
@@ -26,8 +26,12 @@ const Admin = () => {
   };
 
   useEffect(() => {
-    getAllUsers();
+    getStatistics();
   }, []);
+
+  // const filteredAdmin = admin.filter(
+  //   (item) => item.featureName === "View-All-Berita"
+  // );
 
   return (
     <div>
@@ -35,10 +39,8 @@ const Admin = () => {
       <div className="parent">
         <div className="top-parent">
           <div className="parent-kontent">
-            {" "}
             <h2>Users</h2>
           </div>
-          <div className="parent-kontent"> </div>
         </div>
         <div className="kontent">
           <div className="list">
@@ -54,26 +56,15 @@ const Admin = () => {
               <table>
                 <thead>
                   <tr>
-                    <th>User</th>
-                    <th>Action</th>
+                    <th>Nama fitur yang di kunjungi</th>
+                    <th>Jumlah</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {admin.map((item) => (
-                    <tr key={item.id}>
-                      <td>
-                        <p>{item.Username}</p>
-                      </td>
-                      <td>
-                        <Button className="btn">
-                          <MdDelete />
-                        </Button>
-                        <Button className="btn">
-                          <AiFillFileAdd />
-                        </Button>
-                      </td>
-                    </tr>
-                  ))}
+                  <td>
+                    <p>View Berita</p>
+                  </td>
+                  <td>{admin.totalCount}</td>
                 </tbody>
               </table>
             </div>

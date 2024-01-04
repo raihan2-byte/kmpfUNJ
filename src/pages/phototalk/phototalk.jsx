@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import Headline from "../../components/assets/Headline1.jpg";
 import { Pagination, Navigation } from "swiper";
 import API from "../../api/API";
+import { Link } from "react-router-dom";
 
 const Phototalk = () => {
   const [phototalk, setPhototalk] = React.useState([]);
@@ -48,16 +49,15 @@ const Phototalk = () => {
               {phototalk?.map((item) => (
                 <SwiperSlide>
                   <div className="konten">
-                    <img src={item.FileName} alt="text" className="image" />
+                    <Link to={item.Link}>
+                      <img src={item.FileName} alt="text" className="image" />
+                    </Link>
                     <div
                       className="overlay"
                       dangerouslySetInnerHTML={{
                         __html: item.Deskripsi,
                       }}
                     ></div>
-                    {/* <div className="overlay">
-                      <h2>{item.Deskripsi}</h2>
-                    </div> */}
                   </div>
                 </SwiperSlide>
               ))}

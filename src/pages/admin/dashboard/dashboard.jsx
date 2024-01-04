@@ -1,19 +1,41 @@
 import React, { useEffect, useState } from "react";
 import "./dashboard.scss";
-import Button from "../../../components/button/Button";
 import Sidebar from "../../../components/sidebar/Sidebar";
 import API from "../../../api/API";
 import SweatAlert from "../../../sweetaleet/SweetAlert";
-import { MdDelete } from "react-icons/md";
-import { AiFillFileAdd } from "react-icons/ai";
 
 const Admin = () => {
-  const [admin, setAdmin] = useState([]);
+  const [totalCount, setTotalCount] = useState({
+    merch: null,
+    rent: null,
+  });
 
   const getStatistics = async () => {
     try {
-      const response = await API.get("/statistics/View-All-News");
-      setAdmin(response);
+      const merch = await API.get("/statistics/view-all-merch");
+      const rent = await API.get("/statistics/View-All-Rent");
+      const berita = await API.get("/statistics/View-All-News");
+      const site = await API.get("/statistics/View-Site");
+      const phototalk = await API.get("/statistics/View-All-Phototalk");
+      const shortVideo = await API.get("/statistics/View-All-short-video");
+      if (
+        merch.data.totalCount &&
+        rent.data.totalCount &&
+        berita.data.totalCount &&
+        site.data.totalCount &&
+        phototalk.data.totalCount &&
+        shortVideo.data.totalCount
+      ) {
+        setTotalCount((prev) => ({
+          ...prev,
+          merch: merch.data.totalCount,
+          rent: rent.data.totalCount,
+          berita: berita.data.totalCount,
+          site: site.data.totalCount,
+          phototalk: phototalk.data.totalCount,
+          shortVideo: shortVideo.data.totalCount,
+        }));
+      }
     } catch (error) {
       const message =
         (error.response &&
@@ -28,10 +50,7 @@ const Admin = () => {
   useEffect(() => {
     getStatistics();
   }, []);
-
-  // const filteredAdmin = admin.filter(
-  //   (item) => item.featureName === "View-All-Berita"
-  // );
+  console.log(totalCount);
 
   return (
     <div>
@@ -39,12 +58,12 @@ const Admin = () => {
       <div className="parent">
         <div className="top-parent">
           <div className="parent-kontent">
-            <h2>Users</h2>
+            <h2>Statistic</h2>
           </div>
         </div>
         <div className="kontent">
           <div className="list">
-            <h4>List User</h4>
+            <h4>List total count</h4>
           </div>
           <div className="table-data">
             <div className="order">
@@ -61,10 +80,34 @@ const Admin = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <td>
-                    <p>View Berita</p>
-                  </td>
-                  <td>{admin.totalCount}</td>
+                  <tr>
+                    <td>View Website</td>
+                    <td>{totalCount.site}</td>
+                  </tr>
+                  <tr>
+                    <td>View Barang</td>
+                    <td>{totalCount.rent}</td>
+                  </tr>
+                  <tr>
+                    <td>View Merch</td>
+                    <td>{totalCount.merch}</td>
+                  </tr>
+                  <tr>
+                    <td>View Berita</td>
+                    <td>{totalCount.berita}</td>
+                  </tr>
+                  <tr>
+                    <td>View Artikel</td>
+                    <td>{totalCount.berita}</td>
+                  </tr>
+                  <tr>
+                    <td>View Phototalk</td>
+                    <td>{totalCount.phototalk}</td>
+                  </tr>
+                  <tr>
+                    <td>View Short Video</td>
+                    <td>{totalCount.shortVideo}</td>
+                  </tr>
                 </tbody>
               </table>
             </div>

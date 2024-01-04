@@ -6,7 +6,7 @@ import Button from "../button/Button";
 
 const navbarContent = [
   {
-    display: "Users",
+    display: "Statistics",
     path: "/admin",
     content: [],
   },

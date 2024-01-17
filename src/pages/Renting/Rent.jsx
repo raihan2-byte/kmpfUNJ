@@ -13,7 +13,6 @@ import { TfiPencilAlt } from "react-icons/tfi";
 
 const Rent = () => {
   const [rent, setRent] = React.useState([]);
-  console.log(rent);
   const getAllRent = async () => {
     await API.get("/barang/")
       .then((response) => {

@@ -17,8 +17,6 @@ const proker = ({ news }) => {
     }
   }
 
-  console.log(news);
-
   return (
     <div className="konten-our-proker">
       <div className="sub-our-proker">{/* <h4>Proker</h4> */}</div>

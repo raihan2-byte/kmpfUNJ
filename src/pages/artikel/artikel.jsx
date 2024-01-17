@@ -46,7 +46,6 @@ const Artikel = () => {
 
   React.useEffect(() => {
     if (isScrolls) {
-      console.log(isScrolls);
       setTimeout(() => {
         scrollToTargetAdjusted(isScrolls);
       }, 3000);
@@ -59,7 +58,6 @@ const Artikel = () => {
   const beritaArchieve = berita.filter((item) => item.tags_id === 4);
   const beritaArtikel = berita.filter((item) => item.tags_id === 5);
 
-  console.log(berita);
   return (
     <>
       <Navbar />

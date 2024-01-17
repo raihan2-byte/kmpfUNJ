@@ -47,7 +47,6 @@ const Home = () => {
   }, []);
 
   const [phototalk, setPhototalk] = React.useState([]);
-  console.log(phototalk);
   const getAllPhototalk = async () => {
     await API.get("phototalk/")
       .then((response) => {

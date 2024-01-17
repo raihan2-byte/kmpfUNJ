@@ -7,14 +7,12 @@ import Navbar from "../../components/navbar/Navbar";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Headline from "../../components/assets/Headline1.jpg";
 import { Pagination, Navigation } from "swiper";
 import API from "../../api/API";
 import { Link } from "react-router-dom";
 
 const Phototalk = () => {
   const [phototalk, setPhototalk] = React.useState([]);
-  console.log(phototalk);
   const getAllPhototalk = async () => {
     await API.get("phototalk/")
       .then((response) => {

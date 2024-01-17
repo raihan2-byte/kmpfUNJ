@@ -3,7 +3,6 @@ import "./berita.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import News from "../../components/news/news";
-import Button from "../../components/button/Button";
 import API from "../../api/API";
 import { Link } from "react-router-dom";
 

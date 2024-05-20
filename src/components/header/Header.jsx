@@ -16,7 +16,7 @@ import { Pagination, Navigation } from "swiper";
 
 import "./header.scss";
 
-const Header = ({ lastNews, tagLine }) => {
+const Header = ({ news, tagLine }) => {
   const sortedTagLine = tagLine.slice().sort((a, b) => b.ID - a.ID);
 
   // Mengambil data dengan ID tertinggi (paling baru)
@@ -30,7 +30,7 @@ const Header = ({ lastNews, tagLine }) => {
     <div className="parent-header">
       <div className="header">
         <div className="header__left">
-        <Swiper
+          <Swiper
             navigation={{
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
@@ -38,18 +38,16 @@ const Header = ({ lastNews, tagLine }) => {
             modules={[Pagination, Navigation]}
             className="mySwiper"
           >
-          
-              <SwiperSlide key={lastNews.id}>
-                <a href={`/berita/${lastNews.slug}`}>
-                  {lastNews.file_names && lastNews.file_names.length > 0 && (
-                    <img src={lastNews.file_names[0]} alt="text" className="image" />
-                  )}
+            {news?.map((data) => (
+              <SwiperSlide key={data.id}>
+                <a href={`/berita/${data.slug}`}>
+                  <img src={data.file_names[0]} alt="text" className="image" />
                 </a>
                 <div className="overlay">
-                  <h2>{lastNews.judul}</h2>
+                  <h2>{data.judul}</h2>
                 </div>
               </SwiperSlide>
-          
+            ))}
             <div
               className="swiper-button-next"
               style={{ color: "white" }}

@@ -18,7 +18,6 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const [news, setNews] = React.useState([]);
-  const [LastNews, setLatNews] = React.useState([]);
   const [tagLineHome, setTagLineHome] = React.useState([]);
 
   const getAllNews = async () => {
@@ -32,19 +31,6 @@ const Home = () => {
   };
   React.useEffect(() => {
     getAllNews();
-  }, []);
-
-  const getLastNews = async () => {
-    await API.get("berita/last")
-      .then((response) => {
-        setLatNews(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-  React.useEffect(() => {
-    getLastNews();
   }, []);
 
   const getAllTagLineHome = async () => {
@@ -87,7 +73,7 @@ const Home = () => {
         }}
       >
         <Navbar />
-        <Header lastNews={LastNews} tagLine={tagLineHome} />
+        <Header news={news} tagLine={tagLineHome} />
         <div className="rental-foto">
           <a href="/productservice">
             <div className="fotografi-parent">

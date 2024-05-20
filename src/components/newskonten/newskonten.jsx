@@ -159,7 +159,7 @@ const Newskonten = () => {
                       .slice(0, maxBeritaChild)
                       .map((item, key) => (
                         <div className="konten-recomendation-child" key={key}>
-                          <a href={`/berita/${item.id}`}>
+                          <a href={`/berita/${item.slug}`}>
                             <div className="photo-news">
                               <img src={item.file_names[0]} alt="news" />
                             </div>
